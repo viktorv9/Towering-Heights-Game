@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="" />
+    <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shape Dropper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shape Dropper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/I.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/I.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/L.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/O.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/O.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Slope.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Slope.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/T.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/T.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Wedge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Wedge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Z.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Z.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/World Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/World Base.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShapePreview.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2kl3scGOz6ZTMZnBN09ZwwVdLe5" />
   <component name="ProjectViewState">
@@ -17,7 +40,8 @@
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -53,15 +77,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="" />
       <created>1723844545819</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723844545819</updated>
       <workItem from="1723844548205" duration="2000" />
+      <workItem from="1723895736303" duration="6094000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

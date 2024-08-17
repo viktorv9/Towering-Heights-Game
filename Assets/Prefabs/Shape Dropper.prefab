@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heightFollowTarget: {fileID: 0}
+  cameraTransform: {fileID: 0}
   horizontalSpeed: 1
   shapes:
   - {fileID: 888350324257194877, guid: 74d6157d62fa51140b964920833216ea, type: 3}
@@ -104,3 +105,9 @@ MonoBehaviour:
   - {fileID: 888350324257194877, guid: b083a7bc20884c14e91adb8f86547fa0, type: 3}
   - {fileID: 4835428507308315959, guid: daec3cc7b7611eb439b9d9b0b68d13b4, type: 3}
   - {fileID: 7978597780222568617, guid: dd790cd80a7d23344930345ad86ab5fe, type: 3}
+  shapePreviews:
+  - {fileID: 406159497350231387, guid: aeec2c6a7418bf0489af5e39b8b3ea22, type: 3}
+  - {fileID: 2889566473779303575, guid: 2d9c56e84306f5e459d9004be1359a22, type: 3}
+  - {fileID: 7624189146383322886, guid: 0de8558f1d0302f49b7a0c6505f28a49, type: 3}
+  - {fileID: 5557374839925236560, guid: c3fcb100b13234c4c9014b095e692fb5, type: 3}
+  - {fileID: 9078342914447106814, guid: 9d622311d0e8eb14f9e670c57794e7c1, type: 3}

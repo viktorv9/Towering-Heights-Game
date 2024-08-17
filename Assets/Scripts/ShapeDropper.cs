@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ShapeDropper : MonoBehaviour {
 
@@ -9,21 +11,52 @@ public class ShapeDropper : MonoBehaviour {
 
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private List<GameObject> shapes;
+    [SerializeField] private List<GameObject> shapePreviews;
+
+    private GameObject nextShapePreview;
+    private int nextShapeIndex;
+    private Vector3 nextRotation;
+
+    void Start() {
+        GenerateNextShape();
+    }
 
     void Update() {
         UpdatePosition();
+        UpdatePreviewPosition();
         if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)) HandleDrop();
     }
 
     void HandleDrop() {
-        GameObject dropShape = shapes[Random.Range(0,(shapes.Count))];
-        Instantiate(dropShape, transform.position, Quaternion.identity);
+        GameObject dropShape = shapes[nextShapeIndex];
+        Quaternion nextRotationQuaternion = Quaternion.Euler(nextRotation);
+        Instantiate(dropShape, transform.position, nextRotationQuaternion);
+        Destroy(nextShapePreview);
+        GenerateNextShape();
+    }
+    
+    void GenerateNextShape() {
+        nextShapeIndex = Random.Range(0, (shapes.Count));
+        nextRotation = GenerateRandomRotation();
+        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+    }
+    
+    Vector3 GenerateRandomRotation() {
+        int randomXRot = Random.Range(0, 4) * 90;
+        int randomYRot = Random.Range(0, 4) * 90;
+        int randomZRot = Random.Range(0, 4) * 90;
+        return new Vector3(randomXRot, randomYRot, randomZRot);
+    }
+    
+    void UpdatePreviewPosition() {
+        nextShapePreview.transform.position = transform.position;
+        nextShapePreview.transform.eulerAngles = nextRotation;
     }
     
     void UpdatePosition() {
         Vector3 newPosition = transform.position;
 
-        newPosition.y = heightFollowTarget.position.y + 3f;
+        newPosition.y = heightFollowTarget.position.y + 1f;
 
         if (Input.GetKey(KeyCode.W)) newPosition += cameraTransform.forward * (horizontalSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A)) newPosition -= cameraTransform.right * (horizontalSpeed * Time.deltaTime);
