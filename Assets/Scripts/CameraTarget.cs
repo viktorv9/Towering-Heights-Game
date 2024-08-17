@@ -10,8 +10,6 @@ public class CameraTarget : MonoBehaviour {
     private float minCameraHeight;
 
     private void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         minCameraHeight = transform.position.y;
     }
 

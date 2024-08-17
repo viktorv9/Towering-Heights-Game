@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shape Dropper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shape Dropper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/I.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/I.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/O.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/O.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Slope.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Slope.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/T.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/T.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Wedge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Wedge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Z.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Z.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/World Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/World Base.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShapePreview.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -35,15 +24,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Unity.exe" />
@@ -83,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1723844545819</updated>
       <workItem from="1723844548205" duration="2000" />
-      <workItem from="1723895736303" duration="6094000" />
+      <workItem from="1723895736303" duration="6155000" />
+      <workItem from="1723923883577" duration="1533000" />
     </task>
     <servers />
   </component>

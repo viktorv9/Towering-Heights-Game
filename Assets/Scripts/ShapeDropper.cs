@@ -22,6 +22,8 @@ public class ShapeDropper : MonoBehaviour {
     }
 
     void Update() {
+        if (PauseMenu.GameIsPaused) return;
+        
         UpdatePosition();
         UpdatePreviewPosition();
         if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)) HandleDrop();
