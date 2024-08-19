@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6449791283332591836, guid: dd790cd80a7d23344930345ad86ab5fe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6545233967564717699, guid: dd790cd80a7d23344930345ad86ab5fe,
         type: 3}
       propertyPath: m_IsTrigger
@@ -93,16 +98,36 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
+    - target: {fileID: 7682941823209647079, guid: dd790cd80a7d23344930345ad86ab5fe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910857341240558026, guid: dd790cd80a7d23344930345ad86ab5fe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7978597780222568617, guid: dd790cd80a7d23344930345ad86ab5fe,
         type: 3}
       propertyPath: m_Name
       value: Z Preview
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978597780222568617, guid: dd790cd80a7d23344930345ad86ab5fe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8250992531692235732, guid: dd790cd80a7d23344930345ad86ab5fe,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
+    - target: {fileID: 8520281472112624615, guid: dd790cd80a7d23344930345ad86ab5fe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

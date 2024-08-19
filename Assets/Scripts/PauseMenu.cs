@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
+    public static bool TutorialShown = false;
 
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject helpMenuUI;
 
     private void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (!TutorialShown) {
+            HowToPlay();
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+            TutorialShown = true;
+        }
     }
 
     private void Update() {
@@ -25,11 +31,19 @@ public class PauseMenu : MonoBehaviour {
     
     public void Resume() {
         pauseMenuUI.SetActive(false);
+        helpMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+    
+    public void HowToPlay() {
+        pauseMenuUI.SetActive(false);
+        helpMenuUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     public void Pause() {

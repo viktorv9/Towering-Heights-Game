@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4747260223375099540}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3966768497637031039
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f15479bd9ca6c841bdf18a1f389256f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameUI: {fileID: 0}
   heightFollowTarget: {fileID: 0}
   cameraTransform: {fileID: 0}
   horizontalSpeed: 1
+  verticalSpeed: 0
   shapes:
   - {fileID: 888350324257194877, guid: 74d6157d62fa51140b964920833216ea, type: 3}
   - {fileID: 7978597780222568617, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4, type: 3}

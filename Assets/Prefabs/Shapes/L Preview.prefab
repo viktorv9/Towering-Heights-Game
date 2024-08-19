@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
+    - target: {fileID: 1317437194688901726, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1524598978589696105, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -73,6 +78,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4315044867079956638, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4746625942045290860, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
         type: 3}
       propertyPath: m_IsTrigger
@@ -93,10 +103,25 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7682941823209647079, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910857341240558026, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7978597780222568617, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
         type: 3}
       propertyPath: m_Name
       value: L Preview
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978597780222568617, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8329860824250563106, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4,
         type: 3}

@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slope Preview
       objectReference: {fileID: 0}
+    - target: {fileID: 6257443880326174759, guid: cc7ff68390e23fa4ab7e0b42bb402a77,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7274377641030994676, guid: cc7ff68390e23fa4ab7e0b42bb402a77,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

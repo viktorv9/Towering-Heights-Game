@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1581559499522113607}
   - component: {fileID: 6079883557872283008}
   m_Layer: 0
-  m_Name: Camera Target
+  m_Name: Follow Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3689911a4c6854fb563cfe6fd70fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  stepSize: 0.2
+  moveSpeed: 10

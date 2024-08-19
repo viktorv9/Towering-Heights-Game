@@ -23,11 +23,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: O Preview
       objectReference: {fileID: 0}
+    - target: {fileID: 888350324257194877, guid: b083a7bc20884c14e91adb8f86547fa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1039360161713559609, guid: b083a7bc20884c14e91adb8f86547fa0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
+    - target: {fileID: 1548687586738911610, guid: b083a7bc20884c14e91adb8f86547fa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799539964256983354, guid: b083a7bc20884c14e91adb8f86547fa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3416173846278939037, guid: b083a7bc20884c14e91adb8f86547fa0,
         type: 3}
       propertyPath: m_IsTrigger
@@ -53,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
+    - target: {fileID: 7237421561714980332, guid: b083a7bc20884c14e91adb8f86547fa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8360947206174026312, guid: b083a7bc20884c14e91adb8f86547fa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412003193378621554, guid: b083a7bc20884c14e91adb8f86547fa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8474607093775009023, guid: b083a7bc20884c14e91adb8f86547fa0,
         type: 3}
