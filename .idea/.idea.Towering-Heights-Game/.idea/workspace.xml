@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FollowTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera Target.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera Target.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shape Dropper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shape Dropper.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/I Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/I Preview.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/L Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/L Preview.prefab" afterDir="false" />
@@ -14,33 +11,10 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/T Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/T Preview.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Wedge Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Wedge Preview.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Z Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Z Preview.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Pause Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Pause Menu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/World Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/World Base.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowTarget.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Game Over Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Game Over Menu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOverMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dpcomic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dpcomic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShapePreview.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.16/Editor/BurstDisassembler.Core.ARM64.info.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Samples~/URPPackageSamples/SharedAssets/Scripts/FirstPersonController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/Utilities/EditorApplicationUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -121,7 +96,8 @@
       <workItem from="1723844548205" duration="2000" />
       <workItem from="1723895736303" duration="6155000" />
       <workItem from="1723923883577" duration="14347000" />
-      <workItem from="1724069567353" duration="4092000" />
+      <workItem from="1724069567353" duration="4718000" />
+      <workItem from="1724085379813" duration="1020000" />
     </task>
     <servers />
   </component>

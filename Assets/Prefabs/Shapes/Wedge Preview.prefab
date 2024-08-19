@@ -112,6 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
-  errorMaterial: {fileID: 2100000, guid: 1be64fffb6e1c23469dab8a5a91df46c, type: 2}
+  errorMaterial: {fileID: 2100000, guid: 4f3e2801dbb427f4aa356fd66447a82c, type: 2}
   associatedRenderers:
   - {fileID: 6876565413811115098}

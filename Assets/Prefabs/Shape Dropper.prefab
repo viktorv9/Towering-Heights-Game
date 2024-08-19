@@ -97,10 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameUI: {fileID: 0}
+  gameOverMenu: {fileID: 0}
   heightFollowTarget: {fileID: 0}
   cameraTransform: {fileID: 0}
-  horizontalSpeed: 1
-  verticalSpeed: 0
+  horizontalSpeed: 1.5
   shapes:
   - {fileID: 888350324257194877, guid: 74d6157d62fa51140b964920833216ea, type: 3}
   - {fileID: 7978597780222568617, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4, type: 3}
@@ -113,3 +113,9 @@ MonoBehaviour:
   - {fileID: 7624189146383322886, guid: 0de8558f1d0302f49b7a0c6505f28a49, type: 3}
   - {fileID: 5557374839925236560, guid: c3fcb100b13234c4c9014b095e692fb5, type: 3}
   - {fileID: 9078342914447106814, guid: 9d622311d0e8eb14f9e670c57794e7c1, type: 3}
+  advancedShapes:
+  - {fileID: 6257443880326174759, guid: cc7ff68390e23fa4ab7e0b42bb402a77, type: 3}
+  - {fileID: 6257443880326174759, guid: 16978e18ce6994b4db17cda99d6fa159, type: 3}
+  AdvancedShapePreviews:
+  - {fileID: 3160462999529527672, guid: 73fa96e4f04497c46bec9e637a085a6a, type: 3}
+  - {fileID: 7875485325622511241, guid: c1db326626de83b4db0cf63f6238df44, type: 3}

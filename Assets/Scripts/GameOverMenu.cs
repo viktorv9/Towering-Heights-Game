@@ -10,6 +10,8 @@ public class GameOverMenu : MonoBehaviour {
     public void Restart() {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Quit() {

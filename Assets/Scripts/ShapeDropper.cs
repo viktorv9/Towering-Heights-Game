@@ -15,6 +15,8 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private List<GameObject> shapes;
     [SerializeField] private List<GameObject> shapePreviews;
+    [SerializeField] private List<GameObject> advancedShapes;
+    [SerializeField] private List<GameObject> AdvancedShapePreviews;
     
     private bool gameOver = false;
     private int currentScore;
@@ -60,6 +62,7 @@ public class ShapeDropper : MonoBehaviour {
         Instantiate(dropShape, transform.position, nextRotationQuaternion);
         
         currentScore++;
+        if (currentScore == 50) AddAdvancedShapes();
         gameUI.UpdateScore(currentScore);
 
         timeLastDrop = Time.time;
@@ -71,6 +74,18 @@ public class ShapeDropper : MonoBehaviour {
         nextShapeIndex = Random.Range(0, (shapes.Count));
         nextRotation = GenerateRandomRotation();
         nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+        nextShapePreview.SetActive(false);
+        StartCoroutine(SetActiveAfterCooldown(nextShapePreview));
+    }
+    
+    void AddAdvancedShapes() {
+        shapes.AddRange(advancedShapes);
+        shapePreviews.AddRange(AdvancedShapePreviews);
+    }
+    
+    IEnumerator SetActiveAfterCooldown(GameObject inactiveGameObject) {
+        yield return new WaitForSeconds(1f);
+        inactiveGameObject.SetActive(true);
     }
     
     Vector3 GenerateRandomRotation() {
@@ -92,12 +107,12 @@ public class ShapeDropper : MonoBehaviour {
         flattenedCameraTransform.eulerAngles =
             new Vector3(0, flattenedCameraTransform.eulerAngles.y, flattenedCameraTransform.eulerAngles.z);
         
-        if (Input.GetKey(KeyCode.W)) newPosition += cameraTransform.forward * (horizontalSpeed);
-        if (Input.GetKey(KeyCode.A)) newPosition -= cameraTransform.right * (horizontalSpeed);
-        if (Input.GetKey(KeyCode.S)) newPosition -= cameraTransform.forward * (horizontalSpeed);
-        if (Input.GetKey(KeyCode.D)) newPosition += cameraTransform.right * (horizontalSpeed);
+        if (Input.GetKey(KeyCode.W)) newPosition += cameraTransform.forward;
+        if (Input.GetKey(KeyCode.A)) newPosition -= cameraTransform.right;
+        if (Input.GetKey(KeyCode.S)) newPosition -= cameraTransform.forward;
+        if (Input.GetKey(KeyCode.D)) newPosition += cameraTransform.right;
         
-        newPosition = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime);
+        newPosition = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * horizontalSpeed);
         
         newPosition.y = heightFollowTarget.position.y + 1f;
 
