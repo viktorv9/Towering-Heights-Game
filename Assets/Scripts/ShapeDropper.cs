@@ -6,13 +6,17 @@ using Random = UnityEngine.Random;
 
 public class ShapeDropper : MonoBehaviour {
 
+    [SerializeField] private GameUI gameUI;
+
     [SerializeField] private Transform heightFollowTarget;
     [SerializeField] private Transform cameraTransform;
 
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private List<GameObject> shapes;
     [SerializeField] private List<GameObject> shapePreviews;
-
+    
+    private int currentScore;
+    
     private GameObject nextShapePreview;
     private int nextShapeIndex;
     private Vector3 nextRotation;
@@ -33,6 +37,10 @@ public class ShapeDropper : MonoBehaviour {
         GameObject dropShape = shapes[nextShapeIndex];
         Quaternion nextRotationQuaternion = Quaternion.Euler(nextRotation);
         Instantiate(dropShape, transform.position, nextRotationQuaternion);
+        
+        currentScore++;
+        gameUI.UpdateScore(currentScore);
+        
         Destroy(nextShapePreview);
         GenerateNextShape();
     }

@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Pause Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Pause Menu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShapeDropper.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +74,7 @@
       <updated>1723844545819</updated>
       <workItem from="1723844548205" duration="2000" />
       <workItem from="1723895736303" duration="6155000" />
-      <workItem from="1723923883577" duration="1533000" />
+      <workItem from="1723923883577" duration="7729000" />
     </task>
     <servers />
   </component>
