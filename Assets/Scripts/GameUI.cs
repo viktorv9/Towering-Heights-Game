@@ -9,7 +9,7 @@ public class GameUI : MonoBehaviour
 
     public void UpdateScore(int newScore) {
         string newText = "score :\n" + newScore + " / 50";
-        if (newScore >= 50) newText += "\n\nadvanced\nshaped\nadded!";
+        if (newScore >= 50) newText += "\n\nadvanced\nshapes\nadded!";
         scoreTextArea.SetText(newText);
         if (newScore == 50) scoreTextArea.color = Color.yellow;
     }
