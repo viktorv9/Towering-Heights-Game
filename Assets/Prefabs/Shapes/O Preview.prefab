@@ -18,6 +18,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 423612794018014429, guid: b083a7bc20884c14e91adb8f86547fa0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 888350324257194877, guid: b083a7bc20884c14e91adb8f86547fa0,
         type: 3}
       propertyPath: m_Name
@@ -183,6 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fac948bbab9584482733abe35e04ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  possibleRotations:
+  - {x: 0, y: 0, z: 0}
+  - {x: 90, y: 0, z: 0}
+  - {x: 90, y: 90, z: 0}
   defaultMaterial: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
   errorMaterial: {fileID: 2100000, guid: 4f3e2801dbb427f4aa356fd66447a82c, type: 2}
   associatedRenderers:

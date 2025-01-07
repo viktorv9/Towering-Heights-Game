@@ -111,6 +111,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fac948bbab9584482733abe35e04ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  possibleRotations:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 90, z: 0}
+  - {x: 0, y: 180, z: 0}
+  - {x: 0, y: 270, z: 0}
+  - {x: 90, y: 0, z: 0}
+  - {x: 90, y: 90, z: 0}
+  - {x: 90, y: 180, z: 0}
+  - {x: 90, y: 270, z: 0}
+  - {x: 180, y: 0, z: 0}
+  - {x: 180, y: 90, z: 0}
+  - {x: 180, y: 180, z: 0}
+  - {x: 180, y: 270, z: 0}
+  - {x: 270, y: 0, z: 0}
+  - {x: 270, y: 90, z: 0}
+  - {x: 270, y: 180, z: 0}
+  - {x: 270, y: 270, z: 0}
+  - {x: 0, y: 0, z: 90}
+  - {x: 0, y: 90, z: 90}
+  - {x: 0, y: 180, z: 90}
+  - {x: 0, y: 270, z: 90}
+  - {x: 0, y: 0, z: 270}
+  - {x: 0, y: 90, z: 270}
+  - {x: 0, y: 180, z: 270}
+  - {x: 0, y: 270, z: 270}
   defaultMaterial: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
   errorMaterial: {fileID: 2100000, guid: 4f3e2801dbb427f4aa356fd66447a82c, type: 2}
   associatedRenderers:

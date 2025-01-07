@@ -21,9 +21,10 @@ public class ShapeDropper : MonoBehaviour {
     private bool gameOver = false;
     private int currentScore;
     
-    private GameObject nextShapePreview;
+    private ShapePreview nextShapePreview;
     private int nextShapeIndex;
     private Vector3 nextRotation;
+    private int nextRotationIndex;
     private float timeLastDrop;
 
     void Start() {
@@ -51,7 +52,8 @@ public class ShapeDropper : MonoBehaviour {
         UpdatePreviewPosition();
         
         if (IsGameOver()) return;
-        if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)) HandleDrop();
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) HandleDrop();
+        if (Input.GetKeyDown(KeyCode.R)) RotateBlock();
     }
 
     void HandleDrop() {
@@ -66,16 +68,25 @@ public class ShapeDropper : MonoBehaviour {
         gameUI.UpdateScore(currentScore);
 
         timeLastDrop = Time.time;
-        Destroy(nextShapePreview);
+        Destroy(nextShapePreview.gameObject);
         GenerateNextShape();
+    }
+
+    void RotateBlock() {
+        nextRotationIndex += 1;
+        if (nextRotationIndex > nextShapePreview.GetPossibleRotations.Count-1) nextRotationIndex = 0;
+        
+        nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
     }
     
     void GenerateNextShape() {
-        nextShapeIndex = Random.Range(0, (shapes.Count));
-        nextRotation = GenerateRandomRotation();
-        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
-        nextShapePreview.SetActive(false);
-        StartCoroutine(SetActiveAfterCooldown(nextShapePreview));
+        nextShapeIndex = Random.Range(0, shapes.Count);
+        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
+        nextRotationIndex = 0;
+        nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
+        
+        nextShapePreview.gameObject.SetActive(false);
+        StartCoroutine(SetActiveAfterCooldown(nextShapePreview.gameObject));
     }
     
     void AddAdvancedShapes() {
@@ -86,13 +97,6 @@ public class ShapeDropper : MonoBehaviour {
     IEnumerator SetActiveAfterCooldown(GameObject inactiveGameObject) {
         yield return new WaitForSeconds(1f);
         inactiveGameObject.SetActive(true);
-    }
-    
-    Vector3 GenerateRandomRotation() {
-        int randomXRot = Random.Range(0, 4) * 90;
-        int randomYRot = Random.Range(0, 4) * 90;
-        int randomZRot = Random.Range(0, 4) * 90;
-        return new Vector3(randomXRot, randomYRot, randomZRot);
     }
     
     void UpdatePreviewPosition() {
