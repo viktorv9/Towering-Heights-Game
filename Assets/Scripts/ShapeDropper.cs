@@ -12,6 +12,7 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float verticalSpeed;
+    [SerializeField] private float holdSpeedUpMultiplier;
     
     [SerializeField] private List<GameObject> shapes;
     [SerializeField] private List<GameObject> shapePreviews;
@@ -108,6 +109,14 @@ public class ShapeDropper : MonoBehaviour {
         Vector3 currentPos = transform.position;
         Vector3 newXPosition = transform.position;
         
+        float tempHorizontalSpeed = horizontalSpeed;
+        float tempVerticalSpeed = verticalSpeed;
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            tempHorizontalSpeed *= holdSpeedUpMultiplier;
+            tempVerticalSpeed *= holdSpeedUpMultiplier;
+        }
+        
+        
         Transform flattenedCameraTransform = cameraTransform;
         flattenedCameraTransform.eulerAngles =
             new Vector3(0, flattenedCameraTransform.eulerAngles.y, flattenedCameraTransform.eulerAngles.z);
@@ -117,10 +126,10 @@ public class ShapeDropper : MonoBehaviour {
         if (Input.GetKey(KeyCode.S)) newXPosition -= cameraTransform.forward;
         if (Input.GetKey(KeyCode.D)) newXPosition += cameraTransform.right;
         
-        float newHeight = transform.position.y + Input.mouseScrollDelta.y * verticalSpeed;
+        float newHeight = transform.position.y + Input.mouseScrollDelta.y * tempVerticalSpeed;
         if (newHeight < 0) newHeight = 0;
         
-        transform.position = Vector3.MoveTowards(transform.position, newXPosition, Time.deltaTime * horizontalSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, newXPosition, Time.deltaTime * tempHorizontalSpeed);
         transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
     }
 }
