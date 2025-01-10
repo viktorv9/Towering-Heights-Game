@@ -9,10 +9,10 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject gameOverMenu;
 
-    [SerializeField] private Transform heightFollowTarget;
     [SerializeField] private Transform cameraTransform;
-
     [SerializeField] private float horizontalSpeed;
+    [SerializeField] private float verticalSpeed;
+    
     [SerializeField] private List<GameObject> shapes;
     [SerializeField] private List<GameObject> shapePreviews;
     [SerializeField] private List<GameObject> advancedShapes;
@@ -105,21 +105,22 @@ public class ShapeDropper : MonoBehaviour {
     }
     
     void UpdatePosition() {
-        Vector3 newPosition = transform.position;
+        Vector3 currentPos = transform.position;
+        Vector3 newXPosition = transform.position;
         
         Transform flattenedCameraTransform = cameraTransform;
         flattenedCameraTransform.eulerAngles =
             new Vector3(0, flattenedCameraTransform.eulerAngles.y, flattenedCameraTransform.eulerAngles.z);
         
-        if (Input.GetKey(KeyCode.W)) newPosition += cameraTransform.forward;
-        if (Input.GetKey(KeyCode.A)) newPosition -= cameraTransform.right;
-        if (Input.GetKey(KeyCode.S)) newPosition -= cameraTransform.forward;
-        if (Input.GetKey(KeyCode.D)) newPosition += cameraTransform.right;
+        if (Input.GetKey(KeyCode.W)) newXPosition += cameraTransform.forward;
+        if (Input.GetKey(KeyCode.A)) newXPosition -= cameraTransform.right;
+        if (Input.GetKey(KeyCode.S)) newXPosition -= cameraTransform.forward;
+        if (Input.GetKey(KeyCode.D)) newXPosition += cameraTransform.right;
         
-        newPosition = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * horizontalSpeed);
+        float newHeight = transform.position.y + Input.mouseScrollDelta.y * verticalSpeed;
+        if (newHeight < 0) newHeight = 0;
         
-        newPosition.y = heightFollowTarget.position.y + 1f;
-
-        transform.position = newPosition;
+        transform.position = Vector3.MoveTowards(transform.position, newXPosition, Time.deltaTime * horizontalSpeed);
+        transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
     }
 }
