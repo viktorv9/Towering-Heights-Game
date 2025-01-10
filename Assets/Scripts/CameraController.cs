@@ -6,16 +6,18 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private CinemachinePOV cinemachinePOV;
+    
+    private void Start() {
+        cinemachinePOV = cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
+    }
+    
+    public void SetHorizontalInputInverted(bool isInverted) {
+        cinemachinePOV.m_HorizontalAxis.m_InvertInput = isInverted;
+    }
+    
+    public void SetVerticalInputInverted(bool isInverted) {
+        cinemachinePOV.m_VerticalAxis.m_InvertInput = isInverted;
     }
 }

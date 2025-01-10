@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour {
     public static bool TutorialShown = false;
 
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject settingsMenuUI;
     [SerializeField] private GameObject helpMenuUI;
 
     private void Start() {
@@ -29,9 +30,14 @@ public class PauseMenu : MonoBehaviour {
         }
     }
     
-    public void Resume() {
+    private void DisableAllMenus() {
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         helpMenuUI.SetActive(false);
+    }
+    
+    public void Resume() {
+        DisableAllMenus();
         Time.timeScale = 1f;
         GameIsPaused = false;
         
@@ -39,18 +45,24 @@ public class PauseMenu : MonoBehaviour {
         Cursor.visible = false;
     }
     
-    public void HowToPlay() {
-        pauseMenuUI.SetActive(false);
-        helpMenuUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-    
     public void Pause() {
+        DisableAllMenus();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
         
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    
+    public void NavigateSettings() {
+        DisableAllMenus();
+        settingsMenuUI.SetActive(true);
+    }
+    
+    public void HowToPlay() {
+        DisableAllMenus();
+        helpMenuUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
