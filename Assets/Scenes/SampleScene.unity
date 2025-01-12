@@ -761,16 +761,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afe9ef5e95bcaf43a4422185a22cd49, type: 3}
---- !u!114 &938039360 stripped
+--- !u!114 &857606678 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7316212517565417464, guid: 962d21efbed8ad24ab59586e7565a68e,
+  m_CorrespondingSourceObject: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
     type: 3}
-  m_PrefabInstance: {fileID: 6438126774781124932}
+  m_PrefabInstance: {fileID: 7253911354990863644}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0a55b2037eb064d87a042e0b53aaa4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1073982064
@@ -870,6 +870,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2491858697997763209, guid: 7c60503b5fb8e624faa3cd8bdaabcde7,
     type: 3}
   m_PrefabInstance: {fileID: 9008237285125971756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1376080367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
+    type: 3}
+  m_PrefabInstance: {fileID: 7253911354990863644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1478220889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
+    type: 3}
+  m_PrefabInstance: {fileID: 7253911354990863644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2038711727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8445406940836875533, guid: 962d21efbed8ad24ab59586e7565a68e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6438126774781124932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2039129937
 PrefabInstance:
@@ -1227,6 +1257,21 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 20193506}
+    - target: {fileID: 7316212517565417464, guid: 962d21efbed8ad24ab59586e7565a68e,
+        type: 3}
+      propertyPath: cameraSensitivitySlider
+      value: 
+      objectReference: {fileID: 1478220889}
+    - target: {fileID: 7316212517565417464, guid: 962d21efbed8ad24ab59586e7565a68e,
+        type: 3}
+      propertyPath: verticalInputInvertedToggle
+      value: 
+      objectReference: {fileID: 857606678}
+    - target: {fileID: 7316212517565417464, guid: 962d21efbed8ad24ab59586e7565a68e,
+        type: 3}
+      propertyPath: horizontalInputInvertedToggle
+      value: 
+      objectReference: {fileID: 1376080367}
     - target: {fileID: 7738812440365599808, guid: 962d21efbed8ad24ab59586e7565a68e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1395,59 +1440,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
+    - target: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
+    - target: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 938039360}
-    - target: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
+      objectReference: {fileID: 2038711727}
+    - target: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetHorizontalInputInverted
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
+    - target: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CameraController, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
+    - target: {fileID: 3090017859743987288, guid: 8298926945ac3c84da11d5a8cfa49655,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 938039360}
-    - target: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetVerticalInputInverted
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CameraController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646781981185641704, guid: 8298926945ac3c84da11d5a8cfa49655,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5374234852009089973, guid: 8298926945ac3c84da11d5a8cfa49655,
