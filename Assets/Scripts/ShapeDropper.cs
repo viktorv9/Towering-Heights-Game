@@ -18,6 +18,8 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private List<GameObject> shapePreviews;
     [SerializeField] private List<GameObject> advancedShapes;
     [SerializeField] private List<GameObject> AdvancedShapePreviews;
+
+    private CameraController cameraController;
     
     private bool gameOver = false;
     private int currentScore;
@@ -29,6 +31,8 @@ public class ShapeDropper : MonoBehaviour {
     private float timeLastDrop;
 
     void Start() {
+        cameraController = cameraTransform.gameObject.GetComponent<CameraController>();
+
         timeLastDrop = Time.time - 1.0f;
         GenerateNextShape();
     }
@@ -108,6 +112,7 @@ public class ShapeDropper : MonoBehaviour {
     void UpdatePosition() {
         Vector3 currentPos = transform.position;
         Vector3 newXPosition = transform.position;
+        float newHeight = transform.position.y;
         
         float tempHorizontalSpeed = horizontalSpeed;
         float tempVerticalSpeed = verticalSpeed;
@@ -126,9 +131,13 @@ public class ShapeDropper : MonoBehaviour {
         if (Input.GetKey(KeyCode.S)) newXPosition -= cameraTransform.forward;
         if (Input.GetKey(KeyCode.D)) newXPosition += cameraTransform.right;
         
-        float newHeight = transform.position.y + Input.mouseScrollDelta.y * tempVerticalSpeed;
-        if (newHeight < 0) newHeight = 0;
-        
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            cameraController.ZoomCamera(-Input.mouseScrollDelta.x);
+        } else {
+            newHeight += Input.mouseScrollDelta.y * tempVerticalSpeed;
+            if (newHeight < 0) newHeight = 0;
+        }
+
         transform.position = Vector3.MoveTowards(transform.position, newXPosition, Time.deltaTime * tempHorizontalSpeed);
         transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
     }
