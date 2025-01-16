@@ -131,7 +131,8 @@ public class ShapeDropper : MonoBehaviour {
         if (Input.GetKey(KeyCode.D)) newXPosition += cameraTransform.right;
         
         if (Input.GetKey(KeyCode.LeftShift)) {
-            cameraController.ZoomCamera(-Input.mouseScrollDelta.y); //NOTE: Mac kijkt hier naar mouseScrollDelta.x for some fucking reason
+            cameraController.ZoomCamera(-Input.mouseScrollDelta.y);
+            cameraController.ZoomCamera(-Input.mouseScrollDelta.x); //NOTE: Mac kijkt hier naar mouseScrollDelta.x for some fucking reason, vandaar 'dubbele' code
         } else {
             newHeight += Input.mouseScrollDelta.y * tempVerticalSpeed;
             if (newHeight < 0) newHeight = 0;
