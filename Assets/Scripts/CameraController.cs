@@ -13,9 +13,11 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private Toggle verticalInputInvertedToggle;
 
     private CinemachinePOV cinemachinePOV;
+    private CinemachineFramingTransposer cinemachineFramingTransposer;
     
     private void Start() {
         cinemachinePOV = cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
+        cinemachineFramingTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         
         cameraSensitivitySlider.onValueChanged.AddListener(delegate {
             SetCameraMaxSpeed(cameraSensitivitySlider.value);
@@ -39,5 +41,11 @@ public class CameraController : MonoBehaviour {
     
     private void SetVerticalInputInverted(bool isInverted) {
         cinemachinePOV.m_VerticalAxis.m_InvertInput = isInverted;
+    }
+
+    public void ZoomCamera(float zoomAmount) {
+        cinemachineFramingTransposer.m_CameraDistance += zoomAmount;
+        if (cinemachineFramingTransposer.m_CameraDistance < 0.1f) cinemachineFramingTransposer.m_CameraDistance = 0.1f;
+        if (cinemachineFramingTransposer.m_CameraDistance > 30) cinemachineFramingTransposer.m_CameraDistance = 30;
     }
 }
