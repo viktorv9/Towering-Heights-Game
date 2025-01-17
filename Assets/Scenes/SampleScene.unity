@@ -1074,7 +1074,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 566fbcf400c349e4ba837a30068dc4bd, type: 2}
+      objectReference: {fileID: 2100000, guid: 2c6daea917f2ac44082b4decb1da624c, type: 2}
     - target: {fileID: 2365869884614187433, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_ReceiveGI
@@ -1103,7 +1103,7 @@ PrefabInstance:
     - target: {fileID: 4311561470150621308, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4311561470150621308, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
@@ -1169,6 +1169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: World Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724663590894753703, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6590267551234282075, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
