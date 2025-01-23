@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WavesMotionless.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WavesMotionless.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Crate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Crate.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/TriPlaner.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/TriPlaner.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +98,7 @@
       <workItem from="1736694205405" duration="1531000" />
       <workItem from="1737044164871" duration="1192000" />
       <workItem from="1737113875795" duration="4856000" />
+      <workItem from="1737633347342" duration="4803000" />
     </task>
     <servers />
   </component>
