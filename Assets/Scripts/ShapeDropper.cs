@@ -8,6 +8,8 @@ public class ShapeDropper : MonoBehaviour {
 
     [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject gameOverMenu;
+    
+    [SerializeField] private GameObject heightGoal;
 
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private float horizontalSpeed;
@@ -136,6 +138,9 @@ public class ShapeDropper : MonoBehaviour {
         } else {
             newHeight += Input.mouseScrollDelta.y * tempVerticalSpeed;
             if (newHeight < 0) newHeight = 0;
+            if (heightGoal) {
+                if (newHeight > heightGoal.transform.position.y + 5) newHeight = heightGoal.transform.position.y + 5;
+            }
         }
 
         transform.position = Vector3.MoveTowards(transform.position, newXPosition, Time.deltaTime * tempHorizontalSpeed);

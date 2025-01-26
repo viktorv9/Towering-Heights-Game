@@ -859,6 +859,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 9008237285125971756}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1343714802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2291398564627407590, guid: 7fe345e9a498f5049af50693a17ebfe5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3443076916743025558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1376080369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
@@ -1204,6 +1210,11 @@ PrefabInstance:
       propertyPath: gameUI
       value: 
       objectReference: {fileID: 251765103}
+    - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
+        type: 3}
+      propertyPath: heightGoal
+      value: 
+      objectReference: {fileID: 1343714802}
     - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
         type: 3}
       propertyPath: gameOverMenu

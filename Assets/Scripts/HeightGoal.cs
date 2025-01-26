@@ -20,11 +20,8 @@ public class HeightGoal : MonoBehaviour
     private void Update() {
         canvas.transform.forward = Camera.main.transform.forward;
 
-        if (timeCollisionStart != 0) Debug.Log(Time.time - timeCollisionStart);
-        
         if (timeCollisionStart != 0) {
             if (Time.time - timeCollisionStart > goalCollisionDuration) {
-                Debug.Log("Reached high goal!! New height reached: " + transform.position.y + "m.");
                 timeCollisionStart = 0;
                 NextGoalHeight();
             }
