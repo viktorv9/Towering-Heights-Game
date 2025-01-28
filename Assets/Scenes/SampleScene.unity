@@ -1303,6 +1303,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeightGoal
       objectReference: {fileID: 0}
+    - target: {fileID: 4696113991167121783, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696113991167121783, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696113991167121783, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914986912910001504, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914986912910001504, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5111843184633560321, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1359,7 +1384,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330585545}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6307873732359499042, guid: 7fe345e9a498f5049af50693a17ebfe5, type: 3}
+    - {fileID: 3396470879409899374, guid: 7fe345e9a498f5049af50693a17ebfe5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe345e9a498f5049af50693a17ebfe5, type: 3}

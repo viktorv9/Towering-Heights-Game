@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8d6311e2-cdab-4da1-999c-c23f85044627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Towering-Heights-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Crate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Crate.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/towering-heights-ui.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/towering-heights-ui.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/towering-heights-ui.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/towering-heights-ui.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/HeightGoal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/HeightGoal.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeightGoal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeightGoal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +102,7 @@
       <workItem from="1737044164871" duration="1192000" />
       <workItem from="1737113875795" duration="4856000" />
       <workItem from="1737633347342" duration="4803000" />
+      <workItem from="1738057083682" duration="3334000" />
     </task>
     <servers />
   </component>
