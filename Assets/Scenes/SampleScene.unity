@@ -1230,6 +1230,11 @@ PrefabInstance:
       propertyPath: heightFollowTarget
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
+        type: 3}
+      propertyPath: inputActions.m_Name
+      value: Input Actions
+      objectReference: {fileID: 0}
     - target: {fileID: 3465009080432118065, guid: 42673cbd032d4384a85f1b7c41415a34,
         type: 3}
       propertyPath: m_LocalPosition.x

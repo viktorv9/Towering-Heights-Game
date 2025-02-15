@@ -161,6 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7738812440365599808}
   - component: {fileID: 5682057300822449905}
+  - component: {fileID: 8949436901263063270}
   - component: {fileID: 7316212517565417464}
   m_Layer: 0
   m_Name: Virtual Camera
@@ -224,6 +225,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 8171139071466164578}
+--- !u!114 &8949436901263063270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445406940836875533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerIndex: -1
+  AutoEnableInputs: 1
+  XYAxis: {fileID: 1378168994782164419, guid: e409f2cc1b55ca34eaf900a3c2a8d39e, type: 3}
+  ZAxis: {fileID: 0}
 --- !u!114 &7316212517565417464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 5682057300822449905}
+  cameraSensitivitySlider: {fileID: 0}
+  horizontalInputInvertedToggle: {fileID: 0}
+  verticalInputInvertedToggle: {fileID: 0}

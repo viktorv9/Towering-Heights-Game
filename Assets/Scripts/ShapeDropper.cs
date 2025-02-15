@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class ShapeDropper : MonoBehaviour {
-
+    
     [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject gameOverMenu;
     
@@ -14,15 +15,18 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float verticalSpeed;
+    [SerializeField] private float zoomSpeed;
     [SerializeField] private float holdSpeedUpMultiplier;
     
     [SerializeField] private List<GameObject> shapes;
     [SerializeField] private List<GameObject> shapePreviews;
     [SerializeField] private List<GameObject> advancedShapes;
-    [SerializeField] private List<GameObject> AdvancedShapePreviews;
+    [SerializeField] private List<GameObject> advancedShapePreviews;
 
-    private CameraController cameraController;
+    private Controls playerControls;
     
+    private CameraController cameraController;
+
     private bool gameOver = false;
     private int currentScore;
     
@@ -33,12 +37,15 @@ public class ShapeDropper : MonoBehaviour {
     private float timeLastDrop;
 
     void Start() {
+        playerControls = new Controls();
+        playerControls.Player.Enable();
+        
         cameraController = cameraTransform.gameObject.GetComponent<CameraController>();
 
         timeLastDrop = Time.time - 1.0f;
         GenerateNextShape();
     }
-    
+
     public bool IsGameOver() {
         return gameOver;
     }
@@ -59,8 +66,8 @@ public class ShapeDropper : MonoBehaviour {
         UpdatePreviewPosition();
         
         if (IsGameOver()) return;
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) HandleDrop();
-        if (Input.GetKeyDown(KeyCode.R)) RotateBlock();
+        if (playerControls.Player.DropShape.triggered) HandleDrop();
+        if (playerControls.Player.Rotate.triggered) RotateBlock();
     }
 
     void HandleDrop() {
@@ -98,7 +105,7 @@ public class ShapeDropper : MonoBehaviour {
     
     void AddAdvancedShapes() {
         shapes.AddRange(advancedShapes);
-        shapePreviews.AddRange(AdvancedShapePreviews);
+        shapePreviews.AddRange(advancedShapePreviews);
     }
     
     IEnumerator SetActiveAfterCooldown(GameObject inactiveGameObject) {
@@ -112,38 +119,31 @@ public class ShapeDropper : MonoBehaviour {
     }
     
     void UpdatePosition() {
-        Vector3 newXPosition = transform.position;
+        Vector3 newHorizontalPosition = transform.position;
         float newHeight = transform.position.y;
         
         float tempHorizontalSpeed = horizontalSpeed;
         float tempVerticalSpeed = verticalSpeed;
-        if (Input.GetKey(KeyCode.LeftShift)) {
+        if (playerControls.Player.MoveSpeedUp.IsPressed()) {
             tempHorizontalSpeed *= holdSpeedUpMultiplier;
             tempVerticalSpeed *= holdSpeedUpMultiplier;
         }
-        
-        
-        Transform flattenedCameraTransform = cameraTransform;
-        flattenedCameraTransform.eulerAngles =
-            new Vector3(0, flattenedCameraTransform.eulerAngles.y, flattenedCameraTransform.eulerAngles.z);
-        
-        if (Input.GetKey(KeyCode.W)) newXPosition += cameraTransform.forward;
-        if (Input.GetKey(KeyCode.A)) newXPosition -= cameraTransform.right;
-        if (Input.GetKey(KeyCode.S)) newXPosition -= cameraTransform.forward;
-        if (Input.GetKey(KeyCode.D)) newXPosition += cameraTransform.right;
-        
-        if (Input.GetKey(KeyCode.LeftShift)) {
-            cameraController.ZoomCamera(-Input.mouseScrollDelta.y);
-            cameraController.ZoomCamera(-Input.mouseScrollDelta.x); //NOTE: Mac kijkt hier naar mouseScrollDelta.x for some fucking reason, vandaar 'dubbele' code
-        } else {
-            newHeight += Input.mouseScrollDelta.y * tempVerticalSpeed;
-            if (newHeight < 0) newHeight = 0;
-            if (heightGoal) {
-                if (newHeight > heightGoal.transform.position.y + 5) newHeight = heightGoal.transform.position.y + 5;
-            }
-        }
 
-        transform.position = Vector3.MoveTowards(transform.position, newXPosition, Time.deltaTime * tempHorizontalSpeed);
+        Vector2 playerMovementHorizontalInput = playerControls.Player.MoveHorizontal.ReadValue<Vector2>();
+        if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
+        if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
+        
+        Vector2 playerMovementVerticalInput = playerControls.Player.MoveVertical.ReadValue<Vector2>();
+        newHeight += playerMovementVerticalInput.y * tempVerticalSpeed;
+        if (newHeight < 0) newHeight = 0;
+        if (heightGoal) {
+            if (newHeight > heightGoal.transform.position.y + 5) newHeight = heightGoal.transform.position.y + 5;
+        }
+        
+        Vector2 playerZoomInput = playerControls.Player.Zoom.ReadValue<Vector2>();
+        cameraController.ZoomCamera(-playerZoomInput.y * zoomSpeed);
+
+        transform.position = Vector3.MoveTowards(transform.position, newHorizontalPosition, Time.deltaTime * tempHorizontalSpeed);
         transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
     }
 }

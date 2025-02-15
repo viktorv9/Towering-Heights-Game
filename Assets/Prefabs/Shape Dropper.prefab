@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4235044329818734155}
   - component: {fileID: 3966768497637031039}
   - component: {fileID: 1350644529415291633}
+  - component: {fileID: 2494367843560358673}
   m_Layer: 0
   m_Name: Shape Dropper
   m_TagString: Untagged
@@ -98,9 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameUI: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  heightGoal: {fileID: 0}
   cameraTransform: {fileID: 0}
   horizontalSpeed: 1.5
-  verticalSpeed: 0.2
+  verticalSpeed: 0.002
+  zoomSpeed: 0.01
   holdSpeedUpMultiplier: 3
   shapes:
   - {fileID: 888350324257194877, guid: 74d6157d62fa51140b964920833216ea, type: 3}
@@ -117,6 +120,35 @@ MonoBehaviour:
   advancedShapes:
   - {fileID: 6257443880326174759, guid: cc7ff68390e23fa4ab7e0b42bb402a77, type: 3}
   - {fileID: 6257443880326174759, guid: 16978e18ce6994b4db17cda99d6fa159, type: 3}
-  AdvancedShapePreviews:
-  - {fileID: 3160462999529527672, guid: 73fa96e4f04497c46bec9e637a085a6a, type: 3}
-  - {fileID: 7875485325622511241, guid: c1db326626de83b4db0cf63f6238df44, type: 3}
+  advancedShapePreviews: []
+--- !u!114 &2494367843560358673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747260223375099540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: e409f2cc1b55ca34eaf900a3c2a8d39e,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
