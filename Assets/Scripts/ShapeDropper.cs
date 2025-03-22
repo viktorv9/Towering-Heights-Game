@@ -119,6 +119,8 @@ public class ShapeDropper : MonoBehaviour {
     }
     
     void UpdatePosition() {
+        Transform flattenedCameraTransform = cameraTransform;
+        flattenedCameraTransform.eulerAngles = new Vector3(0, flattenedCameraTransform.eulerAngles.y, flattenedCameraTransform.eulerAngles.z);
         Vector3 newHorizontalPosition = transform.position;
         float newHeight = transform.position.y;
         
