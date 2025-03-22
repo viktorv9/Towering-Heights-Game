@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour {
 
+    [SerializeField] private float minCameraSpeed = 100;
+    [SerializeField] private float maxCameraSpeed = 500;
+
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
     [SerializeField] private Slider cameraSensitivitySlider;
@@ -20,7 +23,8 @@ public class CameraController : MonoBehaviour {
         cinemachineFramingTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         
         cameraSensitivitySlider.onValueChanged.AddListener(delegate {
-            SetCameraMaxSpeed(cameraSensitivitySlider.value);
+            float newCameraSpeed = (maxCameraSpeed - minCameraSpeed) * cameraSensitivitySlider.value + minCameraSpeed;
+            SetCameraMaxSpeed(newCameraSpeed);
         });
         horizontalInputInvertedToggle.onValueChanged.AddListener(delegate {
             SetHorizontalInputInverted(horizontalInputInvertedToggle.isOn);

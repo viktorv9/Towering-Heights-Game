@@ -2,16 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
     public static bool TutorialShown = false;
+    
+    [SerializeField] private EventSystem eventSystem;
 
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject pauseMenuFirstSelected;
+
     [SerializeField] private GameObject settingsMenuUI;
+    [SerializeField] private GameObject settingsMenuFirstSelected;
+
     [SerializeField] private GameObject helpMenuUI;
+    [SerializeField] private GameObject helpMenuFirstSelected;
+    
+    private Controls playerControls;
 
     private void Start() {
+        playerControls = new Controls();
+        playerControls.Player.Enable();
+
         if (!TutorialShown) {
             HowToPlay();
             Time.timeScale = 0f;
@@ -21,7 +34,7 @@ public class PauseMenu : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (playerControls.Player.Pause.triggered) {
             if (GameIsPaused) {
                 Resume();
             } else {
@@ -39,7 +52,7 @@ public class PauseMenu : MonoBehaviour {
     public void Resume() {
         DisableAllMenus();
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        StartCoroutine(SetGamePausedAfterDelay(false));
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -53,11 +66,15 @@ public class PauseMenu : MonoBehaviour {
         
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
+        eventSystem.SetSelectedGameObject(pauseMenuFirstSelected);
     }
     
     public void NavigateSettings() {
         DisableAllMenus();
         settingsMenuUI.SetActive(true);
+        
+        eventSystem.SetSelectedGameObject(settingsMenuFirstSelected);
     }
     
     public void HowToPlay() {
@@ -65,9 +82,16 @@ public class PauseMenu : MonoBehaviour {
         helpMenuUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
+        eventSystem.SetSelectedGameObject(helpMenuFirstSelected);
     }
     
     public void Quit() {
         Application.Quit();
+    }
+    
+    IEnumerator SetGamePausedAfterDelay(bool newPausedValue) {
+        yield return new WaitForSeconds(0.1f);
+        GameIsPaused = newPausedValue;
     }
 }

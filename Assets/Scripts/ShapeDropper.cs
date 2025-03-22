@@ -2,14 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class ShapeDropper : MonoBehaviour {
     
+    [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject gameOverMenu;
-    
+    [SerializeField] private GameObject gameOverMenuFirstSelected;
+
     [SerializeField] private GameObject heightGoal;
 
     [SerializeField] private Transform cameraTransform;
@@ -28,6 +31,7 @@ public class ShapeDropper : MonoBehaviour {
     private CameraController cameraController;
 
     private bool gameOver = false;
+    private bool gamePausedPrevFrame = false;
     private int currentScore;
     
     private ShapePreview nextShapePreview;
@@ -56,6 +60,7 @@ public class ShapeDropper : MonoBehaviour {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             gameOverMenu.SetActive(true);
+            eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
         }
     }
 
