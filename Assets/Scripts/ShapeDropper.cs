@@ -31,7 +31,6 @@ public class ShapeDropper : MonoBehaviour {
     private CameraController cameraController;
 
     private bool gameOver = false;
-    private bool gamePausedPrevFrame = false;
     private int currentScore;
     
     private ShapePreview nextShapePreview;
