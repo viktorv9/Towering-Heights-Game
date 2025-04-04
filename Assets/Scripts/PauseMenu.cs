@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour {
             }
         }
     }
-    
+
     private void DisableAllMenus() {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
@@ -64,9 +64,6 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 0f;
         GameIsPaused = true;
         
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        
         eventSystem.SetSelectedGameObject(pauseMenuFirstSelected);
     }
     
@@ -80,8 +77,6 @@ public class PauseMenu : MonoBehaviour {
     public void HowToPlay() {
         DisableAllMenus();
         helpMenuUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         
         eventSystem.SetSelectedGameObject(helpMenuFirstSelected);
     }

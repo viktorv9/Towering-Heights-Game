@@ -10,10 +10,15 @@ public class UIControlSwitch : MonoBehaviour {
     
     private void OnEnable() {
         InputHandler.OnInputModeChanged += SetAllGameObjectsActive;
+        InputHandler.OnInputModeChanged += SetMouseLockedState;
+        SetMouseLockedState(InputHandler.CurrentInputMode);
     }
 
     private void OnDisable() {
         InputHandler.OnInputModeChanged -= SetAllGameObjectsActive;
+        InputHandler.OnInputModeChanged -= SetMouseLockedState;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     
     private void SetAllGameObjectsActive(InputHandler.InputMode inputMode) {
@@ -23,5 +28,10 @@ public class UIControlSwitch : MonoBehaviour {
         controllerOnlyUI.ForEach(listGameObject => {
             listGameObject.SetActive(inputMode == InputHandler.InputMode.Controller);
         });
+    }
+    
+    private void SetMouseLockedState(InputHandler.InputMode inputMode) {
+        Cursor.lockState = inputMode == InputHandler.InputMode.Keyboard ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = inputMode == InputHandler.InputMode.Keyboard;
     }
 }

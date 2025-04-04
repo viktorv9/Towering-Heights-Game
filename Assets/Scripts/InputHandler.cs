@@ -9,33 +9,22 @@ public class InputHandler : MonoBehaviour {
 
     public enum InputMode { Controller, Keyboard, Touch };
     public static Action<InputMode> OnInputModeChanged;
-    public InputMode currentInputMode;
+    public static InputMode CurrentInputMode;
     
     private InputMode inputModeLastFrame;
     
     private void Start() {
-        currentInputMode = InputMode.Keyboard;
+        CurrentInputMode = InputMode.Keyboard;
     }
     
     private void Update() {
-        currentInputMode = SetInputMode();
+        CurrentInputMode = SetInputMode();
         
-        if (currentInputMode != inputModeLastFrame) {
-            OnInputModeChanged.Invoke(currentInputMode);
+        if (CurrentInputMode != inputModeLastFrame) {
+            OnInputModeChanged?.Invoke(CurrentInputMode);
         }
         
         inputModeLastFrame = SetInputMode();
-    }
-
-    public void SetMouseLockedState(bool mouseIsLocked) {
-        Debug.Log(mouseIsLocked);
-        if (mouseIsLocked) {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        } else {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = true;
-        }
     }
     
     private InputMode SetInputMode() {
@@ -68,6 +57,6 @@ public class InputHandler : MonoBehaviour {
             return InputMode.Keyboard;
         }
 
-        return currentInputMode;
+        return CurrentInputMode;
     }
 }

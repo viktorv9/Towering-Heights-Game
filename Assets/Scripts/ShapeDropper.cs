@@ -56,8 +56,6 @@ public class ShapeDropper : MonoBehaviour {
     public void SetGameOver(bool newState) {
         gameOver = newState;
         if (gameOver) {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             gameOverMenu.SetActive(true);
             eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
         }
@@ -139,8 +137,6 @@ public class ShapeDropper : MonoBehaviour {
         if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
         if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
 
-        Debug.Log(playerMovementHorizontalInput);
-        
         Vector2 playerMovementVerticalInput = playerControls.Player.MoveVertical.ReadValue<Vector2>();
         newHeight += playerMovementVerticalInput.y * tempVerticalSpeed;
         if (newHeight < 0) newHeight = 0;
