@@ -1,28 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIControlSwitch : MonoBehaviour {
     
-    [SerializeField] private ControlsTracker controlsTracker;
-
     [SerializeField] private List<GameObject> mouseKeyboardOnlyUI;
     [SerializeField] private List<GameObject> controllerOnlyUI;
     
-    private bool isMouseKeyboard = true;
+    private void OnEnable() {
+        InputHandler.OnInputModeChanged += SetAllGameObjectsActive;
+    }
 
-    void Update() {
-        if (isMouseKeyboard != controlsTracker.isMouseKeyboard) {
-            isMouseKeyboard = controlsTracker.isMouseKeyboard;
-
-            SetAllGameObjectsActive(mouseKeyboardOnlyUI, isMouseKeyboard);
-            SetAllGameObjectsActive(controllerOnlyUI, !isMouseKeyboard);
-        }
+    private void OnDisable() {
+        InputHandler.OnInputModeChanged -= SetAllGameObjectsActive;
     }
     
-    private void SetAllGameObjectsActive(List<GameObject> gameObjects, bool newValue) {
-        gameObjects.ForEach(listGameObject => {
-            listGameObject.SetActive(newValue);
+    private void SetAllGameObjectsActive(InputHandler.InputMode inputMode) {
+        mouseKeyboardOnlyUI.ForEach(listGameObject => {
+            listGameObject.SetActive(inputMode == InputHandler.InputMode.Keyboard);
+        });
+        controllerOnlyUI.ForEach(listGameObject => {
+            listGameObject.SetActive(inputMode == InputHandler.InputMode.Controller);
         });
     }
 }

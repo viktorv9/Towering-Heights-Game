@@ -138,6 +138,8 @@ public class ShapeDropper : MonoBehaviour {
         Vector2 playerMovementHorizontalInput = playerControls.Player.MoveHorizontal.ReadValue<Vector2>();
         if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
         if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
+
+        Debug.Log(playerMovementHorizontalInput);
         
         Vector2 playerMovementVerticalInput = playerControls.Player.MoveVertical.ReadValue<Vector2>();
         newHeight += playerMovementVerticalInput.y * tempVerticalSpeed;
@@ -148,6 +150,8 @@ public class ShapeDropper : MonoBehaviour {
         
         Vector2 playerZoomInput = playerControls.Player.Zoom.ReadValue<Vector2>();
         cameraController.ZoomCamera(-playerZoomInput.y * zoomSpeed);
+        
+        Debug.DrawRay(newHorizontalPosition, Vector3.up, Color.green);
 
         transform.position = Vector3.MoveTowards(transform.position, newHorizontalPosition, Time.deltaTime * tempHorizontalSpeed);
         transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
