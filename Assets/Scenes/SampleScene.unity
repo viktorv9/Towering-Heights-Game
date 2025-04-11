@@ -976,6 +976,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3443076916743025558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1343714803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3443076916743025558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343714802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a02f83ec899f814788e367579155379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1376080369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 285522869947792405, guid: 8298926945ac3c84da11d5a8cfa49655,
@@ -1256,9 +1268,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4545365103795787097, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
+      propertyPath: heightGoal
+      value: 
+      objectReference: {fileID: 1343714803}
+    - target: {fileID: 4545365103795787097, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
       propertyPath: shapeDropper
       value: 
       objectReference: {fileID: 632419839}
+    - target: {fileID: 4545365103795787097, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: pickups.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545365103795787097, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: pickups.Array.data[0]
+      value: 
+      objectReference: {fileID: -4828897670659003399, guid: 18592581c883efb439710b1909e1a772,
+        type: 3}
     - target: {fileID: 4822048237043188252, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_LocalPosition.x

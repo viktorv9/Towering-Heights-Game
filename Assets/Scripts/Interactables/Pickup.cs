@@ -21,8 +21,7 @@ public class Pickup : MonoBehaviour {
     private void Update() {
         if (timeCollisionStart != 0) {
             if (Time.time - timeCollisionStart > pickupCollisionDuration) {
-                Debug.Log("Picked up object! New Pickup!!!");
-                Destroy(gameObject);
+                PickUp();
             }
         }
     }
@@ -45,5 +44,10 @@ public class Pickup : MonoBehaviour {
             timeCollisionStart = 0;
             meshRenderer.material = defaultMaterial;
         }
+    }
+    
+    protected virtual void PickUp() {
+        Debug.Log("Picked up object! New Pickup!!!");
+        Destroy(gameObject);
     }
 }

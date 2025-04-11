@@ -53,6 +53,10 @@ public class HeightGoal : MonoBehaviour
         }
     }
     
+    public float GetCurrentGoalHeight() {
+        return goalHeights[0];
+    }
+    
     private void NextGoalHeight() {
         goalHeights.RemoveAt(0);
         if (goalHeights.Count > 0) {
