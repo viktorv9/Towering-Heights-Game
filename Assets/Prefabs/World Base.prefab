@@ -204,6 +204,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapeDropper: {fileID: 0}
+  platformPart: {fileID: 8070605208666738340, guid: add166663533ee740b051935a9817239,
+    type: 3}
+  heightGoal: {fileID: 0}
+  platformY: 1
+  pickups: []
 --- !u!1001 &3969034124355405101
 PrefabInstance:
   m_ObjectHideFlags: 0

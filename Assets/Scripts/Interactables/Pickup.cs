@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour {
-
+    
+    [SerializeField] private PickupType pickupType;
     [SerializeField] private float pickupCollisionDuration;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material collidingMaterial;
@@ -13,7 +14,15 @@ public class Pickup : MonoBehaviour {
     
     private List<GameObject> collidersInTrigger = new ();
     private float timeCollisionStart = 0;
+    
+    public enum PickupType {
+        Default,
+        Platform
+    }
 
+    public delegate void PickupAction(PickupType pickupType);
+    public static event PickupAction OnPickup;
+    
     private void Start() {
         meshRenderer = GetComponent<MeshRenderer>();
     }
@@ -46,8 +55,8 @@ public class Pickup : MonoBehaviour {
         }
     }
     
-    protected virtual void PickUp() {
-        Debug.Log("Picked up object! New Pickup!!!");
+    private void PickUp() {
+        OnPickup?.Invoke(pickupType);
         Destroy(gameObject);
     }
 }

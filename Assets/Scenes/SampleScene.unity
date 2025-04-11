@@ -1285,7 +1285,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickups.Array.data[0]
       value: 
-      objectReference: {fileID: -4828897670659003399, guid: 18592581c883efb439710b1909e1a772,
+      objectReference: {fileID: 985903348417994073, guid: 18592581c883efb439710b1909e1a772,
         type: 3}
     - target: {fileID: 4822048237043188252, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
