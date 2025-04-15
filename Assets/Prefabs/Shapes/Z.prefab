@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3202238157899952317}
   - component: {fileID: 5524451932452017503}
+  - component: {fileID: -4949411406499410062}
   m_Layer: 0
   m_Name: Z
   m_TagString: Block
@@ -378,6 +379,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4949411406499410062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7978597780222568617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7c339a36f8c124abe031f8697ce8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound:
+    Guid:
+      Data1: -2122135241
+      Data2: 1258920392
+      Data3: -965180028
+      Data4: 1834626731
+    Path: event:/Block Collision
 --- !u!1 &8520281472112624615
 GameObject:
   m_ObjectHideFlags: 0
