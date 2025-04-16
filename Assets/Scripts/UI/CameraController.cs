@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -5,10 +6,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour {
-
-    [SerializeField] private float minCameraSpeed = 100;
-    [SerializeField] private float maxCameraSpeed = 500;
-
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
     [SerializeField] private Slider cameraSensitivitySlider;
@@ -22,9 +19,10 @@ public class CameraController : MonoBehaviour {
         cinemachinePOV = cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
         cinemachineFramingTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         
+        LoadPlayerSettings();
+        
         cameraSensitivitySlider.onValueChanged.AddListener(delegate {
-            float newCameraSpeed = (maxCameraSpeed - minCameraSpeed) * cameraSensitivitySlider.value + minCameraSpeed;
-            SetCameraMaxSpeed(newCameraSpeed);
+            SetCameraMaxSpeed(cameraSensitivitySlider.value);
         });
         horizontalInputInvertedToggle.onValueChanged.AddListener(delegate {
             SetHorizontalInputInverted(horizontalInputInvertedToggle.isOn);
@@ -33,18 +31,38 @@ public class CameraController : MonoBehaviour {
             SetVerticalInputInverted(verticalInputInvertedToggle.isOn);
         });
     }
+
+    private void LoadPlayerSettings()
+    {
+        float savedCameraSensitivity = PlayerPrefs.GetFloat("CameraSensitivity", cameraSensitivitySlider.value);
+        SetCameraMaxSpeed(savedCameraSensitivity);
+        cameraSensitivitySlider.value = savedCameraSensitivity;
+        
+        bool savedHorizontalInputInverted = Convert.ToBoolean(
+            PlayerPrefs.GetInt("HorizontalInputInverted", horizontalInputInvertedToggle.isOn ? 1 : 0));
+        SetHorizontalInputInverted(savedHorizontalInputInverted);
+        horizontalInputInvertedToggle.isOn = savedHorizontalInputInverted;
+        
+        bool savedVerticalInputInverted = Convert.ToBoolean(
+            PlayerPrefs.GetInt("VerticalInputInverted", verticalInputInvertedToggle.isOn ? 1 : 0));
+        SetVerticalInputInverted(savedVerticalInputInverted);
+        verticalInputInvertedToggle.isOn = savedVerticalInputInverted;
+    }
     
     private void SetCameraMaxSpeed(float newMaxSpeed) {
         cinemachinePOV.m_HorizontalAxis.m_MaxSpeed = newMaxSpeed;
         cinemachinePOV.m_VerticalAxis.m_MaxSpeed = newMaxSpeed;
+        PlayerPrefs.SetFloat("CameraSensitivity", newMaxSpeed);
     }
     
     private void SetHorizontalInputInverted(bool isInverted) {
         cinemachinePOV.m_HorizontalAxis.m_InvertInput = isInverted;
+        PlayerPrefs.SetInt("HorizontalInputInverted", isInverted ? 1 : 0);
     }
     
     private void SetVerticalInputInverted(bool isInverted) {
         cinemachinePOV.m_VerticalAxis.m_InvertInput = isInverted;
+        PlayerPrefs.SetInt("VerticalInputInverted", isInverted ? 1 : 0);
     }
 
     public void ZoomCamera(float zoomAmount) {
