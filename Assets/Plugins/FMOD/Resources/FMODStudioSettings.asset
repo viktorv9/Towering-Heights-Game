@@ -466,7 +466,7 @@ MonoBehaviour:
   sourceProjectPath: C:/Users/vgver/OneDrive/projecten/sound/fmod/towering-heights/towering-heights.fspro
   sourceBankPath: C:/Users/vgver/OneDrive/projecten/sound/fmod/towering-heights/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -488,6 +488,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Music
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -58,4 +58,12 @@ public class AudioManager : MonoBehaviour
     public void PlayOneShot(EventReference sound, Vector3 worldPos) {
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
+    
+    public void PlayBlockCollision(EventReference sound, Vector3 worldPos, float velocity) {
+        var soundInstance = RuntimeManager.CreateInstance(sound);
+        soundInstance.set3DAttributes(worldPos.To3DAttributes());
+        soundInstance.setParameterByName("velocity", velocity);
+        soundInstance.start();
+        soundInstance.release();
+    }
 }

@@ -8,17 +8,16 @@ public class Shape : MonoBehaviour {
 
     [SerializeField] private EventReference collisionSound;
 
-    private bool enteredCollisionThisFrame;
+    private bool playedSoundThisFrame;
     
     private void Update() {
-        if (enteredCollisionThisFrame) {
-            AudioManager.instance.PlayOneShot(collisionSound, transform.position);
-        }
-
-        enteredCollisionThisFrame = false;
+        playedSoundThisFrame = false;
     }
 
     private void OnCollisionEnter(Collision collision) {
-        enteredCollisionThisFrame = true;
+        if (collision.relativeVelocity.magnitude > 0.1 && !playedSoundThisFrame) {
+            AudioManager.instance.PlayBlockCollision(collisionSound, transform.position, collision.relativeVelocity.magnitude);
+            playedSoundThisFrame = true;
+        }
     }
 }
