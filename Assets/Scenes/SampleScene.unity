@@ -128,12 +128,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2114845304967295053}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &149591563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4747260223375099540, guid: 42673cbd032d4384a85f1b7c41415a34,
-    type: 3}
-  m_PrefabInstance: {fileID: 2114845304967295053}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &251765097
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +311,6 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
-  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -469,20 +462,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &330585549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 149591563}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +611,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxVolumeSlider: {fileID: 2134572815}
   musicVolumeSlider: {fileID: 1004286621}
+  sceneMusic:
+    Guid:
+      Data1: -631643669
+      Data2: 1141925730
+      Data3: 2049735086
+      Data4: 1891996788
+    Path: event:/BGM
 --- !u!4 &576611923
 Transform:
   m_ObjectHideFlags: 0
@@ -641,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 576611921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.432222, y: 8.83739, z: 5.618516}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -659,7 +645,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2114845304967295053}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149591563}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f15479bd9ca6c841bdf18a1f389256f, type: 3}
@@ -1537,6 +1523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shape Dropper
       objectReference: {fileID: 0}
+    - target: {fileID: 4747260223375099540, guid: 42673cbd032d4384a85f1b7c41415a34,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1735,6 +1726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Virtual Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8646533615844007254, guid: 962d21efbed8ad24ab59586e7565a68e,
+        type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 330585543}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

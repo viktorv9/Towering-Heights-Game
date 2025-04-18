@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
 using UnityEngine.UI;
@@ -8,24 +9,29 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
 
-    private FMOD.Studio.Bus sfx;
-    private FMOD.Studio.Bus music;
-
     [SerializeField] private Slider sfxVolumeSlider;
     [SerializeField] private Slider musicVolumeSlider;
+    
+    [SerializeField] private EventReference sceneMusic;
 
-    public static float sfxVolume { get; private set; }
-    public static float musicVolume { get; private set; }
+    private List<EventInstance> eventInstances = new();
+    private EventInstance musicEventInstance;
+
+    private Bus sfxBus;
+    private Bus musicBus;
 
     private void Awake() {
         if (instance != null) {
             Debug.LogError("More than one AudioManager in the scene!");
         }
         instance = this;
-        
-        // todo: hier het opzetten van de FMOD sound banks
+
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        musicBus.getVolume(out float volume);
         
         LoadPlayerSettings();
+        InitializeMusic(sceneMusic);
         
         sfxVolumeSlider.onValueChanged.AddListener(delegate {
             SetSfxVolume(sfxVolumeSlider.value);
@@ -46,13 +52,19 @@ public class AudioManager : MonoBehaviour
     }
 
     private void SetSfxVolume(float newSfxVolume) {
-        // todo: hier de volume van de sound bank aanpassen
+        sfxBus.setVolume(newSfxVolume);
         PlayerPrefs.SetFloat("SfxVolume", newSfxVolume);
     }
 
     private void SetMusicVolume(float newMusicVolume) {
-        // todo: hier de volume van de sound bank aanpassen
+        musicBus.setVolume(newMusicVolume);
         PlayerPrefs.SetFloat("MusicVolume", newMusicVolume);
+    }
+    
+    private void InitializeMusic(EventReference musicReference) {
+        musicEventInstance = CreateInstance(musicReference);
+        RuntimeManager.AttachInstanceToGameObject(musicEventInstance, GameObject.FindWithTag("MainCamera"));
+        musicEventInstance.start();
     }
     
     public void PlayOneShot(EventReference sound, Vector3 worldPos) {
@@ -65,5 +77,21 @@ public class AudioManager : MonoBehaviour
         soundInstance.setParameterByName("velocity", velocity);
         soundInstance.start();
         soundInstance.release();
+    }
+    
+    public EventInstance CreateInstance(EventReference eventReference)
+    {
+        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstances.Add(eventInstance);
+        return eventInstance;
+    }
+    
+    private void OnDestroy()
+    {
+        foreach (EventInstance eventInstance in eventInstances)
+        {
+            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            eventInstance.release();
+        }
     }
 }

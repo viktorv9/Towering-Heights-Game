@@ -112,7 +112,7 @@ public class ShapeDropper : MonoBehaviour {
     
     IEnumerator SetActiveAfterCooldown(GameObject inactiveGameObject) {
         yield return new WaitForSeconds(1f);
-        inactiveGameObject.SetActive(true);
+        if (inactiveGameObject) inactiveGameObject.SetActive(true);
     }
     
     void UpdatePreviewPosition() {
