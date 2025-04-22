@@ -73,8 +73,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.37335, y: 31}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -107.69, y: 31}
+  m_SizeDelta: {x: 215.37, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5986578597060934563
 CanvasRenderer:
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move cursor horizontally: WASD'
+  m_text: 'Move cursor horizontally: Right Mouse'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2c2bfc29507e1b4ebe4455811aee247, type: 2}
   m_sharedMaterial: {fileID: -6145683430605681513, guid: c2c2bfc29507e1b4ebe4455811aee247,
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -0.3779297}
+  m_margin: {x: -15.725571, y: 0, z: 0, w: -0.3779297}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -543,7 +543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d712e0b3a0ae14418c7f6edf33e6856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlsTracker: {fileID: 0}
   mouseKeyboardOnlyUI:
   - {fileID: 54865758316584}
   controllerOnlyUI:

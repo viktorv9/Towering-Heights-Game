@@ -882,17 +882,17 @@ PrefabInstance:
     - target: {fileID: 3389812471445025306, guid: bf3e223cb3f540a4bb7e0aaa8b92fdd8,
         type: 3}
       propertyPath: m_Value
-      value: 300
+      value: 1.122
       objectReference: {fileID: 0}
     - target: {fileID: 3389812471445025306, guid: bf3e223cb3f540a4bb7e0aaa8b92fdd8,
         type: 3}
       propertyPath: m_MaxValue
-      value: 500
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3389812471445025306, guid: bf3e223cb3f540a4bb7e0aaa8b92fdd8,
         type: 3}
       propertyPath: m_MinValue
-      value: 100
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3389812471445025306, guid: bf3e223cb3f540a4bb7e0aaa8b92fdd8,
         type: 3}

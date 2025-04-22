@@ -126,19 +126,19 @@ public class ShapeDropper : MonoBehaviour {
         Vector3 newHorizontalPosition = transform.position;
         float newHeight = transform.position.y;
         
-        float tempHorizontalSpeed = horizontalSpeed;
-        float tempVerticalSpeed = verticalSpeed;
-        if (playerControls.Player.MoveSpeedUp.IsPressed()) {
-            tempHorizontalSpeed *= holdSpeedUpMultiplier;
-            tempVerticalSpeed *= holdSpeedUpMultiplier;
-        }
+        // float tempHorizontalSpeed = horizontalSpeed;
+        // float tempVerticalSpeed = verticalSpeed;
+        // if (playerControls.Player.MoveSpeedUp.IsPressed()) {
+        //     tempHorizontalSpeed *= holdSpeedUpMultiplier;
+        //     tempVerticalSpeed *= holdSpeedUpMultiplier;
+        // }
 
         Vector2 playerMovementHorizontalInput = playerControls.Player.MoveHorizontal.ReadValue<Vector2>();
         if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
         if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
 
         Vector2 playerMovementVerticalInput = playerControls.Player.MoveVertical.ReadValue<Vector2>();
-        newHeight += playerMovementVerticalInput.y * tempVerticalSpeed;
+        newHeight += playerMovementVerticalInput.y * verticalSpeed;
         if (newHeight < 0) newHeight = 0;
         if (heightGoal) {
             if (newHeight > heightGoal.transform.position.y + 5) newHeight = heightGoal.transform.position.y + 5;
@@ -147,9 +147,6 @@ public class ShapeDropper : MonoBehaviour {
         Vector2 playerZoomInput = playerControls.Player.Zoom.ReadValue<Vector2>();
         cameraController.ZoomCamera(-playerZoomInput.y * zoomSpeed);
         
-        Debug.DrawRay(newHorizontalPosition, Vector3.up, Color.green);
-
-        transform.position = Vector3.MoveTowards(transform.position, newHorizontalPosition, Time.deltaTime * tempHorizontalSpeed);
-        transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
+        transform.position = new Vector3(newHorizontalPosition.x, newHeight, newHorizontalPosition.z);
     }
 }
