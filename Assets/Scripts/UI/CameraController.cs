@@ -16,6 +16,17 @@ public class CameraController : MonoBehaviour {
     private CinemachinePOV cinemachinePOV;
     private CinemachineFramingTransposer cinemachineFramingTransposer;
 
+    private void Update() {
+        // bugfix for cinemachine issue where camera keeps spinning on pause (only with SpeedMode.InputValueGain)
+        if (PauseMenu.GameIsPaused && cinemachinePOV.m_HorizontalAxis.m_SpeedMode != AxisState.SpeedMode.MaxSpeed) {
+            cinemachinePOV.m_HorizontalAxis.m_SpeedMode = AxisState.SpeedMode.MaxSpeed;
+            cinemachinePOV.m_VerticalAxis.m_SpeedMode = AxisState.SpeedMode.MaxSpeed;
+        } else if (!PauseMenu.GameIsPaused && cinemachinePOV.m_HorizontalAxis.m_SpeedMode != AxisState.SpeedMode.InputValueGain) {
+            cinemachinePOV.m_HorizontalAxis.m_SpeedMode = AxisState.SpeedMode.InputValueGain;
+            cinemachinePOV.m_VerticalAxis.m_SpeedMode = AxisState.SpeedMode.InputValueGain;
+        }
+    }
+
     private void Start() {
         cinemachinePOV = cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
         cinemachineFramingTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
