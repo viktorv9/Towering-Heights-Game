@@ -125,15 +125,10 @@ public class ShapeDropper : MonoBehaviour {
         flattenedCameraTransform.eulerAngles = new Vector3(0, flattenedCameraTransform.eulerAngles.y, flattenedCameraTransform.eulerAngles.z);
         Vector3 newHorizontalPosition = transform.position;
         float newHeight = transform.position.y;
-        
-        // float tempHorizontalSpeed = horizontalSpeed;
-        // float tempVerticalSpeed = verticalSpeed;
-        // if (playerControls.Player.MoveSpeedUp.IsPressed()) {
-        //     tempHorizontalSpeed *= holdSpeedUpMultiplier;
-        //     tempVerticalSpeed *= holdSpeedUpMultiplier;
-        // }
 
         Vector2 playerMovementHorizontalInput = playerControls.Player.MoveHorizontal.ReadValue<Vector2>();
+        if (playerControls.Player.MoveSpeedUp.IsPressed()) playerMovementHorizontalInput *= holdSpeedUpMultiplier;
+            
         if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
         if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
 
