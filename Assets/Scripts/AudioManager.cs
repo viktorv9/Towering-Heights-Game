@@ -9,9 +9,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
 
-    [SerializeField] private Slider sfxVolumeSlider;
-    [SerializeField] private Slider musicVolumeSlider;
-    
     [SerializeField] private EventReference sceneMusic;
 
     private List<EventInstance> eventInstances = new();
@@ -30,35 +27,20 @@ public class AudioManager : MonoBehaviour
         musicBus = RuntimeManager.GetBus("bus:/Music");
         musicBus.getVolume(out float volume);
         
-        LoadPlayerSettings();
         InitializeMusic(sceneMusic);
-        
-        sfxVolumeSlider.onValueChanged.AddListener(delegate {
-            SetSfxVolume(sfxVolumeSlider.value);
-        });
-        musicVolumeSlider.onValueChanged.AddListener(delegate {
-            SetMusicVolume(musicVolumeSlider.value);
-        });
+    }
+    
+    private void OnEnable() {
+        Settings.OnUpdateSettings += SetVolumeSettings;
     }
 
-    private void LoadPlayerSettings() {
-        float savedSfxVolume = PlayerPrefs.GetFloat("SfxVolume", sfxVolumeSlider.value);
-        SetSfxVolume(savedSfxVolume);
-        sfxVolumeSlider.value = savedSfxVolume;
-        
-        float savedMusicVolume = PlayerPrefs.GetFloat("MusicVolume", musicVolumeSlider.value);
-        SetMusicVolume(savedMusicVolume);
-        musicVolumeSlider.value = savedMusicVolume;
+    private void OnDisable() {
+        Settings.OnUpdateSettings -= SetVolumeSettings;
     }
 
-    private void SetSfxVolume(float newSfxVolume) {
-        sfxBus.setVolume(newSfxVolume);
-        PlayerPrefs.SetFloat("SfxVolume", newSfxVolume);
-    }
-
-    private void SetMusicVolume(float newMusicVolume) {
-        musicBus.setVolume(newMusicVolume);
-        PlayerPrefs.SetFloat("MusicVolume", newMusicVolume);
+    private void SetVolumeSettings(Settings.GameSettings gameSettings) {
+        sfxBus.setVolume(gameSettings.sfxVolume);
+        musicBus.setVolume(gameSettings.musicVolume);
     }
     
     private void InitializeMusic(EventReference musicReference) {
