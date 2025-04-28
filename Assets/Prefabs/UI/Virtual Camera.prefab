@@ -107,7 +107,7 @@ MonoBehaviour:
     m_SpeedMode: 1
     m_MaxSpeed: 1
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -255,9 +255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 5682057300822449905}
-  cameraSensitivitySlider: {fileID: 0}
-  horizontalInputInvertedToggle: {fileID: 0}
-  verticalInputInvertedToggle: {fileID: 0}
 --- !u!114 &9142214649808645145
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private GameObject gameOverMenuFirstSelected;
 
+    [SerializeField] private GameObject blocksHolder;
     [SerializeField] private GameObject heightGoal;
 
     [SerializeField] private Transform cameraTransform;
@@ -32,6 +33,7 @@ public class ShapeDropper : MonoBehaviour {
 
     private bool gameOver = false;
     private int currentScore;
+    private GameObject lastSavedTowerState;
     
     private ShapePreview nextShapePreview;
     private int nextShapeIndex;
@@ -70,14 +72,17 @@ public class ShapeDropper : MonoBehaviour {
         if (IsGameOver()) return;
         if (playerControls.Player.DropShape.triggered) HandleDrop();
         if (playerControls.Player.Rotate.triggered) RotateBlock();
+        if (Input.GetKeyDown(KeyCode.L)) LoadTowerState();
     }
 
     void HandleDrop() {
         if (Time.time - timeLastDrop < 1.0f) return;
         
+        SaveTowerState();
+
         GameObject dropShape = shapes[nextShapeIndex];
         Quaternion nextRotationQuaternion = Quaternion.Euler(nextRotation);
-        Instantiate(dropShape, transform.position, nextRotationQuaternion);
+        Instantiate(dropShape, transform.position, nextRotationQuaternion, blocksHolder.transform);
         
         currentScore++;
         if (currentScore == 50) AddAdvancedShapes();
@@ -113,6 +118,19 @@ public class ShapeDropper : MonoBehaviour {
     IEnumerator SetActiveAfterCooldown(GameObject inactiveGameObject) {
         yield return new WaitForSeconds(1f);
         if (inactiveGameObject) inactiveGameObject.SetActive(true);
+    }
+    
+    void SaveTowerState() {
+        if (lastSavedTowerState) Destroy(lastSavedTowerState);
+        lastSavedTowerState = Instantiate(blocksHolder);
+        lastSavedTowerState.SetActive(false);
+    }
+    
+    void LoadTowerState() {
+        Destroy(blocksHolder);
+        GameObject newBlocksHolder = Instantiate(lastSavedTowerState);
+        newBlocksHolder.SetActive(true);
+        blocksHolder = newBlocksHolder;
     }
     
     void UpdatePreviewPosition() {
