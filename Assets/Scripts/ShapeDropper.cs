@@ -31,7 +31,8 @@ public class ShapeDropper : MonoBehaviour {
     
     private CameraController cameraController;
 
-    private bool gameOver = false;
+    private bool gameOver;
+    private bool dropsBlocks;
     private int currentScore;
     private GameObject lastSavedTowerState;
     
@@ -50,11 +51,20 @@ public class ShapeDropper : MonoBehaviour {
         timeLastDrop = Time.time - 1.0f;
         GenerateNextShape();
     }
+    
+    public void SetDropsBlocks(bool newValue) {
+        dropsBlocks = newValue;
+    }
 
     public bool IsGameOver() {
         return gameOver;
     }
-    
+
+
+    public int GetCurrentScore() {
+        return currentScore;
+    }
+
     public void SetGameOver(bool newState) {
         gameOver = newState;
         if (gameOver) {
@@ -70,7 +80,7 @@ public class ShapeDropper : MonoBehaviour {
         UpdatePreviewPosition();
         
         if (IsGameOver()) return;
-        if (playerControls.Player.DropShape.triggered) HandleDrop();
+        if (playerControls.Player.DropShape.triggered && dropsBlocks) HandleDrop();
         if (playerControls.Player.Rotate.triggered) RotateBlock();
         if (Input.GetKeyDown(KeyCode.L)) LoadTowerState();
     }
