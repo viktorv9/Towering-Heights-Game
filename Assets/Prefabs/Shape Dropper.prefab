@@ -97,11 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f15479bd9ca6c841bdf18a1f389256f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
   gameUI: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  gameOverMenuFirstSelected: {fileID: 0}
+  blocksHolder: {fileID: 0}
   heightGoal: {fileID: 0}
   cameraTransform: {fileID: 0}
-  horizontalSpeed: 1.5
+  horizontalSpeed: 400
   verticalSpeed: 0.002
   zoomSpeed: 0.01
   holdSpeedUpMultiplier: 3

@@ -145,8 +145,9 @@ public class ShapeDropper : MonoBehaviour {
         float newHeight = transform.position.y;
 
         Vector2 playerMovementHorizontalInput = playerControls.Player.MoveHorizontal.ReadValue<Vector2>();
+        playerMovementHorizontalInput *= Time.deltaTime * horizontalSpeed;
         if (playerControls.Player.MoveSpeedUp.IsPressed()) playerMovementHorizontalInput *= holdSpeedUpMultiplier;
-            
+        
         if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
         if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
 
