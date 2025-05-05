@@ -8,20 +8,25 @@ using Random = UnityEngine.Random;
 
 public class ShapeDropper : MonoBehaviour {
     
+    [Header("UI links")]
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private GameObject gameOverMenuFirstSelected;
 
+    [Header("Scene related links")]
     [SerializeField] private GameObject blocksHolder;
     [SerializeField] private GameObject heightGoal;
-
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private bool dropsBlocks;
+    
+    [Header("Control settings")]
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float verticalSpeed;
     [SerializeField] private float zoomSpeed;
     [SerializeField] private float holdSpeedUpMultiplier;
     
+    [Header("Shapes")]
     [SerializeField] private List<GameObject> shapes;
     [SerializeField] private List<GameObject> shapePreviews;
     [SerializeField] private List<GameObject> advancedShapes;
@@ -32,7 +37,6 @@ public class ShapeDropper : MonoBehaviour {
     private CameraController cameraController;
 
     private bool gameOver;
-    private bool dropsBlocks;
     private int currentScore;
     private GameObject lastSavedTowerState;
     

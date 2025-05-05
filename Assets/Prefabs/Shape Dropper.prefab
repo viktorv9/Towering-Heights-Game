@@ -104,6 +104,7 @@ MonoBehaviour:
   blocksHolder: {fileID: 0}
   heightGoal: {fileID: 0}
   cameraTransform: {fileID: 0}
+  dropsBlocks: 1
   horizontalSpeed: 400
   verticalSpeed: 0.002
   zoomSpeed: 0.01

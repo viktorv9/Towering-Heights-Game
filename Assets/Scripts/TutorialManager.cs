@@ -19,7 +19,7 @@ public class TutorialManager : MonoBehaviour
         if (tutorialSteps.Count > 0) {
             Destroy(tutorialSteps[0]);
             tutorialSteps.RemoveAt(0);
-            tutorialSteps[0].SetActive(true);
+            if (tutorialSteps.Count > 0) tutorialSteps[0].SetActive(true);
         }
     }
 }

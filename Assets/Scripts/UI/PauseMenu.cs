@@ -53,9 +53,6 @@ public class PauseMenu : MonoBehaviour {
         DisableAllMenus();
         Time.timeScale = 1f;
         StartCoroutine(SetGamePausedAfterDelay(false));
-        
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
     
     public void Pause() {
