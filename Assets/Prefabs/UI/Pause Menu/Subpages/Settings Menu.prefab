@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 116584986494282631}
   - component: {fileID: 1199406906741316776}
   - component: {fileID: 7571135579023995780}
+  - component: {fileID: 6531127717443448705}
   m_Layer: 5
   m_Name: Settings Menu
   m_TagString: Untagged
@@ -734,6 +735,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6531127717443448705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5374234852009089973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d712e0b3a0ae14418c7f6edf33e6856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseKeyboardOnlyUI: []
+  controllerOnlyUI: []
 --- !u!1 &7473880260090169341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +1686,12 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 7272780373104674936}
+    - target: {fileID: 7984314666690072410, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3630124427610912512, guid: 5f4559d067a2afe4f983daf1b4575319,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

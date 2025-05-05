@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 8980047456985153534}
   - component: {fileID: 7086420127544045871}
   m_Layer: 5
-  m_Name: Intro
+  m_Name: HowToPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1932,6 +1932,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7984314666690072410, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3630124427610912512, guid: 5f4559d067a2afe4f983daf1b4575319,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
