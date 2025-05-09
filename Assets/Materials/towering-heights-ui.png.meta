@@ -214,6 +214,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: square
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f753bf31394a24c42b29488bf4c702b0
+      internalID: 81410661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -225,6 +246,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      square: 81410661
       towering-heights-ui_1: 1912596024
       ui_checkbox: 1718829313
       ui_checkmark: -2057060688

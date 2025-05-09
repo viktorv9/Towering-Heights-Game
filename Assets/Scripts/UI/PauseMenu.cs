@@ -15,22 +15,15 @@ public class PauseMenu : MonoBehaviour {
 
     [SerializeField] private GameObject settingsMenuUI;
     [SerializeField] private GameObject settingsMenuFirstSelected;
-
-    [SerializeField] private GameObject helpMenuUI;
-    [SerializeField] private GameObject helpMenuFirstSelected;
     
     private Controls playerControls;
 
     private void Start() {
         playerControls = new Controls();
         playerControls.Player.Enable();
-
-        if (!TutorialShown) {
-            HowToPlay();
-            Time.timeScale = 0f;
-            GameIsPaused = true;
-            TutorialShown = true;
-        }
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update() {
@@ -46,7 +39,6 @@ public class PauseMenu : MonoBehaviour {
     private void DisableAllMenus() {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
-        helpMenuUI.SetActive(false);
     }
     
     public void Resume() {
@@ -69,13 +61,6 @@ public class PauseMenu : MonoBehaviour {
         settingsMenuUI.SetActive(true);
         
         eventSystem.SetSelectedGameObject(settingsMenuFirstSelected);
-    }
-    
-    public void HowToPlay() {
-        DisableAllMenus();
-        helpMenuUI.SetActive(true);
-        
-        eventSystem.SetSelectedGameObject(helpMenuFirstSelected);
     }
     
     public void Quit() {

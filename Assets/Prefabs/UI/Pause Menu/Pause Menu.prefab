@@ -56,8 +56,6 @@ MonoBehaviour:
   pauseMenuFirstSelected: {fileID: 8194965150445528729}
   settingsMenuUI: {fileID: 4054714897677420479}
   settingsMenuFirstSelected: {fileID: 8326156338833103671}
-  helpMenuUI: {fileID: 7103844483976801113}
-  helpMenuFirstSelected: {fileID: 9116001580892554866}
 --- !u!1001 &898285558956585945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -277,6 +275,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2588950479328877035, guid: 8298926945ac3c84da11d5a8cfa49655,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3630124427610912512}
     - target: {fileID: 4397120858031025679, guid: 8298926945ac3c84da11d5a8cfa49655,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -486,18 +489,6 @@ PrefabInstance:
 --- !u!224 &2132926702515101722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7141980650706970286, guid: 950fee1d9fd048041b55de02d30befa4,
-    type: 3}
-  m_PrefabInstance: {fileID: 9116627079465633460}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7103844483976801113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2022442707150941677, guid: 950fee1d9fd048041b55de02d30befa4,
-    type: 3}
-  m_PrefabInstance: {fileID: 9116627079465633460}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &9116001580892554866 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1775872277315782, guid: 950fee1d9fd048041b55de02d30befa4,
     type: 3}
   m_PrefabInstance: {fileID: 9116627079465633460}
   m_PrefabAsset: {fileID: 0}

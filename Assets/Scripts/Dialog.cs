@@ -22,19 +22,22 @@ public class Dialog : MonoBehaviour
     [SerializeField] private TutorialType tutorialType;
     
     [SerializeField] private ProgressBar progressBar;
-    
-    [SerializeField] private ShapeDropper shapeDropper;
-    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
     private Controls playerControls;
 
     private float progressPercentage;
-
+    
+    private ShapeDropper shapeDropper;
+    private CinemachineVirtualCamera cinemachineVirtualCamera;
+    
     private Vector3 shapeDropperPosition;
     private Quaternion cinemachineVirtualCameraRotation;
 
     private void OnEnable()
     {
+        shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
+        cinemachineVirtualCamera = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].GetComponent<CinemachineVirtualCamera>();
+        
         playerControls = new Controls();
         playerControls.Player.Enable();
         
