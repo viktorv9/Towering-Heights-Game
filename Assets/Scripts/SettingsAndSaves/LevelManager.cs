@@ -8,6 +8,9 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour {
+    
+    // TODO: This script saves data to JSON, but the SaveSystem/SaveData classes write to binary.
+    // TODO: Convert or delete this code and work with SaveSystem!
 
     [SerializeField] private List<Button> uiButtons;
     

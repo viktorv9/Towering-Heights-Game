@@ -1016,11 +1016,6 @@ PrefabInstance:
       objectReference: {fileID: 1343714802}
     - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
         type: 3}
-      propertyPath: dropsBlocks
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
-        type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1073982066}

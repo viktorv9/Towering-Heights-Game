@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8053296465930976323}
   - component: {fileID: 2086725578195033994}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: SettingsAndSaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
