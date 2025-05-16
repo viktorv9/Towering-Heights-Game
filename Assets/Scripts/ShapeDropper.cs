@@ -49,6 +49,8 @@ public class ShapeDropper : MonoBehaviour {
     void Start() {
         playerControls = new Controls();
         playerControls.Player.Enable();
+
+        UpgradeManager.LoadUnlockedUpgrades();
         
         cameraController = cameraTransform.gameObject.GetComponent<CameraController>();
 
