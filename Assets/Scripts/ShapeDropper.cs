@@ -33,6 +33,7 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private List<GameObject> advancedShapePreviews;
 
     private Controls playerControls;
+    private int dropShapeBlockers = 0;
     
     private CameraController cameraController;
 
@@ -58,8 +59,12 @@ public class ShapeDropper : MonoBehaviour {
         GenerateNextShape();
     }
     
-    public void SetDropsBlocks(bool newValue) {
-        dropsBlocks = newValue;
+    public void AddDropsBlocksBlocker() {
+        dropShapeBlockers++;
+    }
+    
+    public void RemoveDropsBlocksBlocker() {
+        dropShapeBlockers--;
     }
 
     public bool IsGameOver() {
@@ -86,8 +91,8 @@ public class ShapeDropper : MonoBehaviour {
         UpdatePreviewPosition();
         
         if (IsGameOver()) return;
-        if (playerControls.Player.DropShape.triggered && dropsBlocks) HandleDrop();
-        if (playerControls.Player.Rotate.triggered) RotateBlock();
+        if (playerControls.Player.DropShape.triggered && dropShapeBlockers == 0) HandleDrop();
+        // if (playerControls.Player.Rotate.triggered) RotateBlock(); TODO: Remove, replaced by rotation upgrade.
         if (Input.GetKeyDown(KeyCode.L)) LoadTowerState();
     }
 
@@ -97,8 +102,8 @@ public class ShapeDropper : MonoBehaviour {
         SaveTowerState();
 
         GameObject dropShape = shapes[nextShapeIndex];
-        Quaternion nextRotationQuaternion = Quaternion.Euler(nextRotation);
-        Instantiate(dropShape, transform.position, nextRotationQuaternion, blocksHolder.transform);
+        // Quaternion nextRotationQuaternion = Quaternion.Euler(nextRotation);
+        Instantiate(dropShape, transform.position, nextShapePreview.transform.rotation, blocksHolder.transform);
         
         currentScore++;
         if (currentScore == 50) AddAdvancedShapes();
@@ -116,11 +121,15 @@ public class ShapeDropper : MonoBehaviour {
         nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
     }
     
+    public void RotateBlockTowards(Vector3 rotationValue) {
+        nextShapePreview.transform.Rotate(rotationValue, Space.World);
+    }
+    
     void GenerateNextShape() {
         nextShapeIndex = Random.Range(0, shapes.Count);
         nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
-        nextRotationIndex = 0;
-        nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
+        // nextRotationIndex = 0;
+        // nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
         
         nextShapePreview.gameObject.SetActive(false);
         StartCoroutine(SetActiveAfterCooldown(nextShapePreview.gameObject));
@@ -136,6 +145,8 @@ public class ShapeDropper : MonoBehaviour {
         if (inactiveGameObject) inactiveGameObject.SetActive(true);
     }
     
+    // TODO: The next two functions were prototypes for a reload system so the game could use lives. TEMPORARY!
+
     void SaveTowerState() {
         if (lastSavedTowerState) Destroy(lastSavedTowerState);
         lastSavedTowerState = Instantiate(blocksHolder);
@@ -151,7 +162,7 @@ public class ShapeDropper : MonoBehaviour {
     
     void UpdatePreviewPosition() {
         nextShapePreview.transform.position = transform.position;
-        nextShapePreview.transform.eulerAngles = nextRotation;
+        // nextShapePreview.transform.eulerAngles = nextRotation;
     }
     
     void UpdatePosition() {

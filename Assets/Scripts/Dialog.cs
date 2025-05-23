@@ -44,28 +44,27 @@ public class Dialog : MonoBehaviour
         switch (tutorialType)
         {
             case (TutorialType.PressA):
-                shapeDropper.SetDropsBlocks(false);
+                shapeDropper.AddDropsBlocksBlocker();
                 break;
             case (TutorialType.HorizontalMovement):
-                shapeDropper.SetDropsBlocks(false);
+                shapeDropper.AddDropsBlocksBlocker();
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 shapeDropperPosition = shapeDropper.transform.position;
                 break;
             case (TutorialType.VerticalMovement):
-                shapeDropper.SetDropsBlocks(false);
+                shapeDropper.AddDropsBlocksBlocker();
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 shapeDropperPosition = shapeDropper.transform.position;
                 break;
             case (TutorialType.CameraMove):
-                shapeDropper.SetDropsBlocks(false);
+                shapeDropper.AddDropsBlocksBlocker();
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 cinemachineVirtualCameraRotation = cinemachineVirtualCamera.transform.rotation;
                 break;
             case (TutorialType.PlaceBlock):
-                shapeDropper.SetDropsBlocks(true);
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 break;
@@ -80,6 +79,7 @@ public class Dialog : MonoBehaviour
         {
             case (TutorialType.PressA):
                 if (playerControls.Player.DropShape.IsPressed()) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }
@@ -91,6 +91,7 @@ public class Dialog : MonoBehaviour
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }
@@ -102,6 +103,7 @@ public class Dialog : MonoBehaviour
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }
@@ -113,6 +115,7 @@ public class Dialog : MonoBehaviour
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }
