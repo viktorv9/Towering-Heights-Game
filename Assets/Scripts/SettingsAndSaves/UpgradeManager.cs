@@ -6,6 +6,7 @@ using UnityEngine;
 public static class UpgradeManager
 {
     public enum UpgradeType {
+        None,
         RotationUpgrade,
         HoldUpgrade,
         StabilityBlocksUpgrade
@@ -19,7 +20,7 @@ public static class UpgradeManager
     public static List<UpgradeType> LoadUnlockedUpgrades() {
         GameData gameData = SaveSystem.LoadGameData();
         if (gameData.rotationUnlocked) {
-            OnUpgradeUnlocked(UpgradeType.RotationUpgrade);
+            OnUpgradeUnlocked?.Invoke(UpgradeType.RotationUpgrade);
             UnlockedUpgrades.Add(UpgradeType.RotationUpgrade);
         }
         return UnlockedUpgrades;

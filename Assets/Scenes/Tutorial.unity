@@ -1739,6 +1739,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5450812006968992240, guid: 962d21efbed8ad24ab59586e7565a68e,
         type: 3}
+      propertyPath: m_HorizontalAxis.m_MaxValue
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450812006968992240, guid: 962d21efbed8ad24ab59586e7565a68e,
+        type: 3}
       propertyPath: m_HorizontalAxis.m_InvertInput
       value: 1
       objectReference: {fileID: 0}

@@ -310,9 +310,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a02f83ec899f814788e367579155379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalHeights:
-  - 5
-  - 10
+  goals:
+  - goalHeight: 10
+    upgradeToUnlock: 1
+  - goalHeight: 20
+    upgradeToUnlock: 0
+  - goalHeight: 30
+    upgradeToUnlock: 0
+  - goalHeight: 40
+    upgradeToUnlock: 0
+  - goalHeight: 50
+    upgradeToUnlock: 0
   goalCollisionDuration: 5
   canvas: {fileID: 8151738160610294337}
   countdownText: {fileID: 5185202954505564446}

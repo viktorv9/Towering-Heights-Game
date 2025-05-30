@@ -1,14 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
 
 public class HeightGoal : MonoBehaviour
 {
-    [SerializeField] private List<float> goalHeights;
-    [SerializeField] private float goalCollisionDuration;
+    
+    [Serializable]
+    private struct Goal {
+        public float goalHeight;
+        public UpgradeManager.UpgradeType upgradeToUnlock;
+    }
 
+    [SerializeField] private List<Goal> goals;
+    [SerializeField] private float goalCollisionDuration;
+    
     [SerializeField] private Canvas canvas;
     [SerializeField] private TextMeshProUGUI countdownText;
 
@@ -16,7 +24,7 @@ public class HeightGoal : MonoBehaviour
     private float timeCollisionStart = 0;
     
     private void Start() {
-        transform.position = new Vector3(0, goalHeights[0], 0);
+        transform.position = new Vector3(0, goals[0].goalHeight, 0);
     }
 
     private void Update() {
@@ -54,14 +62,14 @@ public class HeightGoal : MonoBehaviour
     }
     
     public float GetCurrentGoalHeight() {
-        return goalHeights[0];
+        return goals[0].goalHeight;
     }
     
     private void NextGoalHeight() {
-        goalHeights.RemoveAt(0);
-        if (goalHeights.Count > 0) {
-            var newGoalHeight = goalHeights[0];
-            transform.position = new Vector3(0, newGoalHeight, 0);
+        UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
+        goals.RemoveAt(0);
+        if (goals.Count > 0) {
+            transform.position = new Vector3(0, goals[0].goalHeight, 0);
         } else {
             Destroy(gameObject); // out of goals, destroy
         }

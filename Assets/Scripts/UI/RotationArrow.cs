@@ -2,26 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class RotationArrow : MonoBehaviour {
+public class RotationArrow : MonoBehaviour, IPointerEnterHandler {
     
-    [SerializeField] private Vector3 rotationValue;
+    [SerializeField] private RotationUpgrade rotationUpgrade;
+    [SerializeField] private RotationUpgrade.RotationDirection rotationDirection;
 
-    private RotationUpgrade rotationUpgrade;
-
-    private void Start() {
-        rotationUpgrade = transform.parent.parent.GetComponent<RotationUpgrade>();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.U)) {
-            transform.Rotate(rotationValue, Space.World);
-            rotationUpgrade.ExecuteRotate(rotationValue);
-        }
-    }
-
-    private void OnMouseDown() {
-        rotationUpgrade.ExecuteRotate(rotationValue);
+    public void OnPointerEnter(PointerEventData eventData) {
+        rotationUpgrade.selectedRotationDirection = rotationDirection;
     }
 }
