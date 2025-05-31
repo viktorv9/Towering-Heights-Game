@@ -14,6 +14,7 @@ public class Dialog : MonoBehaviour
         CameraMove,
         CameraZoom,
         PlaceBlock,
+        Rotate,
     }
 
     public delegate void DialogCompleted();
@@ -32,6 +33,8 @@ public class Dialog : MonoBehaviour
     
     private Vector3 shapeDropperPosition;
     private Quaternion cinemachineVirtualCameraRotation;
+    private int rotationsDone;
+    private Quaternion? rotationPreviousFrame;
 
     private void OnEnable()
     {
@@ -67,6 +70,11 @@ public class Dialog : MonoBehaviour
             case (TutorialType.PlaceBlock):
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(progressPercentage);
+                break;
+            case (TutorialType.Rotate):
+                rotationsDone = 0;
+                progressPercentage = 0;
+                progressBar.SetProgressBarPercentage(0);
                 break;
         }
     }
@@ -122,6 +130,22 @@ public class Dialog : MonoBehaviour
                 break;
             case (TutorialType.PlaceBlock):
                 progressPercentage = shapeDropper.GetCurrentScore() * 100 / 3;
+                progressBar.SetProgressBarPercentage(progressPercentage);
+                if (progressPercentage >= 100) {
+                    OnComplete?.Invoke();
+                    Destroy(gameObject);
+                }
+                break;
+            case (TutorialType.Rotate):
+                if (rotationPreviousFrame == null) {
+                    rotationPreviousFrame = shapeDropper.GetBlockRotation();
+                    break;
+                }
+                if (rotationPreviousFrame != shapeDropper.GetBlockRotation()) {
+                    rotationPreviousFrame = shapeDropper.GetBlockRotation();
+                    rotationsDone++;
+                }
+                progressPercentage = rotationsDone * 100 / 4;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
                     OnComplete?.Invoke();

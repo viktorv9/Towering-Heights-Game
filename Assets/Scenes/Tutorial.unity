@@ -750,6 +750,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotationUpgradeHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 5576213327596304075, guid: 570ceb40038fb0241b32019ae005db3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -779,6 +784,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2131840675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7353006760401254992, guid: 689f5378226072247b5fdbe0e84e46c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4992627615539355289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1371375274958954731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1722,6 +1733,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 8920723861758838653, guid: 689f5378226072247b5fdbe0e84e46c8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920723861758838653, guid: 689f5378226072247b5fdbe0e84e46c8,
+        type: 3}
+      propertyPath: tutorialSteps.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920723861758838653, guid: 689f5378226072247b5fdbe0e84e46c8,
+        type: 3}
+      propertyPath: tutorialSteps.Array.data[4]
+      value: 
+      objectReference: {fileID: 2131840675}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8637730589425863952, guid: 689f5378226072247b5fdbe0e84e46c8, type: 3}

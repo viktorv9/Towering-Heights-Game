@@ -18,7 +18,6 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private GameObject blocksHolder;
     [SerializeField] private GameObject heightGoal;
     [SerializeField] private Transform cameraTransform;
-    [SerializeField] private bool dropsBlocks;
     
     [Header("Control settings")]
     [SerializeField] private float horizontalSpeed;
@@ -123,6 +122,11 @@ public class ShapeDropper : MonoBehaviour {
     
     public void RotateBlockTowards(Vector3 rotationValue) {
         nextShapePreview.transform.Rotate(rotationValue, Space.World);
+    }
+    
+    public Quaternion? GetBlockRotation() {
+        if (nextShapePreview == null) return null;
+        return nextShapePreview.transform.rotation;
     }
     
     void GenerateNextShape() {

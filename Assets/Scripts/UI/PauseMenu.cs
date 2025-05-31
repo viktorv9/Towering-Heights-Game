@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
-    public static bool TutorialShown = false;
     
     [SerializeField] private EventSystem eventSystem;
 

@@ -56,8 +56,6 @@ public class RotationUpgrade : MonoBehaviour {
     private void SetRotationUIState(bool newState) {
         RotationUpgradeUI.SetActive(newState);
         cinemachineInputProvider.enabled = !newState;
-        if (newState) shapeDropper.AddDropsBlocksBlocker();
-        else shapeDropper.RemoveDropsBlocksBlocker();
     }
     
     private void ExecuteRotate(RotationDirection rotationDirection) {
