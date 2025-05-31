@@ -24,6 +24,12 @@ public class HeightGoal : MonoBehaviour
     private float timeCollisionStart = 0;
     
     private void Start() {
+        GameData gameData = SaveSystem.LoadGameData();
+        List<Goal> goalsCopy = new List<Goal>(goals);
+        foreach (Goal goal in goalsCopy) {
+            if (goal.goalHeight <= gameData.highestHeightGoalHeight) goals.Remove(goal);
+        }
+
         transform.position = new Vector3(0, goals[0].goalHeight, 0);
     }
 
@@ -66,6 +72,10 @@ public class HeightGoal : MonoBehaviour
     }
     
     private void NextGoalHeight() {
+        GameData gameData = SaveSystem.LoadGameData();
+        gameData.highestHeightGoalHeight = goals[0].goalHeight;
+        SaveSystem.SaveGameData(gameData);
+        
         UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
         goals.RemoveAt(0);
         if (goals.Count > 0) {
