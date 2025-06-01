@@ -136,6 +136,9 @@ public class ShapeDropper : MonoBehaviour {
             heldBlockIndex = nextShapeIndex;
             Destroy(nextShapePreview.gameObject);
             nextShapeIndex = Random.Range(0, shapes.Count);
+            while (nextShapeIndex == heldBlockIndex) {
+                nextShapeIndex = Random.Range(0, shapes.Count); // it's not fun to reroll into the same shape
+            }
             nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
         } else {
             int tempNextShapeIndex = nextShapeIndex;

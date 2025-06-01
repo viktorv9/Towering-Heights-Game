@@ -15,6 +15,7 @@ public class Dialog : MonoBehaviour
         CameraZoom,
         PlaceBlock,
         Rotate,
+        HoldBlock,
     }
 
     public delegate void DialogCompleted();
@@ -35,6 +36,7 @@ public class Dialog : MonoBehaviour
     private Quaternion cinemachineVirtualCameraRotation;
     private int rotationsDone;
     private Quaternion? rotationPreviousFrame;
+    private int holdBlockPresses;
 
     private void OnEnable()
     {
@@ -73,6 +75,10 @@ public class Dialog : MonoBehaviour
                 break;
             case (TutorialType.Rotate):
                 rotationsDone = 0;
+                progressPercentage = 0;
+                progressBar.SetProgressBarPercentage(0);
+                break;
+            case (TutorialType.HoldBlock):
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(0);
                 break;
@@ -146,6 +152,17 @@ public class Dialog : MonoBehaviour
                     rotationsDone++;
                 }
                 progressPercentage = rotationsDone * 100 / 4;
+                progressBar.SetProgressBarPercentage(progressPercentage);
+                if (progressPercentage >= 100) {
+                    OnComplete?.Invoke();
+                    Destroy(gameObject);
+                }
+                break;
+            case (TutorialType.HoldBlock):
+                if (playerControls.Player.HoldBlock.triggered) {
+                    holdBlockPresses++;
+                }
+                progressPercentage = holdBlockPresses * 100 / 2;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
                     OnComplete?.Invoke();

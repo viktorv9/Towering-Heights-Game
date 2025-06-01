@@ -8,10 +8,12 @@ public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> tutorialSteps;
     [SerializeField] private List<GameObject> rotationSteps;
+    [SerializeField] private List<GameObject> holdBlockSteps;
 
     private enum TutorialType {
         StarterTutorial,
         RotationTutorial,
+        HoldBlockTutorial,
     }
 
     private TutorialType? currentTutorialType;
@@ -39,7 +41,7 @@ public class TutorialManager : MonoBehaviour
     private void CheckForUncompletedTutorials() {
         if (currentTutorialType != null) return;
         gameData = SaveSystem.LoadGameData();
-        
+
         if (!gameData.tutorialCompleted) {
             currentTutorialType = TutorialType.StarterTutorial;
             currentSteps.AddRange(tutorialSteps);
@@ -48,10 +50,16 @@ public class TutorialManager : MonoBehaviour
             currentTutorialType = TutorialType.RotationTutorial;
             currentSteps.AddRange(rotationSteps);
             currentSteps[0]?.SetActive(true);
+        } else if (gameData.holdBlockUnlocked && !gameData.holdBlockTutorialCompleted) {
+            currentTutorialType = TutorialType.HoldBlockTutorial;
+            currentSteps.AddRange(holdBlockSteps);
+            currentSteps[0]?.SetActive(true);
         }
     }
     
     private void NextTutorialStep() {
+        gameData = SaveSystem.LoadGameData();
+
         if (currentSteps.Count > 0) {
             Destroy(currentSteps[0]);
             currentSteps.RemoveAt(0);
@@ -66,7 +74,11 @@ public class TutorialManager : MonoBehaviour
                     case (TutorialType.RotationTutorial):
                         gameData.rotationTutorialCompleted = true;
                         break;
+                    case (TutorialType.HoldBlockTutorial):
+                        gameData.holdBlockTutorialCompleted = true;
+                        break;
                 }
+
                 currentTutorialType = null;
                 SaveSystem.SaveGameData(gameData);
                 CheckForUncompletedTutorials();
