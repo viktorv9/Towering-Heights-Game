@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5588dcf90cc861a4e88abb17c6e1f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationUpgrade: {fileID: 0}
   rotationDirection: 4
 --- !u!1 &1705336591171675094
 GameObject:
@@ -177,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5588dcf90cc861a4e88abb17c6e1f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationUpgrade: {fileID: 0}
   rotationDirection: 0
 --- !u!1 &2127834699875923359
 GameObject:
@@ -266,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5588dcf90cc861a4e88abb17c6e1f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationUpgrade: {fileID: 0}
   rotationDirection: 2
 --- !u!1 &5020132002736254228
 GameObject:
@@ -355,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5588dcf90cc861a4e88abb17c6e1f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationUpgrade: {fileID: 0}
   rotationDirection: 1
 --- !u!1 &7483129794698107820
 GameObject:
@@ -368,7 +372,6 @@ GameObject:
   - component: {fileID: 1369631986894101325}
   - component: {fileID: 8922521822972433117}
   - component: {fileID: 5097973905042495963}
-  - component: {fileID: 941369034326384621}
   m_Layer: 0
   m_Name: RotationSelectionCanvas
   m_TagString: Untagged
@@ -463,18 +466,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &941369034326384621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7483129794698107820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb3d4fc93979424c8a19d2247d7cf22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8493474681753151204
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,4 +554,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5588dcf90cc861a4e88abb17c6e1f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationUpgrade: {fileID: 0}
   rotationDirection: 3

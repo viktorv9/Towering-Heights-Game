@@ -701,6 +701,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
   errorMaterial: {fileID: 2100000, guid: 4f3e2801dbb427f4aa356fd66447a82c, type: 2}
   errorerMaterial: {fileID: 2100000, guid: afc0f7166c2a38542b491412a6202d41, type: 2}
+  previewSprite: {fileID: 1042309042, guid: 99bbe95eda5de9b47806896badbfee3e, type: 3}
   innerCollider: {fileID: 8164107389098495365}
   associatedRenderers:
   - {fileID: 1150426271794230823}

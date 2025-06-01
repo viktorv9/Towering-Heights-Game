@@ -40,7 +40,7 @@ public class ShapeDropper : MonoBehaviour {
     private int currentScore;
     private GameObject lastSavedTowerState;
     
-    private GameObject nextShapePreview;
+    private ShapePreview nextShapePreview;
     private int nextShapeIndex;
     // private Vector3 nextRotation;
     // private int nextRotationIndex;
@@ -131,27 +131,29 @@ public class ShapeDropper : MonoBehaviour {
         return nextShapePreview.transform.rotation;
     }
     
-    public void HoldBlock() {
+    public int HoldBlock() {
         if (heldBlockIndex == null) {
             heldBlockIndex = nextShapeIndex;
             Destroy(nextShapePreview.gameObject);
             nextShapeIndex = Random.Range(0, shapes.Count);
             while (nextShapeIndex == heldBlockIndex) {
-                nextShapeIndex = Random.Range(0, shapes.Count); // it's not fun to reroll into the same shape
+                nextShapeIndex = Random.Range(0, shapes.Count); // it's not fun to re-roll into the same shape
             }
-            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
+            return (int)heldBlockIndex;
         } else {
             int tempNextShapeIndex = nextShapeIndex;
             nextShapeIndex = (int)heldBlockIndex;
             heldBlockIndex = tempNextShapeIndex;
             Destroy(nextShapePreview.gameObject);
-            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
+            return (int)heldBlockIndex;
         }
     }
     
     void GenerateNextShape() {
         nextShapeIndex = Random.Range(0, shapes.Count);
-        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
         
         // nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
         // nextRotationIndex = 0;

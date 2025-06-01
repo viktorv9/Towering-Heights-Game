@@ -104,7 +104,6 @@ MonoBehaviour:
   blocksHolder: {fileID: 0}
   heightGoal: {fileID: 0}
   cameraTransform: {fileID: 0}
-  dropsBlocks: 1
   horizontalSpeed: 400
   verticalSpeed: 0.002
   zoomSpeed: 0.01
@@ -124,7 +123,9 @@ MonoBehaviour:
   advancedShapes:
   - {fileID: 6257443880326174759, guid: cc7ff68390e23fa4ab7e0b42bb402a77, type: 3}
   - {fileID: 6257443880326174759, guid: 16978e18ce6994b4db17cda99d6fa159, type: 3}
-  advancedShapePreviews: []
+  advancedShapePreviews:
+  - {fileID: 3160462999529527672, guid: 73fa96e4f04497c46bec9e637a085a6a, type: 3}
+  - {fileID: 7875485325622511241, guid: c1db326626de83b4db0cf63f6238df44, type: 3}
 --- !u!114 &2494367843560358673
 MonoBehaviour:
   m_ObjectHideFlags: 0
