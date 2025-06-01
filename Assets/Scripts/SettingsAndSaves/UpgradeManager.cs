@@ -23,6 +23,10 @@ public static class UpgradeManager
             OnUpgradeUnlocked?.Invoke(UpgradeType.RotationUpgrade);
             UnlockedUpgrades.Add(UpgradeType.RotationUpgrade);
         }
+        if (gameData.holdBlockUnlocked) {
+            OnUpgradeUnlocked?.Invoke(UpgradeType.HoldUpgrade);
+            UnlockedUpgrades.Add(UpgradeType.HoldUpgrade);
+        }
         return UnlockedUpgrades;
     }
     
@@ -32,6 +36,10 @@ public static class UpgradeManager
             case (UpgradeType.RotationUpgrade):
                 UnlockedUpgrades.Add(UpgradeType.RotationUpgrade);
                 gameData.rotationUnlocked = true;
+                break;
+            case (UpgradeType.HoldUpgrade):
+                UnlockedUpgrades.Add(UpgradeType.HoldUpgrade);
+                gameData.holdBlockUnlocked = true;
                 break;
         }
         SaveSystem.SaveGameData(gameData);

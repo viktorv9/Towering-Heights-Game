@@ -40,11 +40,13 @@ public class ShapeDropper : MonoBehaviour {
     private int currentScore;
     private GameObject lastSavedTowerState;
     
-    private ShapePreview nextShapePreview;
+    private GameObject nextShapePreview;
     private int nextShapeIndex;
-    private Vector3 nextRotation;
-    private int nextRotationIndex;
+    // private Vector3 nextRotation;
+    // private int nextRotationIndex;
     private float timeLastDrop;
+
+    private int? heldBlockIndex;
 
     void Start() {
         playerControls = new Controls();
@@ -56,6 +58,18 @@ public class ShapeDropper : MonoBehaviour {
 
         timeLastDrop = Time.time - 1.0f;
         GenerateNextShape();
+    }
+
+    void Update() {
+        if (PauseMenu.GameIsPaused) return;
+        
+        UpdatePosition();
+        UpdatePreviewPosition();
+        
+        if (IsGameOver()) return;
+        if (playerControls.Player.DropShape.triggered && dropShapeBlockers == 0) HandleDrop();
+        // if (playerControls.Player.Rotate.triggered) RotateBlock(); replaced by rotation upgrade.
+        if (Input.GetKeyDown(KeyCode.L)) LoadTowerState();
     }
     
     public void AddDropsBlocksBlocker() {
@@ -83,18 +97,6 @@ public class ShapeDropper : MonoBehaviour {
         }
     }
 
-    void Update() {
-        if (PauseMenu.GameIsPaused) return;
-        
-        UpdatePosition();
-        UpdatePreviewPosition();
-        
-        if (IsGameOver()) return;
-        if (playerControls.Player.DropShape.triggered && dropShapeBlockers == 0) HandleDrop();
-        // if (playerControls.Player.Rotate.triggered) RotateBlock(); TODO: Remove, replaced by rotation upgrade.
-        if (Input.GetKeyDown(KeyCode.L)) LoadTowerState();
-    }
-
     void HandleDrop() {
         if (Time.time - timeLastDrop < 1.0f) return;
         
@@ -113,12 +115,12 @@ public class ShapeDropper : MonoBehaviour {
         GenerateNextShape();
     }
 
-    void RotateBlock() {
-        nextRotationIndex += 1;
-        if (nextRotationIndex > nextShapePreview.GetPossibleRotations.Count-1) nextRotationIndex = 0;
-        
-        nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
-    }
+    // void RotateBlock() {
+    //     nextRotationIndex += 1;
+    //     if (nextRotationIndex > nextShapePreview.GetPossibleRotations.Count-1) nextRotationIndex = 0;
+    //     
+    //     nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
+    // }
     
     public void RotateBlockTowards(Vector3 rotationValue) {
         nextShapePreview.transform.Rotate(rotationValue, Space.World);
@@ -129,12 +131,29 @@ public class ShapeDropper : MonoBehaviour {
         return nextShapePreview.transform.rotation;
     }
     
+    public void HoldBlock() {
+        if (heldBlockIndex == null) {
+            heldBlockIndex = nextShapeIndex;
+            Destroy(nextShapePreview.gameObject);
+            nextShapeIndex = Random.Range(0, shapes.Count);
+            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+        } else {
+            int tempNextShapeIndex = nextShapeIndex;
+            nextShapeIndex = (int)heldBlockIndex;
+            heldBlockIndex = tempNextShapeIndex;
+            Destroy(nextShapePreview.gameObject);
+            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+        }
+    }
+    
     void GenerateNextShape() {
         nextShapeIndex = Random.Range(0, shapes.Count);
-        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
+        nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]);
+        
+        // nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
         // nextRotationIndex = 0;
         // nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
-        
+
         nextShapePreview.gameObject.SetActive(false);
         StartCoroutine(SetActiveAfterCooldown(nextShapePreview.gameObject));
     }

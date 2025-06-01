@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8590b2dfe298fb4c849e44ecc28b0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedRotationDirection: 0
   RotationUpgradeUI: {fileID: 5368663838382800294}
 --- !u!1 &3784639656634963097
 GameObject:
@@ -93,7 +94,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7976517249823439775
 Transform:
   m_ObjectHideFlags: 0

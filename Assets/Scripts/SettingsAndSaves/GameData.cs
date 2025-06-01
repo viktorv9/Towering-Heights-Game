@@ -11,11 +11,13 @@ public class GameData {
 
     // with a run based system these would have to be saved into a separate run-specific save
     public bool rotationUnlocked;
+    public bool holdBlockUnlocked;
     
     public GameData (
         bool tutorialIsCompleted = false,
         bool rotationTutorialIsCompleted = false,
         bool rotationIsUnlocked = false,
+        bool holdBlockIsUnlocked = false,
         float highestHeightGoal = 0
     ) {
         tutorialCompleted = tutorialIsCompleted;
@@ -23,5 +25,6 @@ public class GameData {
         highestHeightGoalHeight = highestHeightGoal;
 
         rotationUnlocked = rotationIsUnlocked;
+        holdBlockUnlocked = holdBlockIsUnlocked;
     }
 }

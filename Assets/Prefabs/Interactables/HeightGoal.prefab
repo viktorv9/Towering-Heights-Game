@@ -313,13 +313,13 @@ MonoBehaviour:
   goals:
   - goalHeight: 10
     upgradeToUnlock: 1
+  - goalHeight: 15
+    upgradeToUnlock: 2
   - goalHeight: 20
     upgradeToUnlock: 0
+  - goalHeight: 25
+    upgradeToUnlock: 0
   - goalHeight: 30
-    upgradeToUnlock: 0
-  - goalHeight: 40
-    upgradeToUnlock: 0
-  - goalHeight: 50
     upgradeToUnlock: 0
   goalCollisionDuration: 5
   canvas: {fileID: 8151738160610294337}
