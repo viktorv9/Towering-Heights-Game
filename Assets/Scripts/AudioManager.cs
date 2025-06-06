@@ -25,7 +25,6 @@ public class AudioManager : MonoBehaviour
 
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
         musicBus = RuntimeManager.GetBus("bus:/Music");
-        musicBus.getVolume(out float volume);
         
         InitializeMusic(sceneMusic);
     }

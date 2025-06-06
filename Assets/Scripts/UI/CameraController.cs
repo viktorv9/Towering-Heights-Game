@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour {
     private CinemachinePOV cinemachinePOV;
     private CinemachineFramingTransposer cinemachineFramingTransposer;
 
-    private void Start() {
+    private void Awake() {
         cinemachinePOV = cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
         cinemachineFramingTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
     }
