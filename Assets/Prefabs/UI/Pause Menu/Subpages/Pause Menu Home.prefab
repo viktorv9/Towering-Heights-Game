@@ -32,8 +32,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4550425325240399887}
-  - {fileID: 1961632072464482331}
   - {fileID: 5229260328370062483}
+  - {fileID: 1961632072464482331}
   - {fileID: 840313567230662420}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -105,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 64408111841998966, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
       propertyPath: m_text
-      value: HOW TO PLAY
+      value: CONTROLS
       objectReference: {fileID: 0}
     - target: {fileID: 64408111841998966, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 3417403144109221926, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
       propertyPath: m_Name
-      value: HowToPlay Button
+      value: Controls Button
       objectReference: {fileID: 0}
     - target: {fileID: 7892084606276552041, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
@@ -205,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 7892084606276552041, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -70.600555
+      value: 9.399445
       objectReference: {fileID: 0}
     - target: {fileID: 7892084606276552041, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 7984314666690072410, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HowToPlay
+      value: NavigateControls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -640,7 +640,7 @@ PrefabInstance:
     - target: {fileID: 7892084606276552041, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.399445
+      value: -70.60056
       objectReference: {fileID: 0}
     - target: {fileID: 7892084606276552041, guid: 556a5cd1adf9f4b4fa952f07718a00b8,
         type: 3}

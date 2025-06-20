@@ -14,6 +14,12 @@ public class PauseMenu : MonoBehaviour {
 
     [SerializeField] private GameObject settingsMenuUI;
     [SerializeField] private GameObject settingsMenuFirstSelected;
+
+    [SerializeField] private GameObject controlsMenuUI;
+    [SerializeField] private GameObject controlsMenuFirstSelected;
+
+    private GameObject previousMenuUI;
+    private GameObject previousMenuFirstSelected;
     
     private Controls playerControls;
 
@@ -38,12 +44,13 @@ public class PauseMenu : MonoBehaviour {
     private void DisableAllMenus() {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(false);
     }
     
     public void Resume() {
         DisableAllMenus();
         Time.timeScale = 1f;
-        StartCoroutine(SetGamePausedAfterDelay(false));
+        StartCoroutine(SetGamePausedStateAfterDelay(false));
     }
     
     public void Pause() {
@@ -55,18 +62,41 @@ public class PauseMenu : MonoBehaviour {
         eventSystem.SetSelectedGameObject(pauseMenuFirstSelected);
     }
     
+    public void NavigateControls() {
+        DisableAllMenus();
+        controlsMenuUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(controlsMenuFirstSelected);
+
+        previousMenuUI = pauseMenuUI;
+        previousMenuFirstSelected = pauseMenuFirstSelected;
+    }
+    
     public void NavigateSettings() {
         DisableAllMenus();
         settingsMenuUI.SetActive(true);
-        
         eventSystem.SetSelectedGameObject(settingsMenuFirstSelected);
+
+        previousMenuUI = pauseMenuUI;
+        previousMenuFirstSelected = pauseMenuFirstSelected;
+    }
+    
+    public void NavigateBack() {
+        if (previousMenuUI == null) Resume();
+        else {
+            DisableAllMenus();
+            previousMenuUI.SetActive(true);
+            eventSystem.SetSelectedGameObject(previousMenuFirstSelected);
+
+            previousMenuUI = null;
+            previousMenuFirstSelected = null;
+        }
     }
     
     public void Quit() {
         Application.Quit();
     }
     
-    IEnumerator SetGamePausedAfterDelay(bool newPausedValue) {
+    IEnumerator SetGamePausedStateAfterDelay(bool newPausedValue) {
         yield return new WaitForSeconds(0.1f);
         GameIsPaused = newPausedValue;
     }
