@@ -16,6 +16,7 @@ public class Dialog : MonoBehaviour
         PlaceBlock,
         Rotate,
         HoldBlock,
+        None,
     }
 
     public delegate void DialogCompleted();
@@ -40,8 +41,10 @@ public class Dialog : MonoBehaviour
 
     private void OnEnable()
     {
-        shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
-        cinemachineVirtualCamera = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].GetComponent<CinemachineVirtualCamera>();
+        if (tutorialType != TutorialType.None) {
+            shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
+            cinemachineVirtualCamera = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].GetComponent<CinemachineVirtualCamera>();
+        }
         
         playerControls = new Controls();
         playerControls.Player.Enable();
@@ -91,6 +94,7 @@ public class Dialog : MonoBehaviour
 
         switch (tutorialType)
         {
+            case (TutorialType.None): return;
             case (TutorialType.PressA):
                 if (playerControls.Player.DropShape.IsPressed()) {
                     shapeDropper.RemoveDropsBlocksBlocker();

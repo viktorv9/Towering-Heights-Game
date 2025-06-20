@@ -14,8 +14,6 @@ public class Settings : MonoBehaviour {
     [SerializeField] private Toggle horizontalInputInvertedToggle;
     [SerializeField] private Toggle verticalInputInvertedToggle;
     
-    [SerializeField] private List<GameObject> gameObjectsDependentOnSettings;
-
     public class GameSettings {
         public float musicVolume;
         public float sfxVolume;
