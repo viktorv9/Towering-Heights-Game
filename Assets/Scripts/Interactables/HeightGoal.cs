@@ -29,6 +29,11 @@ public class HeightGoal : MonoBehaviour
         foreach (Goal goal in goalsCopy) {
             if (goal.goalHeight <= gameData.highestHeightGoalHeight) goals.Remove(goal);
         }
+        
+        if (goals.Count == 0) {
+            Destroy(gameObject);
+            return;
+        }
 
         transform.position = new Vector3(0, goals[0].goalHeight, 0);
     }

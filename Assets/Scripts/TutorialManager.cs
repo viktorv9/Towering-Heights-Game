@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TutorialManager : MonoBehaviour
-{
+public class TutorialManager : MonoBehaviour {
+    [SerializeField] private bool resetTutorialsOnSceneLoad;
+    
     [SerializeField] private List<GameObject> tutorialSteps;
     [SerializeField] private List<GameObject> rotationSteps;
     [SerializeField] private List<GameObject> holdBlockSteps;
@@ -21,6 +23,7 @@ public class TutorialManager : MonoBehaviour
     private GameData gameData;
     
     private void Start() {
+        if (resetTutorialsOnSceneLoad) ResetTutorials();
         CheckForUncompletedTutorials();
     }
 
@@ -84,5 +87,13 @@ public class TutorialManager : MonoBehaviour
                 CheckForUncompletedTutorials();
             }
         }
+    }
+    
+    private void ResetTutorials() {
+        gameData = SaveSystem.LoadGameData();
+        gameData.tutorialCompleted = false;
+        gameData.rotationTutorialCompleted = false;
+        gameData.holdBlockTutorialCompleted = false;
+        SaveSystem.SaveGameData(gameData);
     }
 }
