@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd0dcd6e0135054d9e5c309c4174a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetTutorialsOnSceneLoad: 0
   tutorialSteps:
   - {fileID: 1433956382952992528}
   - {fileID: 6172580157969068165}

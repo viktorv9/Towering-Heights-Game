@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Cinemachine.Utility;
 using UnityEngine;
 
 public class RotationUpgrade : MonoBehaviour {
@@ -17,11 +18,14 @@ public class RotationUpgrade : MonoBehaviour {
     public RotationDirection selectedRotationDirection = RotationDirection.None;
 
     [SerializeField] private GameObject RotationUpgradeUI;
+    [SerializeField] private float RotationUpgradeUIDeadzoneSize;
     
     private ShapeDropper shapeDropper;
     private CinemachinePOV cinemachinePOV;
     private CinemachineInputProvider cinemachineInputProvider;
     private Controls playerControls;
+
+    private Vector2 mouseStart;
 
     private void Start() {
         shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
@@ -43,7 +47,22 @@ public class RotationUpgrade : MonoBehaviour {
 
         if (playerControls.Player.Rotate.triggered || playerControls.Player.Rotate.WasReleasedThisFrame()) {
             SetRotationUIState(true);
-            if (playerControls.Player.Rotate.WasReleasedThisFrame()) {
+            if (!playerControls.Player.Rotate.WasReleasedThisFrame()) {
+                mouseStart = Input.mousePosition;
+            } else {
+                Vector2 mouseEndRelative = (Vector2)Input.mousePosition - mouseStart;
+                if (mouseEndRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
+                    selectedRotationDirection = RotationDirection.None;
+                } else {
+                    if (mouseEndRelative.Abs().x > mouseEndRelative.Abs().y) {
+                        if (mouseEndRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
+                        else selectedRotationDirection = RotationDirection.Left;
+                    } else {
+                        if (mouseEndRelative.y > 0) selectedRotationDirection = RotationDirection.Up;
+                        else selectedRotationDirection = RotationDirection.Down;
+                    }
+                }   
+                
                 ExecuteRotate(selectedRotationDirection);
             }
         }
@@ -59,6 +78,7 @@ public class RotationUpgrade : MonoBehaviour {
     }
     
     private void ExecuteRotate(RotationDirection rotationDirection) {
+        if (rotationDirection == RotationDirection.None) return;
         Vector3 rotationValue = new Vector3();
         if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
         if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;

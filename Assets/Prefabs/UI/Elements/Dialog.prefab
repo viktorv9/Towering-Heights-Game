@@ -53,8 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialType: 0
   progressBar: {fileID: 2256584943786583404}
-  shapeDropper: {fileID: 0}
-  cinemachineVirtualCamera: {fileID: 0}
 --- !u!1 &3221818661477569109
 GameObject:
   m_ObjectHideFlags: 0

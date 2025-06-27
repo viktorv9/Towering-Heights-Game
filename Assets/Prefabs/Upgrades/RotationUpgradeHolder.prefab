@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedRotationDirection: 0
   RotationUpgradeUI: {fileID: 5368663838382800294}
+  RotationUpgradeUIDeadzoneSize: 80
 --- !u!1 &5368663838382800294
 GameObject:
   m_ObjectHideFlags: 0
