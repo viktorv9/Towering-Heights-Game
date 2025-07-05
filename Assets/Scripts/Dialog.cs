@@ -17,6 +17,7 @@ public class Dialog : MonoBehaviour
         Rotate,
         HoldBlock,
         None,
+        Undo,
     }
 
     public delegate void DialogCompleted();
@@ -105,7 +106,7 @@ public class Dialog : MonoBehaviour
             case (TutorialType.HorizontalMovement):
                 if (shapeDropperPosition.x != shapeDropper.transform.position.x || shapeDropperPosition.z != shapeDropper.transform.position.z) {
                     shapeDropperPosition = shapeDropper.transform.position;
-                    progressPercentage += 0.2f;
+                    progressPercentage += 40f * Time.deltaTime;
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {
@@ -117,7 +118,7 @@ public class Dialog : MonoBehaviour
             case (TutorialType.VerticalMovement):
                 if (shapeDropperPosition.y != shapeDropper.transform.position.y) {
                     shapeDropperPosition = shapeDropper.transform.position;
-                    progressPercentage += 2f;
+                    progressPercentage += 80f * Time.deltaTime;
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {
@@ -129,7 +130,7 @@ public class Dialog : MonoBehaviour
             case (TutorialType.CameraMove):
                 if (cinemachineVirtualCameraRotation != cinemachineVirtualCamera.transform.rotation) {
                     cinemachineVirtualCameraRotation = cinemachineVirtualCamera.transform.rotation;
-                    progressPercentage += 0.5f;
+                    progressPercentage += 40f * Time.deltaTime;
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {
@@ -169,6 +170,12 @@ public class Dialog : MonoBehaviour
                 progressPercentage = holdBlockPresses * 100 / 2;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
+                    OnComplete?.Invoke();
+                    Destroy(gameObject);
+                }
+                break;
+            case (TutorialType.Undo):
+                if (playerControls.Player.Undo.triggered) {
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }

@@ -38,7 +38,6 @@ public class ShapeDropper : MonoBehaviour {
 
     private bool gameOver;
     private int currentScore;
-    private GameObject lastSavedTowerState;
     
     private ShapePreview nextShapePreview;
     private int nextShapeIndex;
@@ -47,6 +46,11 @@ public class ShapeDropper : MonoBehaviour {
     private float timeLastDrop;
 
     private int? heldBlockIndex;
+    
+    private GameObject lastSavedTowerState;
+    private ShapePreview lastNextShapePreview;
+    private int lastNextShapeIndex;
+    private int? lastHeldBlockIndex;
 
     void Start() {
         playerControls = new Controls();
@@ -57,7 +61,7 @@ public class ShapeDropper : MonoBehaviour {
         cameraController = cameraTransform.gameObject.GetComponent<CameraController>();
 
         timeLastDrop = Time.time - 1.0f;
-        GenerateNextShape();
+        GenerateNextShape(null);
     }
 
     void Update() {
@@ -69,7 +73,6 @@ public class ShapeDropper : MonoBehaviour {
         if (IsGameOver()) return;
         if (playerControls.Player.DropShape.triggered && dropShapeBlockers == 0) HandleDrop();
         // if (playerControls.Player.Rotate.triggered) RotateBlock(); replaced by rotation upgrade.
-        if (Input.GetKeyDown(KeyCode.L)) LoadTowerState();
     }
     
     public void AddDropsBlocksBlocker() {
@@ -112,7 +115,7 @@ public class ShapeDropper : MonoBehaviour {
 
         timeLastDrop = Time.time;
         Destroy(nextShapePreview.gameObject);
-        GenerateNextShape();
+        GenerateNextShape(null);
     }
 
     // void RotateBlock() {
@@ -151,8 +154,9 @@ public class ShapeDropper : MonoBehaviour {
         }
     }
     
-    void GenerateNextShape() {
-        nextShapeIndex = Random.Range(0, shapes.Count);
+    void GenerateNextShape(int? shapeIndex) {
+        if (shapeIndex == null) nextShapeIndex = Random.Range(0, shapes.Count);
+        else nextShapeIndex = shapeIndex.Value;
         nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
         
         // nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
@@ -172,8 +176,6 @@ public class ShapeDropper : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         if (inactiveGameObject) inactiveGameObject.SetActive(true);
     }
-    
-    // TODO: The next two functions were prototypes for a reload system so the game could use lives. TEMPORARY!
 
     void SaveTowerState() {
         if (lastSavedTowerState) Destroy(lastSavedTowerState);
@@ -181,11 +183,16 @@ public class ShapeDropper : MonoBehaviour {
         lastSavedTowerState.SetActive(false);
     }
     
-    void LoadTowerState() {
-        Destroy(blocksHolder);
-        GameObject newBlocksHolder = Instantiate(lastSavedTowerState);
-        newBlocksHolder.SetActive(true);
-        blocksHolder = newBlocksHolder;
+    public void LoadTowerState() {
+        if (lastSavedTowerState) {
+            Destroy(blocksHolder);
+            GameObject newBlocksHolder = Instantiate(lastSavedTowerState);
+            newBlocksHolder.SetActive(true);
+            blocksHolder = newBlocksHolder;
+            
+            Destroy(nextShapePreview.gameObject);
+            nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
+        }
     }
     
     void UpdatePreviewPosition() {

@@ -316,11 +316,7 @@ MonoBehaviour:
   - goalHeight: 15
     upgradeToUnlock: 2
   - goalHeight: 20
-    upgradeToUnlock: 0
-  - goalHeight: 25
-    upgradeToUnlock: 0
-  - goalHeight: 30
-    upgradeToUnlock: 0
+    upgradeToUnlock: 4
   goalCollisionDuration: 5
   canvas: {fileID: 8151738160610294337}
   countdownText: {fileID: 5185202954505564446}

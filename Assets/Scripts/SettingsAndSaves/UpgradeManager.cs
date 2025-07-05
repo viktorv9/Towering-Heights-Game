@@ -9,7 +9,8 @@ public static class UpgradeManager
         None,
         RotationUpgrade,
         HoldUpgrade,
-        StabilityBlocksUpgrade
+        StabilityBlocksUpgrade,
+        UndoUpgrade,
     }
     
     public delegate void UpgradeUnlocked(UpgradeType upgradeType);
@@ -40,6 +41,10 @@ public static class UpgradeManager
             case (UpgradeType.HoldUpgrade):
                 UnlockedUpgrades.Add(UpgradeType.HoldUpgrade);
                 gameData.holdBlockUnlocked = true;
+                break;
+            case (UpgradeType.UndoUpgrade):
+                UnlockedUpgrades.Add(UpgradeType.UndoUpgrade);
+                gameData.undoBlockUnlocked = true;
                 break;
         }
         SaveSystem.SaveGameData(gameData);
