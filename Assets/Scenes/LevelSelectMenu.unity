@@ -459,10 +459,20 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1724802138932839870, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: EndlessMode
+      objectReference: {fileID: 0}
     - target: {fileID: 3279057599610544597, guid: 20f1294b967630f4eb94d5ba025fe230,
         type: 3}
       propertyPath: m_Name
       value: Level Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219277053792035522, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_Name
+      value: Endless Mode Button
       objectReference: {fileID: 0}
     - target: {fileID: 6479871206437105956, guid: 20f1294b967630f4eb94d5ba025fe230,
         type: 3}
@@ -564,8 +574,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8774862951469494930, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_text
+      value: Endless
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2693810967221203717, guid: 20f1294b967630f4eb94d5ba025fe230, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f1294b967630f4eb94d5ba025fe230, type: 3}

@@ -311,9 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - goalHeight: 10
-    upgradeToUnlock: 0
-    finalGoal: 1
+  - goalHeight: 15
+    upgradeToUnlock: 1
+    finalGoal: 0
   goalCollisionDuration: 5
   canvas: {fileID: 8151738160610294337}
   countdownText: {fileID: 5185202954505564446}

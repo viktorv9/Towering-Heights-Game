@@ -215,6 +215,7 @@ public class ShapeDropper : MonoBehaviour {
             
             Destroy(nextShapePreview.gameObject);
             nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
+            currentScore--;
             canUndo = false;
         }
     }

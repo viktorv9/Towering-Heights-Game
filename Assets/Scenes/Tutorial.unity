@@ -1652,8 +1652,23 @@ PrefabInstance:
       objectReference: {fileID: 330585545}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
+      propertyPath: goals.Array.data[0].finalGoal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: goals.Array.data[0].goalHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
       propertyPath: goals.Array.data[1].goalHeight
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: goals.Array.data[0].upgradeToUnlock
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
