@@ -6,14 +6,16 @@ using Random = UnityEngine.Random;
 
 public class WorldBase : MonoBehaviour {
 
-    [SerializeField] private ShapeDropper shapeDropper;
     [SerializeField] private HeightGoal heightGoal;
     [SerializeField] private float platformY = 1;
     [SerializeField] private GameObject platformPart;
 
     [SerializeField] private List<Pickup> pickups;
 
+    private ShapeDropper shapeDropper;
+
     private void Start() {
+        shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
         SpawnPickup(pickups[Random.Range(0, pickups.Count-1)]);
     }
 
@@ -27,7 +29,7 @@ public class WorldBase : MonoBehaviour {
 
     public void SpawnPickup(Pickup pickup) {
         float range = 3;
-        float maxHeight = (heightGoal != null) ? heightGoal.GetCurrentGoalHeight() - 1 : 100; // temp: if no heightgoal spawn somewhere below y=100
+        float maxHeight = 5; // TODO: beter scaling based on current tower height
         while (true) {
             for (int i = 0; i < 100; i++) {
                 Vector3 randomSpawnPoint = new Vector3(
@@ -67,6 +69,8 @@ public class WorldBase : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
+        if (shapeDropper.GetHasWon()) return;
+        
         if (other.CompareTag("Block")) {
             shapeDropper.SetGameOver(true);
         }

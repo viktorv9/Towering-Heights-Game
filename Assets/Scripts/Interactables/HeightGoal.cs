@@ -12,6 +12,7 @@ public class HeightGoal : MonoBehaviour
     private struct Goal {
         public float goalHeight;
         public UpgradeManager.UpgradeType upgradeToUnlock;
+        public bool finalGoal;
     }
 
     [SerializeField] private List<Goal> goals;
@@ -19,15 +20,30 @@ public class HeightGoal : MonoBehaviour
     
     [SerializeField] private Canvas canvas;
     [SerializeField] private TextMeshProUGUI countdownText;
+    
+    [SerializeField] private GameObject winEffect;
 
     private List<GameObject> collidersInTrigger = new ();
     private float timeCollisionStart = 0;
-    
+    private ShapeDropper shapeDropper;
+
     private void Start() {
+        shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
+        
         GameData gameData = SaveSystem.LoadGameData();
         List<Goal> goalsCopy = new List<Goal>(goals);
         foreach (Goal goal in goalsCopy) {
-            if (goal.goalHeight <= gameData.highestHeightGoalHeight) goals.Remove(goal);
+            switch (goal.upgradeToUnlock) {
+                case UpgradeManager.UpgradeType.RotationUpgrade:
+                    if (gameData.rotationUnlocked) goals.Remove(goal);
+                    break;
+                case UpgradeManager.UpgradeType.HoldUpgrade:
+                    if (gameData.holdBlockUnlocked) goals.Remove(goal);
+                    break;
+                case UpgradeManager.UpgradeType.UndoUpgrade:
+                    if (gameData.undoBlockUnlocked) goals.Remove(goal);
+                    break;
+            }
         }
         
         if (goals.Count == 0) {
@@ -72,16 +88,13 @@ public class HeightGoal : MonoBehaviour
         }
     }
     
-    public float GetCurrentGoalHeight() {
-        return goals[0].goalHeight;
-    }
-    
     private void NextGoalHeight() {
-        GameData gameData = SaveSystem.LoadGameData();
-        gameData.highestHeightGoalHeight = goals[0].goalHeight;
-        SaveSystem.SaveGameData(gameData);
-        
         UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
+        if (goals[0].finalGoal) {
+            Instantiate(winEffect);
+            shapeDropper.SetHasWon(true);
+        }
+        
         goals.RemoveAt(0);
         if (goals.Count > 0) {
             transform.position = new Vector3(0, goals[0].goalHeight, 0);

@@ -312,14 +312,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goals:
   - goalHeight: 10
-    upgradeToUnlock: 1
-  - goalHeight: 15
-    upgradeToUnlock: 2
-  - goalHeight: 20
-    upgradeToUnlock: 4
+    upgradeToUnlock: 0
+    finalGoal: 1
   goalCollisionDuration: 5
   canvas: {fileID: 8151738160610294337}
   countdownText: {fileID: 5185202954505564446}
+  winEffect: {fileID: 6343847601216642769, guid: 7c89174a2ecd0f54f91f308eb604ae98,
+    type: 3}
 --- !u!1 &5610618916882719695
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,6 +101,8 @@ MonoBehaviour:
   gameUI: {fileID: 0}
   gameOverMenu: {fileID: 0}
   gameOverMenuFirstSelected: {fileID: 0}
+  hasWonMenu: {fileID: 0}
+  hasWonMenuFirstSelected: {fileID: 0}
   blocksHolder: {fileID: 0}
   heightGoal: {fileID: 0}
   cameraTransform: {fileID: 0}
@@ -126,6 +128,7 @@ MonoBehaviour:
   advancedShapePreviews:
   - {fileID: 3160462999529527672, guid: 73fa96e4f04497c46bec9e637a085a6a, type: 3}
   - {fileID: 7875485325622511241, guid: c1db326626de83b4db0cf63f6238df44, type: 3}
+  showScore: 0
 --- !u!114 &2494367843560358673
 MonoBehaviour:
   m_ObjectHideFlags: 0

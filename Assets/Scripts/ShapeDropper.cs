@@ -13,6 +13,8 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private GameUI gameUI;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private GameObject gameOverMenuFirstSelected;
+    [SerializeField] private GameObject hasWonMenu;
+    [SerializeField] private GameObject hasWonMenuFirstSelected;
 
     [Header("Scene related links")]
     [SerializeField] private GameObject blocksHolder;
@@ -30,6 +32,9 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private List<GameObject> shapePreviews;
     [SerializeField] private List<GameObject> advancedShapes;
     [SerializeField] private List<GameObject> advancedShapePreviews;
+    
+    [Header("Other settings")]
+    [SerializeField] private bool showScore;
 
     private Controls playerControls;
     private int dropShapeBlockers = 0;
@@ -37,6 +42,7 @@ public class ShapeDropper : MonoBehaviour {
     private CameraController cameraController;
 
     private bool gameOver;
+    private bool hasWon;
     private int currentScore;
     
     private ShapePreview nextShapePreview;
@@ -60,6 +66,8 @@ public class ShapeDropper : MonoBehaviour {
         UpgradeManager.LoadUnlockedUpgrades();
         
         cameraController = cameraTransform.gameObject.GetComponent<CameraController>();
+        
+        gameUI.SetShowScore(showScore);
 
         timeLastDrop = Time.time - 1.0f;
         GenerateNextShape(null);
@@ -88,7 +96,6 @@ public class ShapeDropper : MonoBehaviour {
         return gameOver;
     }
 
-
     public int GetCurrentScore() {
         return currentScore;
     }
@@ -101,6 +108,18 @@ public class ShapeDropper : MonoBehaviour {
         }
     }
 
+    public void SetHasWon(bool newState) {
+        hasWon = newState;
+        if (hasWon) {
+            hasWonMenu.SetActive(true);
+            eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
+        }
+    }
+
+    public bool GetHasWon() {
+        return hasWon;
+    }
+
     void HandleDrop() {
         if (Time.time - timeLastDrop < 1.0f) return;
         
@@ -111,8 +130,10 @@ public class ShapeDropper : MonoBehaviour {
         Instantiate(dropShape, transform.position, nextShapePreview.transform.rotation, blocksHolder.transform);
         
         currentScore++;
-        if (currentScore == 50) AddAdvancedShapes();
-        gameUI.UpdateScore(currentScore);
+        if (showScore) {
+            if (currentScore == 50) AddAdvancedShapes();
+            gameUI.UpdateScore(currentScore);
+        }
 
         canUndo = true;
         timeLastDrop = Time.time;
