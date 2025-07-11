@@ -118,7 +118,7 @@ public class Dialog : MonoBehaviour
             case (TutorialType.VerticalMovement):
                 if (shapeDropperPosition.y != shapeDropper.transform.position.y) {
                     shapeDropperPosition = shapeDropper.transform.position;
-                    progressPercentage += 80f * Time.deltaTime;
+                    progressPercentage += 500f * Time.deltaTime;
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {

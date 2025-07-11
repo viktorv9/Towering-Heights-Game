@@ -46,6 +46,7 @@ public class ShapeDropper : MonoBehaviour {
     private float timeLastDrop;
 
     private int? heldBlockIndex;
+    private bool canUndo;
     
     private GameObject lastSavedTowerState;
     private ShapePreview lastNextShapePreview;
@@ -113,6 +114,7 @@ public class ShapeDropper : MonoBehaviour {
         if (currentScore == 50) AddAdvancedShapes();
         gameUI.UpdateScore(currentScore);
 
+        canUndo = true;
         timeLastDrop = Time.time;
         Destroy(nextShapePreview.gameObject);
         GenerateNextShape(null);
@@ -184,7 +186,7 @@ public class ShapeDropper : MonoBehaviour {
     }
     
     public void LoadTowerState() {
-        if (lastSavedTowerState) {
+        if (lastSavedTowerState && canUndo) {
             Destroy(blocksHolder);
             GameObject newBlocksHolder = Instantiate(lastSavedTowerState);
             newBlocksHolder.SetActive(true);
@@ -192,6 +194,7 @@ public class ShapeDropper : MonoBehaviour {
             
             Destroy(nextShapePreview.gameObject);
             nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
+            canUndo = false;
         }
     }
     
