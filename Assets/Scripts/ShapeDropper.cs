@@ -241,9 +241,6 @@ public class ShapeDropper : MonoBehaviour {
         Vector2 playerMovementVerticalInput = playerControls.Player.MoveVertical.ReadValue<Vector2>();
         newHeight += playerMovementVerticalInput.y * verticalSpeed;
         if (newHeight < 0) newHeight = 0;
-        if (heightGoal) {
-            if (newHeight > heightGoal.transform.position.y + 5) newHeight = heightGoal.transform.position.y + 5;
-        }
         
         Vector2 playerZoomInput = playerControls.Player.Zoom.ReadValue<Vector2>();
         cameraController.ZoomCamera(-playerZoomInput.y * zoomSpeed);
