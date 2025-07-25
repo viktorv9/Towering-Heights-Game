@@ -428,7 +428,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1012,6 +1012,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978750727892609283, guid: 251685533d551224888994854f63c4a2,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378981743306782638, guid: 251685533d551224888994854f63c4a2,
+        type: 3}
+      propertyPath: progressBar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9006595165548743323, guid: 251685533d551224888994854f63c4a2,
         type: 3}
