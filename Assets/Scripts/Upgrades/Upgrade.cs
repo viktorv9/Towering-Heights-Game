@@ -17,5 +17,8 @@ public class Upgrade : MonoBehaviour {
     
     private void SetUpgradeActive(UpgradeManager.UpgradeType unlockedUpgradeType) {
         if (upgradeType == unlockedUpgradeType) upgradeGameObject.SetActive(true);
+        Debug.Log(upgradeGameObject.name + " is " + upgradeGameObject.activeSelf);
+        Debug.Log(upgradeType + " is " + unlockedUpgradeType);
+        Debug.Log(8888888888);
     }
 }

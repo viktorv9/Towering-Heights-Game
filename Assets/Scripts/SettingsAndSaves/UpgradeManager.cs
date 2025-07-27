@@ -28,6 +28,10 @@ public static class UpgradeManager
             OnUpgradeUnlocked?.Invoke(UpgradeType.HoldUpgrade);
             UnlockedUpgrades.Add(UpgradeType.HoldUpgrade);
         }
+        if (gameData.undoBlockUnlocked) {
+            OnUpgradeUnlocked?.Invoke(UpgradeType.UndoUpgrade);
+            UnlockedUpgrades.Add(UpgradeType.UndoUpgrade);
+        }
         return UnlockedUpgrades;
     }
     

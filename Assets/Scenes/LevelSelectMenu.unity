@@ -454,6 +454,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1487332092619296653, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1724802138932839870, guid: 20f1294b967630f4eb94d5ba025fe230,
         type: 3}
       propertyPath: m_Interactable
@@ -468,6 +473,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583335920561319048, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583335920561319048, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6219277053792035522, guid: 20f1294b967630f4eb94d5ba025fe230,
         type: 3}
