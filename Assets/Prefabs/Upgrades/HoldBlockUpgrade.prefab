@@ -347,6 +347,13 @@ MonoBehaviour:
   - {fileID: -1537228283, guid: 99bbe95eda5de9b47806896badbfee3e, type: 3}
   - {fileID: -733921353, guid: 99bbe95eda5de9b47806896badbfee3e, type: 3}
   shapePreviewImage: {fileID: 1648334704161322178}
+  holdBlockSound:
+    Guid:
+      Data1: -431254660
+      Data2: 1219301922
+      Data3: 809651592
+      Data4: -147498042
+    Path: event:/Hold Block
 --- !u!1 &7120857351456496423
 GameObject:
   m_ObjectHideFlags: 0

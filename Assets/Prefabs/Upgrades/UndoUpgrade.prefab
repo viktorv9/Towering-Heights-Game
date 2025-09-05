@@ -268,6 +268,13 @@ MonoBehaviour:
   inputText: {fileID: 6257014818070991448}
   cooldownText: {fileID: 1170687522980360200}
   cooldownContainer: {fileID: 6199377340876896584}
+  undoSound:
+    Guid:
+      Data1: 503919162
+      Data2: 1166097656
+      Data3: 2102353553
+      Data4: 1507507466
+    Path: event:/Undo
 --- !u!1 &2522270132548096508
 GameObject:
   m_ObjectHideFlags: 0

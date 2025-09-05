@@ -20,7 +20,6 @@ public class ShapeDropper : MonoBehaviour {
     [Header("Scene related links")]
     [SerializeField] private GameObject blocksHolder;
     [SerializeField] private GameObject heightGoal;
-    [SerializeField] private Transform cameraTransform;
     
     [Header("Control settings")]
     [SerializeField] private float horizontalSpeed;
@@ -43,6 +42,7 @@ public class ShapeDropper : MonoBehaviour {
     private int dropShapeBlockers = 0;
     
     private CameraController cameraController;
+    private Transform cameraTransform;
 
     private bool gameOver;
     private bool hasWon;
@@ -68,6 +68,7 @@ public class ShapeDropper : MonoBehaviour {
 
         UpgradeManager.LoadUnlockedUpgrades();
         
+        cameraTransform = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].transform;
         cameraController = cameraTransform.gameObject.GetComponent<CameraController>();
         
         gameUI.SetShowScore(showScore);
