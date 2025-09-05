@@ -1526,13 +1526,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
+      propertyPath: goals.Array.data[0].goalHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
       propertyPath: goals.Array.data[1].goalHeight
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: goals.Array.data[2].goalHeight
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}

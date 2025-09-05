@@ -130,7 +130,7 @@ public class Dialog : MonoBehaviour
             case (TutorialType.CameraMove):
                 if (cinemachineVirtualCameraRotation != cinemachineVirtualCamera.transform.rotation) {
                     cinemachineVirtualCameraRotation = cinemachineVirtualCamera.transform.rotation;
-                    progressPercentage += 40f * Time.deltaTime;
+                    progressPercentage += 80f * Time.deltaTime;
                     progressBar.SetProgressBarPercentage(progressPercentage);
                 }
                 if (progressPercentage >= 100) {

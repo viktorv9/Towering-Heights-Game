@@ -23,6 +23,22 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
 
+        StartCoroutine(LoadMusicAsync());
+    }
+    
+    private IEnumerator LoadMusicAsync()
+    {
+        RuntimeManager.LoadBank("Master", true);
+        RuntimeManager.LoadBank("Master.strings", true);
+        RuntimeManager.LoadBank("Music", true);
+        RuntimeManager.LoadBank("SFX", true);
+
+        // Keep yielding the co-routine until all the Bank loading is done
+        while (!RuntimeManager.HaveAllBanksLoaded)
+        {
+            yield return null;
+        }
+
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
         musicBus = RuntimeManager.GetBus("bus:/Music");
         
@@ -38,6 +54,22 @@ public class AudioManager : MonoBehaviour
     }
 
     private void SetVolumeSettings(Settings.GameSettings gameSettings) {
+        // this 'reroute if loading' is pretty damn ugly,
+        // could be improved with a more central 'LoadMusicAsync' (like in the main menu)
+        if (!RuntimeManager.HaveAllBanksLoaded) {
+            StartCoroutine(SetVolumeAfterLoading(gameSettings));
+            return;
+        }
+        sfxBus.setVolume(gameSettings.sfxVolume);
+        musicBus.setVolume(gameSettings.musicVolume);
+    }
+    
+    private IEnumerator SetVolumeAfterLoading(Settings.GameSettings gameSettings) {
+        while (!RuntimeManager.HaveAllBanksLoaded)
+        {
+            yield return null;
+        }
+        
         sfxBus.setVolume(gameSettings.sfxVolume);
         musicBus.setVolume(gameSettings.musicVolume);
     }
@@ -76,3 +108,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 }
+
+
+
+
