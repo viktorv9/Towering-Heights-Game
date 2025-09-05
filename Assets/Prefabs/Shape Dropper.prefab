@@ -129,6 +129,13 @@ MonoBehaviour:
   - {fileID: 3160462999529527672, guid: 73fa96e4f04497c46bec9e637a085a6a, type: 3}
   - {fileID: 7875485325622511241, guid: c1db326626de83b4db0cf63f6238df44, type: 3}
   showScore: 0
+  gameOverSound:
+    Guid:
+      Data1: -1754831573
+      Data2: 1332445113
+      Data3: -1535963207
+      Data4: -791050135
+    Path: event:/Game Over
 --- !u!114 &2494367843560358673
 MonoBehaviour:
   m_ObjectHideFlags: 0

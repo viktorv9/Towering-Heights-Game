@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -35,7 +36,9 @@ public class ShapeDropper : MonoBehaviour {
     
     [Header("Other settings")]
     [SerializeField] private bool showScore;
+    [SerializeField] private EventReference gameOverSound;
 
+    
     private Controls playerControls;
     private int dropShapeBlockers = 0;
     
@@ -101,10 +104,12 @@ public class ShapeDropper : MonoBehaviour {
     }
 
     public void SetGameOver(bool newState) {
+        if (newState == gameOver) return;
         gameOver = newState;
         if (gameOver) {
             gameOverMenu.SetActive(true);
             eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
+            AudioManager.instance.PlayOneShot(gameOverSound, cameraTransform.position);
         }
     }
 

@@ -398,6 +398,7 @@ MonoBehaviour:
       Data3: -965180028
       Data4: 1834626731
     Path: event:/Block Collision
+  collisionSoundCooldown: 0.2
 --- !u!1 &8520281472112624615
 GameObject:
   m_ObjectHideFlags: 0
