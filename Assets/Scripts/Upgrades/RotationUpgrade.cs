@@ -18,6 +18,7 @@ public class RotationUpgrade : MonoBehaviour {
     public RotationDirection selectedRotationDirection = RotationDirection.None;
 
     [SerializeField] private GameObject RotationUpgradeUI;
+    [SerializeField] private RectTransform RotationUpgradeCursorTransform;
     [SerializeField] private float RotationUpgradeUIDeadzoneSize;
     
     private ShapeDropper shapeDropper;
@@ -25,7 +26,7 @@ public class RotationUpgrade : MonoBehaviour {
     private CinemachineInputProvider cinemachineInputProvider;
     private Controls playerControls;
 
-    private Vector2 mouseStart;
+    private Vector2 mouseRelative;
 
     private void Start() {
         shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
@@ -45,20 +46,25 @@ public class RotationUpgrade : MonoBehaviour {
             return;
         }
 
+        if (RotationUpgradeUI.activeSelf) {
+            mouseRelative += playerControls.Player.Look.ReadValue<Vector2>();
+            RotationUpgradeCursorTransform.localPosition = new Vector3(mouseRelative.x, mouseRelative.y);
+        }
+
         if (playerControls.Player.Rotate.triggered || playerControls.Player.Rotate.WasReleasedThisFrame()) {
             SetRotationUIState(true);
             if (!playerControls.Player.Rotate.WasReleasedThisFrame()) {
-                mouseStart = Input.mousePosition;
+                // if rotate was triggered (pressed) and not yet released, reset cursor position
+                mouseRelative = new Vector2(0, 0);
             } else {
-                Vector2 mouseEndRelative = (Vector2)Input.mousePosition - mouseStart;
-                if (mouseEndRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
+                if (mouseRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
                     selectedRotationDirection = RotationDirection.None;
                 } else {
-                    if (mouseEndRelative.Abs().x > mouseEndRelative.Abs().y) {
-                        if (mouseEndRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
+                    if (mouseRelative.Abs().x > mouseRelative.Abs().y) {
+                        if (mouseRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
                         else selectedRotationDirection = RotationDirection.Left;
                     } else {
-                        if (mouseEndRelative.y > 0) selectedRotationDirection = RotationDirection.Up;
+                        if (mouseRelative.y > 0) selectedRotationDirection = RotationDirection.Up;
                         else selectedRotationDirection = RotationDirection.Down;
                     }
                 }   

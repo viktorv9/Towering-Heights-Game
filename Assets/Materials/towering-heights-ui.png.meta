@@ -475,7 +475,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,6 +483,27 @@ TextureImporter:
       bones: []
       spriteID: 95697c65ace2e7a46931ef3a55821d60
       internalID: -1868694716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_rotation_cursor
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962d1bb4e87c8aa4fa1067e0a0c28a9a
+      internalID: -1694292486
       vertices: []
       indices: 
       edges: []
@@ -514,6 +535,7 @@ TextureImporter:
       ui_checkbox: 1718829313
       ui_checkmark: -2057060688
       ui_dotted_line: -671931192
+      ui_rotation_cursor: -1694292486
       ui_slider_bar: -1859729423
       ui_slider_button: 2027857050
   mipmapLimitGroupName: 
