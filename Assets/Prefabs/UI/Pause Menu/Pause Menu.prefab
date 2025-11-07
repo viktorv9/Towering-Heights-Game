@@ -57,7 +57,7 @@ MonoBehaviour:
   settingsMenuUI: {fileID: 4054714897677420479}
   settingsMenuFirstSelected: {fileID: 8326156338833103671}
   controlsMenuUI: {fileID: 4521904564149435972}
-  controlsMenuFirstSelected: {fileID: 2510316944798126959}
+  controlsMenuFirstSelected: {fileID: 0}
 --- !u!1001 &898285558956585945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,6 +71,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3630124427610912512}
+    - target: {fileID: 640301132899949863, guid: d38af9151aa25c74bac5f2bd002d3231,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NavigateLevels
+      objectReference: {fileID: 0}
     - target: {fileID: 754722094756260316, guid: d38af9151aa25c74bac5f2bd002d3231,
         type: 3}
       propertyPath: m_Name
@@ -212,6 +217,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NavigateBack
       objectReference: {fileID: 0}
+    - target: {fileID: 5714227084144581393, guid: 950fee1d9fd048041b55de02d30befa4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3630124427610912512}
     - target: {fileID: 7141980650706970286, guid: 950fee1d9fd048041b55de02d30befa4,
         type: 3}
       propertyPath: m_Pivot.x
@@ -317,12 +327,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950fee1d9fd048041b55de02d30befa4, type: 3}
---- !u!1 &2510316944798126959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1775872277315782, guid: 950fee1d9fd048041b55de02d30befa4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2508541085003256745}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4521904564149435972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2022442707150941677, guid: 950fee1d9fd048041b55de02d30befa4,

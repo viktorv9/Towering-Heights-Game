@@ -14,6 +14,8 @@ public class GameData {
     public bool rotationUnlocked;
     public bool holdBlockUnlocked;
     public bool undoBlockUnlocked;
+
+    public List<string> completedLevels;
     
     public GameData (
         bool tutorialIsCompleted = false,
@@ -23,7 +25,7 @@ public class GameData {
         bool rotationIsUnlocked = false,
         bool holdBlockIsUnlocked = false,
         bool undoIsUnlocked = false,
-        float highestHeightGoal = 0
+        List<string> levelsCompleted = null
     ) {
         tutorialCompleted = tutorialIsCompleted;
         rotationTutorialCompleted = rotationTutorialIsCompleted;
@@ -33,5 +35,7 @@ public class GameData {
         rotationUnlocked = rotationIsUnlocked;
         holdBlockUnlocked = holdBlockIsUnlocked;
         undoBlockUnlocked = undoIsUnlocked;
+
+        completedLevels = levelsCompleted ?? new List<string>();
     }
 }

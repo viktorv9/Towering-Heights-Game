@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeightGoal : MonoBehaviour
 {
@@ -89,6 +90,8 @@ public class HeightGoal : MonoBehaviour
     }
     
     private void NextGoalHeight() {
+        if (shapeDropper.IsGameOver()) return;
+        
         UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
         if (goals[0].finalGoal) {
             Instantiate(winEffect);
@@ -99,6 +102,9 @@ public class HeightGoal : MonoBehaviour
         if (goals.Count > 0) {
             transform.position = new Vector3(0, goals[0].goalHeight, 0);
         } else {
+            GameData gameData = SaveSystem.LoadGameData();
+            gameData.completedLevels.Add(SceneManager.GetActiveScene().name); // add current level name to completed levels
+            SaveSystem.SaveGameData(gameData);
             Destroy(gameObject); // out of goals, destroy
         }
     }

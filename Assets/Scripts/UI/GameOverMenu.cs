@@ -11,6 +11,10 @@ public class GameOverMenu : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    
+    public void LevelSelect() {
+        SceneManager.LoadScene("LevelSelectMenu");
+    }
 
     public void Quit() {
         Application.Quit();
