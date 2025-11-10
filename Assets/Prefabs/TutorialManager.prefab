@@ -47,9 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetTutorialsOnSceneLoad: 0
   tutorialSteps:
+  - {fileID: 5080266580705531886}
   - {fileID: 1433956382952992528}
   - {fileID: 6172580157969068165}
-  - {fileID: 5080266580705531886}
   - {fileID: 7353006760401254992}
   rotationSteps:
   - {fileID: 2146890702601930421}
@@ -88,9 +88,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2254145715316580989}
   - {fileID: 5345352365199661699}
   - {fileID: 892142562470184214}
-  - {fileID: 2254145715316580989}
   - {fileID: 4594743287047720899}
   - {fileID: 4900945142434329382}
   - {fileID: 5162933455256812790}
@@ -1725,7 +1725,7 @@ PrefabInstance:
     - target: {fileID: 5202051076765698495, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
       propertyPath: m_text
-      value: Use Left Mouse to look around
+      value: Use the mouse to look around
       objectReference: {fileID: 0}
     - target: {fileID: 5202051076765698495, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}

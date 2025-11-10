@@ -56,6 +56,7 @@ public class RotationUpgrade : MonoBehaviour {
             if (!playerControls.Player.Rotate.WasReleasedThisFrame()) {
                 // if rotate was triggered (pressed) and not yet released, reset cursor position
                 mouseRelative = new Vector2(0, 0);
+                shapeDropper.AddDropsBlocksBlocker();
             } else {
                 if (mouseRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
                     selectedRotationDirection = RotationDirection.None;
@@ -69,6 +70,7 @@ public class RotationUpgrade : MonoBehaviour {
                     }
                 }   
                 
+                shapeDropper.RemoveDropsBlocksBlocker();
                 ExecuteRotate(selectedRotationDirection);
             }
         }
