@@ -134,8 +134,8 @@ public class ShapeDropper : MonoBehaviour {
         GameObject dropShape = shapes[nextShapeIndex];
         // Quaternion nextRotationQuaternion = Quaternion.Euler(nextRotation);
         Instantiate(dropShape, transform.position, nextShapePreview.transform.rotation, blocksHolder.transform);
-        
-        currentScore++;
+
+        currentScore = 50;// currentScore++;
         if (showScore) {
             if (currentScore == 50) AddAdvancedShapes();
             gameUI.UpdateScore(currentScore);
