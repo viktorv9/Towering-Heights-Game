@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EndlessMode.unity
     guid: f6f000b4b0cb58444970f4db314f469a
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1.unity
+    path: Assets/Scenes/Levels/AirLevel.unity
     guid: e65b997f6cf6af944be7630e447b04a0
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity

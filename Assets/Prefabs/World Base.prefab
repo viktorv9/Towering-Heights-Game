@@ -189,7 +189,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 2e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4545365103795787097
 MonoBehaviour:
@@ -203,7 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb149109810444585c66e284bd902b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeDropper: {fileID: 0}
   heightGoal: {fileID: 0}
   platformY: 1
   platformPart: {fileID: 5539557120024346959, guid: 4c9d4d80e8c25b840bbcb7c8bb40ed1f,
