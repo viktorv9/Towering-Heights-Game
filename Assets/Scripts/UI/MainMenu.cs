@@ -8,9 +8,20 @@ public class MainMenu : MonoBehaviour {
 
     [SerializeField] private GameObject mainMenuUI;
     [SerializeField] private GameObject settingsMenuUI;
+
+    private GameData gameData;
+
+    private void Start() {
+        gameData = SaveSystem.LoadGameData();
+    }
+
     
     public void Play() {
-        SceneManager.LoadScene("LevelSelectMenu");
+        if (gameData.tutorialCompleted) {
+            SceneManager.LoadScene("LevelSelectMenu");
+        } else {
+            SceneManager.LoadScene("Tutorial");
+        }
     }
     
     public void OpenSettings() {

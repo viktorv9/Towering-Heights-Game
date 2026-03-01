@@ -105,7 +105,6 @@ MonoBehaviour:
   hasWonMenuFirstSelected: {fileID: 0}
   blocksHolder: {fileID: 0}
   heightGoal: {fileID: 0}
-  cameraTransform: {fileID: 0}
   horizontalSpeed: 400
   verticalSpeed: 0.002
   zoomSpeed: 0.01
