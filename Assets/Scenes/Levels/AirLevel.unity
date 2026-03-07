@@ -771,6 +771,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6341392944848974327, guid: 56361b14a959dc84893ab4b48c41eec8,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 550.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548780252431080639, guid: 56361b14a959dc84893ab4b48c41eec8,
+        type: 3}
+      propertyPath: m_text
+      value: A container has fallen into the clouds
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: be12a438c4aef5346af4f347ac6ba7cf, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 02a01f19b62c4b448978aba154b5b8fa, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -315,6 +315,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53711985229380740, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: field of view
+      value: 64.61749
+      objectReference: {fileID: 0}
+    - target: {fileID: 53711985229380740, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 53711985229380740, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 566688471562899312, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_text
+      value: A container has fallen into the quicksand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116257430980233066, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1986377426031614251, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_Name
@@ -325,6 +350,11 @@ PrefabInstance:
       propertyPath: heightGoal
       value: 
       objectReference: {fileID: 1343714802}
+    - target: {fileID: 3971832667381932600, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 4520574122432379369, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -375,8 +405,59 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5588176934097512970, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054894658608141555, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054894658608141555, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054894658608141555, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054894658608141555, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112550731039193615, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7406026258408588861, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508134702048065723, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.1237235
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508134702048065723, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508134702048065723, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.1237235
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5080749154149399770, guid: 354ed21543bd6d142a5430da223071a9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 354ed21543bd6d142a5430da223071a9, type: 3}
@@ -391,13 +472,13 @@ PrefabInstance:
     - target: {fileID: 404844376917559136, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1909637876254004304, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f07b079b2d32f54488a37f59b0aecf47, type: 2}
+      objectReference: {fileID: 2100000, guid: 3b6ae98b8e78c9d4b85a5ad2b51c2075, type: 2}
     - target: {fileID: 2365869884614187433, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_ReceiveGI
@@ -408,6 +489,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f586babc7af6b9418d2b6ef5cadf162, type: 2}
+    - target: {fileID: 2945107644575655840, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945107644575655840, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945107644575655840, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945107644575655840, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3503359591522427590, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: m_LocalScale.x
