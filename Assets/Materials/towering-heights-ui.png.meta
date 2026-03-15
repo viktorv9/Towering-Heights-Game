@@ -529,6 +529,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ui_rounded_box
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 16, z: 16, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8428f56a73bcfa4d9495120cfba6028
+      internalID: 64675300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -558,6 +579,7 @@ TextureImporter:
       ui_checkmark: -2057060688
       ui_dotted_line: -671931192
       ui_rotation_cursor: -1694292486
+      ui_rounded_box: 64675300
       ui_slider_bar: -1859729423
       ui_slider_button: 2027857050
   mipmapLimitGroupName: 

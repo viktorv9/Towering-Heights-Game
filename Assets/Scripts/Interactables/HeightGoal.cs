@@ -23,6 +23,7 @@ public class HeightGoal : MonoBehaviour
     [SerializeField] private TextMeshProUGUI countdownText;
     
     [SerializeField] private GameObject winEffect;
+    [SerializeField] private GameObject tutorialManager;
 
     private List<GameObject> collidersInTrigger = new ();
     private float timeCollisionStart = 0;
@@ -35,9 +36,6 @@ public class HeightGoal : MonoBehaviour
         List<Goal> goalsCopy = new List<Goal>(goals);
         foreach (Goal goal in goalsCopy) {
             switch (goal.upgradeToUnlock) {
-                case UpgradeManager.UpgradeType.RotationUpgrade:
-                    if (gameData.rotationUnlocked) goals.Remove(goal);
-                    break;
                 case UpgradeManager.UpgradeType.HoldUpgrade:
                     if (gameData.holdBlockUnlocked) goals.Remove(goal);
                     break;
@@ -94,6 +92,7 @@ public class HeightGoal : MonoBehaviour
         
         UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
         if (goals[0].finalGoal) {
+            tutorialManager.SetActive(false);
             Instantiate(winEffect);
             shapeDropper.SetHasWon(true);
         }
