@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Cinemachine.Utility;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RotationUpgrade : MonoBehaviour {
     
@@ -20,6 +22,13 @@ public class RotationUpgrade : MonoBehaviour {
     [SerializeField] private GameObject RotationUpgradeUI;
     [SerializeField] private RectTransform RotationUpgradeCursorTransform;
     [SerializeField] private float RotationUpgradeUIDeadzoneSize;
+
+    [Header("Element references")]
+    [SerializeField] private Button UpButton;
+    [SerializeField] private Button RightButton;
+    [SerializeField] private Button DownButton;
+    [SerializeField] private Button LeftButton;
+    [SerializeField] private GameObject ReleaseTip;
     
     private ShapeDropper shapeDropper;
     private CinemachinePOV cinemachinePOV;
@@ -49,6 +58,20 @@ public class RotationUpgrade : MonoBehaviour {
         if (RotationUpgradeUI.activeSelf) {
             mouseRelative += playerControls.Player.Look.ReadValue<Vector2>();
             RotationUpgradeCursorTransform.localPosition = new Vector3(mouseRelative.x, mouseRelative.y);
+            
+            if (mouseRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
+                selectedRotationDirection = RotationDirection.None;
+            } else {
+                if (mouseRelative.Abs().x > mouseRelative.Abs().y) {
+                    if (mouseRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
+                    else selectedRotationDirection = RotationDirection.Left;
+                } else {
+                    if (mouseRelative.y > 0) selectedRotationDirection = RotationDirection.Up;
+                    else selectedRotationDirection = RotationDirection.Down;
+                }
+            }
+
+            SetButtonHoverStates(selectedRotationDirection);
         }
 
         if (playerControls.Player.Rotate.triggered || playerControls.Player.Rotate.WasReleasedThisFrame()) {
@@ -58,18 +81,6 @@ public class RotationUpgrade : MonoBehaviour {
                 mouseRelative = new Vector2(0, 0);
                 shapeDropper.AddDropsBlocksBlocker();
             } else {
-                if (mouseRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
-                    selectedRotationDirection = RotationDirection.None;
-                } else {
-                    if (mouseRelative.Abs().x > mouseRelative.Abs().y) {
-                        if (mouseRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
-                        else selectedRotationDirection = RotationDirection.Left;
-                    } else {
-                        if (mouseRelative.y > 0) selectedRotationDirection = RotationDirection.Up;
-                        else selectedRotationDirection = RotationDirection.Down;
-                    }
-                }   
-                
                 shapeDropper.RemoveDropsBlocksBlocker();
                 ExecuteRotate(selectedRotationDirection);
             }
@@ -83,6 +94,25 @@ public class RotationUpgrade : MonoBehaviour {
     private void SetRotationUIState(bool newState) {
         RotationUpgradeUI.SetActive(newState);
         cinemachineInputProvider.enabled = !newState;
+    }
+    
+    private void SetButtonHoverStates(RotationDirection rotationDirection) {
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+        
+        switch (rotationDirection) {
+            case RotationDirection.Up:
+                UpButton.Select();
+                break;
+            case RotationDirection.Right:
+                RightButton.Select();
+                break;
+            case RotationDirection.Down:
+                DownButton.Select();
+                break;
+            case RotationDirection.Left:
+                LeftButton.Select();
+                break;
+        }
     }
     
     private void ExecuteRotate(RotationDirection rotationDirection) {
@@ -105,6 +135,7 @@ public class RotationUpgrade : MonoBehaviour {
                 if (rotationDirection == RotationDirection.Down) rotationValue.x = -90;
             }
         }
-        shapeDropper.RotateBlockTowards(rotationValue);
+        
+        StartCoroutine(shapeDropper.RotateBlockTowards(rotationValue, 0.3f));
     }
 }

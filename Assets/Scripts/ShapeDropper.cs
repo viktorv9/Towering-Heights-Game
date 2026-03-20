@@ -154,8 +154,27 @@ public class ShapeDropper : MonoBehaviour {
     //     nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
     // }
     
-    public void RotateBlockTowards(Vector3 rotationValue) {
-        nextShapePreview.transform.Rotate(rotationValue, Space.World);
+    public IEnumerator RotateBlockTowards(Vector3 rotationValue, float duration)
+    {
+        dropShapeBlockers++;
+        Quaternion start = nextShapePreview.transform.rotation;
+        Quaternion end = Quaternion.Euler(rotationValue) * start;
+
+        float time = 0;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float t = time / duration;
+
+            nextShapePreview.transform.rotation =
+                Quaternion.Slerp(start, end, t);
+
+            yield return null;
+        }
+
+        dropShapeBlockers--;
+        nextShapePreview.transform.rotation = end;
     }
     
     public Quaternion? GetBlockRotation() {
