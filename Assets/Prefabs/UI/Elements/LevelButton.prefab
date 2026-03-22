@@ -272,9 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8299259984113021492}
   pathImage: {fileID: 7353823468877717205}
-  levelSceneName: 
-  unlockedAfterLevelId: 
-  testCompletedLevelIds: []
+  levelSceneName: AirLevel
+  unlockedAfterLevel: 
 --- !u!1 &4796969853082720441
 GameObject:
   m_ObjectHideFlags: 0

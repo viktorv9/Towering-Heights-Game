@@ -727,6 +727,11 @@ PrefabInstance:
       propertyPath: testCompletedLevelIds.Array.data[0]
       value: EndlessMode
       objectReference: {fileID: 0}
+    - target: {fileID: 1061467151568689706, guid: 20f1294b967630f4eb94d5ba025fe230,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3154888812805836384, guid: 20f1294b967630f4eb94d5ba025fe230,
         type: 3}
       propertyPath: unlockedAfterLevelId

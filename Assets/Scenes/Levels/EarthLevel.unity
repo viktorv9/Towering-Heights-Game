@@ -141,6 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f15479bd9ca6c841bdf18a1f389256f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &689793022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4752292452594591072, guid: 354ed21543bd6d142a5430da223071a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 680718158783676801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &703242555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -882,13 +888,23 @@ PrefabInstance:
       objectReference: {fileID: 330585545}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 689793022}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
       propertyPath: goals.Array.size
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: goals.Array.data[0].finalGoal
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: goals.Array.data[0].goalHeight
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
@@ -899,6 +915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: goals.Array.data[2].goalHeight
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: goals.Array.data[0].upgradeToUnlock
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}

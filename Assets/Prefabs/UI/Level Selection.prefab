@@ -963,13 +963,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
-      propertyPath: levelSceneName
-      value: Level2
-      objectReference: {fileID: 0}
-    - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
-        type: 3}
       propertyPath: unlockedAfterLevel
-      value: Level1
+      value: EarthLevel
       objectReference: {fileID: 0}
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
@@ -1118,7 +1113,7 @@ PrefabInstance:
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
       propertyPath: levelSceneName
-      value: Level1
+      value: EarthLevel
       objectReference: {fileID: 0}
     - target: {fileID: 3417403144109221926, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
