@@ -13633,6 +13633,11 @@ PrefabInstance:
       objectReference: {fileID: 330585545}
     - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 4992627615539355290}
+    - target: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
       propertyPath: goals.Array.data[0].finalGoal
       value: 1
       objectReference: {fileID: 0}
@@ -14271,6 +14276,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 689f5378226072247b5fdbe0e84e46c8, type: 3}
+--- !u!1 &4992627615539355290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3737445802419952385, guid: 689f5378226072247b5fdbe0e84e46c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4992627615539355289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6438126774781124932
 PrefabInstance:
   m_ObjectHideFlags: 0

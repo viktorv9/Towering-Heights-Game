@@ -16,7 +16,7 @@ public class WorldBase : MonoBehaviour {
 
     private void Start() {
         shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
-        SpawnPickup(pickups[Random.Range(0, pickups.Count-1)]);
+        if (pickups.Count > 0) SpawnPickup(pickups[Random.Range(0, pickups.Count-1)]);
     }
 
     private void OnEnable() {

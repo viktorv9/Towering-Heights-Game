@@ -207,8 +207,7 @@ MonoBehaviour:
   platformY: 1
   platformPart: {fileID: 5539557120024346959, guid: 4c9d4d80e8c25b840bbcb7c8bb40ed1f,
     type: 3}
-  pickups:
-  - {fileID: 985903348417994073, guid: 18592581c883efb439710b1909e1a772, type: 3}
+  pickups: []
 --- !u!1001 &3969034124355405101
 PrefabInstance:
   m_ObjectHideFlags: 0

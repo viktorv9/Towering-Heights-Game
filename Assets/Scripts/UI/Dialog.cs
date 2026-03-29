@@ -152,7 +152,7 @@ public class Dialog : MonoBehaviour
                     rotationPreviousFrame = shapeDropper.GetBlockRotation();
                     break;
                 }
-                if (rotationPreviousFrame != shapeDropper.GetBlockRotation()) {
+                if (shapeDropper.GetBlockRotation() != null && rotationPreviousFrame != shapeDropper.GetBlockRotation()) {
                     rotationPreviousFrame = shapeDropper.GetBlockRotation();
                     rotationsDone++;
                 }

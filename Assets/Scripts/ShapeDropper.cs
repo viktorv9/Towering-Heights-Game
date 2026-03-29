@@ -40,6 +40,7 @@ public class ShapeDropper : MonoBehaviour {
     
     private Controls playerControls;
     private int dropShapeBlockers = 0;
+    private bool isRotating = false;
     
     private CameraController cameraController;
     private Transform cameraTransform;
@@ -84,7 +85,12 @@ public class ShapeDropper : MonoBehaviour {
         UpdatePreviewPosition();
         
         if (IsGameOver()) return;
-        if (playerControls.Player.DropShape.triggered && dropShapeBlockers == 0) HandleDrop();
+        if (playerControls.Player.DropShape.triggered) {
+            if (dropShapeBlockers > 0) return;
+            if (isRotating) return;
+            
+            HandleDrop();
+        }
         // if (playerControls.Player.Rotate.triggered) RotateBlock(); replaced by rotation upgrade.
     }
     
@@ -156,7 +162,7 @@ public class ShapeDropper : MonoBehaviour {
     
     public IEnumerator RotateBlockTowards(Vector3 rotationValue, float duration)
     {
-        dropShapeBlockers++;
+        isRotating = true;
         Quaternion start = nextShapePreview.transform.rotation;
         Quaternion end = Quaternion.Euler(rotationValue) * start;
 
@@ -173,12 +179,13 @@ public class ShapeDropper : MonoBehaviour {
             yield return null;
         }
 
-        dropShapeBlockers--;
+        isRotating = false;
         nextShapePreview.transform.rotation = end;
     }
     
     public Quaternion? GetBlockRotation() {
         if (nextShapePreview == null) return null;
+        if (isRotating) return null;
         return nextShapePreview.transform.rotation;
     }
     
