@@ -37,10 +37,10 @@ public class HeightGoal : MonoBehaviour
         foreach (Goal goal in goalsCopy) {
             switch (goal.upgradeToUnlock) {
                 case UpgradeManager.UpgradeType.HoldUpgrade:
-                    if (gameData.holdBlockUnlocked) goals.Remove(goal);
+                    if (gameData.holdBlockUnlocked && !goal.finalGoal) goals.Remove(goal);
                     break;
                 case UpgradeManager.UpgradeType.UndoUpgrade:
-                    if (gameData.undoBlockUnlocked) goals.Remove(goal);
+                    if (gameData.undoBlockUnlocked && !goal.finalGoal) goals.Remove(goal);
                     break;
             }
         }
@@ -106,6 +106,13 @@ public class HeightGoal : MonoBehaviour
             SaveSystem.SaveGameData(gameData);
             Destroy(gameObject); // out of goals, destroy
         }
+    }
+    
+    public float? GetCurrentGoalHeight() {
+        if (goals.Count > 0) {
+            return goals[0].goalHeight;
+        }
+        return null;
     }
     
     private void UpdateMessage(int remainingTime) {
