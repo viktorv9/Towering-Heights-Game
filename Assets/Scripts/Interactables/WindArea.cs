@@ -8,7 +8,11 @@ public class WindArea : MonoBehaviour {
 
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Block")) {
-            other.gameObject.transform.parent.GetComponent<Rigidbody>().AddForce(transform.forward * windStrength);
+            // Debug.DrawRay(other.gameObject.transform.position, transform.forward * -4, Color.blue);
+            if (!Physics.Raycast(other.gameObject.transform.position, -transform.forward, out RaycastHit hit, 4))
+            {
+                other.gameObject.transform.parent.GetComponent<Rigidbody>().AddForce(transform.forward * windStrength);
+            }
         }
     }
 }
