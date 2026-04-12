@@ -784,6 +784,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1926769304607350873, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2291398564627407590, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: m_Name
@@ -794,6 +799,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 689793022}
     - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: goals.Array.data[0].finalGoal
@@ -877,6 +887,11 @@ PrefabInstance:
     - target: {fileID: 5111843184633560321, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748575194771708876, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151738160610294337, guid: 7fe345e9a498f5049af50693a17ebfe5,
