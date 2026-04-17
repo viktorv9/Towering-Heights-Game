@@ -61,7 +61,9 @@ public class RotationUpgrade : MonoBehaviour {
             
             if (mouseRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
                 selectedRotationDirection = RotationDirection.None;
+                ReleaseTip.SetActive(false);
             } else {
+                ReleaseTip.SetActive(true);
                 if (mouseRelative.Abs().x > mouseRelative.Abs().y) {
                     if (mouseRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
                     else selectedRotationDirection = RotationDirection.Left;

@@ -53,7 +53,7 @@ MonoBehaviour:
   RightButton: {fileID: 8535414951133863409}
   DownButton: {fileID: 1117376909020153572}
   LeftButton: {fileID: 7188760366804875181}
-  ReleaseTip: {fileID: 0}
+  ReleaseTip: {fileID: 4319601142901926543}
 --- !u!1 &5368663838382800294
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +322,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4319601142901926543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2432635746932410277, guid: fe8ea65a31c24824299aa8a7186fd1cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887073153001762090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6647153396373553666 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5048348005119831848, guid: fe8ea65a31c24824299aa8a7186fd1cd,
