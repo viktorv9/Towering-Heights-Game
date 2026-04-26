@@ -123,11 +123,443 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &32690272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &42496342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &155442420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1477095763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &160087034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1076954057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &330585545 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 53711985229380740, guid: 354ed21543bd6d142a5430da223071a9,
     type: 3}
   m_PrefabInstance: {fileID: 680718158783676801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &416527117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 573856457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &462265345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &467624129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &553968103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &573856457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &616861904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1606665845}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &632419839 stripped
 MonoBehaviour:
@@ -141,92 +573,1486 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f15479bd9ca6c841bdf18a1f389256f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1086033762
+--- !u!4 &695298514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 797501359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &707481695
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1989296135}
     m_Modifications:
-    - target: {fileID: 7478271786841194098, guid: 456436cc18676db4889272aa97d760b8,
-        type: 3}
-      propertyPath: m_Name
-      value: Platform Base
-      objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7634140318356742561, guid: 456436cc18676db4889272aa97d760b8,
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 456436cc18676db4889272aa97d760b8, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &797501359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &839934199
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &915313506
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &919743550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 707481695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &958523031
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1009204603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073377315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1030020447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &1035857203
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1040297781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1249787269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1056231905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 467624129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1073377315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &1076954057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &1230619388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1231093806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 462265345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1249787269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &1295895300
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1300733578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1493757185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1302692242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 553968103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1343714802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2291398564627407590, guid: 7fe345e9a498f5049af50693a17ebfe5,
     type: 3}
   m_PrefabInstance: {fileID: 3443076916743025558}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1343714803 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9028345594262463348, guid: 7fe345e9a498f5049af50693a17ebfe5,
+--- !u!4 &1372049352 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
     type: 3}
-  m_PrefabInstance: {fileID: 3443076916743025558}
+  m_PrefabInstance: {fileID: 42496342}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343714802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a02f83ec899f814788e367579155379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+--- !u!1001 &1446193468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &1477095763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1479858349 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1295895300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1493757185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1544203804 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446193468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1585932396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1001 &1606665845
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &1637220706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035857203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1653387973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 958523031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1717369091 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 32690272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1745579332 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1585932396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1828775499 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1931606190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1841447382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 839934199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1874346583 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1230619388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1931606190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!1 &1989296134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989296135}
+  m_Layer: 0
+  m_Name: PlatformBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1989296135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989296134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 160087034}
+  - {fileID: 1717369091}
+  - {fileID: 416527117}
+  - {fileID: 1653387973}
+  - {fileID: 1372049352}
+  - {fileID: 1479858349}
+  - {fileID: 2132844722}
+  - {fileID: 1040297781}
+  - {fileID: 1544203804}
+  - {fileID: 919743550}
+  - {fileID: 1231093806}
+  - {fileID: 2050169694}
+  - {fileID: 1828775499}
+  - {fileID: 1841447382}
+  - {fileID: 1745579332}
+  - {fileID: 155442420}
+  - {fileID: 616861904}
+  - {fileID: 1009204603}
+  - {fileID: 1302692242}
+  - {fileID: 1874346583}
+  - {fileID: 1056231905}
+  - {fileID: 1300733578}
+  - {fileID: 695298514}
+  - {fileID: 1637220706}
+  - {fileID: 1995484688}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1995484688 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 915313506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2050169694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2125221808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2125221808
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1989296135}
+    m_Modifications:
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070605208666738340, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform Part Lava (Cube) (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1, type: 3}
+--- !u!4 &2132844722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368258723204186434, guid: 6fd5a7a7ab6e06d49b13026ff8c560b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1030020447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680718158783676801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,6 +2061,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53711985229380740, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 1986377426031614251, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_Name
@@ -250,6 +2081,66 @@ PrefabInstance:
       propertyPath: heightGoal
       value: 
       objectReference: {fileID: 1343714802}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[0]
+      value: 
+      objectReference: {fileID: 888350324257194877, guid: 374bf3c9fac39cf45bd764962d1e1648,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[1]
+      value: 
+      objectReference: {fileID: 7978597780222568617, guid: 04af1956099512c4ba28f5aecb4d952a,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[2]
+      value: 
+      objectReference: {fileID: 888350324257194877, guid: 0b022af6e3d869a459567616e45190a0,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[3]
+      value: 
+      objectReference: {fileID: 4835428507308315959, guid: 342cfcb8f969ecf4b83db6bb649f7b74,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[4]
+      value: 
+      objectReference: {fileID: 7978597780222568617, guid: f6c7dea77d7a5a84f82c8f4b267f896a,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviews.Array.data[0]
+      value: 
+      objectReference: {fileID: 406159497350231387, guid: 8bf85ce93b81c914db24989689f7a512,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviews.Array.data[1]
+      value: 
+      objectReference: {fileID: 2889566473779303575, guid: 08288de6ba001dc4baf67617fbfdc7ba,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviews.Array.data[2]
+      value: 
+      objectReference: {fileID: 7624189146383322886, guid: 4a2cb0a0889ce3a43be5e874cf4252fc,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviews.Array.data[3]
+      value: 
+      objectReference: {fileID: 5557374839925236560, guid: 20483747d99112c4baa620df4488194f,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviews.Array.data[4]
+      value: 
+      objectReference: {fileID: 9078342914447106814, guid: c5d92da48761caf4882fe8d2f4bef96c,
+        type: 3}
     - target: {fileID: 4520574122432379369, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -315,6 +2206,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1909637876254004304, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909637876254004304, guid: 9996ffb804c5e00499aa6ff69866a512,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c6daea917f2ac44082b4decb1da624c, type: 2}
@@ -357,7 +2253,7 @@ PrefabInstance:
         type: 3}
       propertyPath: heightGoal
       value: 
-      objectReference: {fileID: 1343714803}
+      objectReference: {fileID: 0}
     - target: {fileID: 4545365103795787097, guid: 9996ffb804c5e00499aa6ff69866a512,
         type: 3}
       propertyPath: shapeDropper
@@ -580,5 +2476,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 680718158783676801}
   - {fileID: 1371375274958954731}
-  - {fileID: 1086033762}
   - {fileID: 3443076916743025558}
+  - {fileID: 1989296135}
