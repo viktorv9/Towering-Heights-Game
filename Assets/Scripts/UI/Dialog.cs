@@ -140,7 +140,7 @@ public class Dialog : MonoBehaviour
                 }
                 break;
             case (TutorialType.PlaceBlock):
-                progressPercentage = shapeDropper.GetCurrentScore() * 100 / 3;
+                progressPercentage = shapeDropper.GetCurrentScore() * 100 / 2;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
                     OnComplete?.Invoke();

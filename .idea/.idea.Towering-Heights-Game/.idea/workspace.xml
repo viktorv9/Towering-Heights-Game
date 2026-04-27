@@ -25,6 +25,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1e29a71158e46cdb750140a667aea01175e00/1a/62e3a13d/Material.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1e29a71158e46cdb750140a667aea01175e00/bd/bb6e0e80/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/WaveScanner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShapePreview.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ControlsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.16/Editor/BurstDisassembler.Core.ARM64.info.cs" root0="SKIP_HIGHLIGHTING" />
@@ -189,6 +190,8 @@
       <workItem from="1776413241143" duration="945000" />
       <workItem from="1777231002890" duration="452000" />
       <workItem from="1777231478993" duration="794000" />
+      <workItem from="1777277552763" duration="1286000" />
+      <workItem from="1777280849109" duration="2515000" />
     </task>
     <servers />
   </component>

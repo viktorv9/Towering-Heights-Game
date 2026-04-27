@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Waves
+  m_Name: Lava
   m_Shader: {fileID: -6465566751694194690, guid: ee9bfb5a1ee508a49aed89e5cbc7ab88,
     type: 3}
   m_Parent: {fileID: 0}
@@ -91,7 +91,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 220a8885c8cd6ce478bb2452a379be54, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b6ac3209bfac0347acc5d81a71bab12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Triplanar_0ebb63fc13eb4192b1f5cafa16158e19_Texture_1_Texture2D:
@@ -135,7 +135,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _MovementSpeed: 0.1
+    - _MovementSpeed: 0.01
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -149,10 +149,10 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TilingMultiplier: 25
+    - _TilingMultiplier: 32
     - _WaterDepth: 10
     - _WaveDensity: 10
-    - _WiggleSpeed: 1
+    - _WiggleSpeed: 0.5
     - _WiggleStrength: 0.01
     - _WorkflowMode: 1
     - _ZTest: 4
