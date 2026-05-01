@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ShapePreview : MonoBehaviour {
 
-    [SerializeField] private List<Vector3> possibleRotations;
-    
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material errorMaterial;
     [SerializeField] private Material errorerMaterial;
@@ -58,6 +56,4 @@ public class ShapePreview : MonoBehaviour {
             }
         }
     }
-
-    public List<Vector3> GetPossibleRotations => possibleRotations;
 }
