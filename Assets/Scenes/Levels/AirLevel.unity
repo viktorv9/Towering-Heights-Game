@@ -13001,7 +13001,7 @@ GameObject:
   - component: {fileID: 1514030669}
   m_Layer: 0
   m_Name: Cloud Platform
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13131,6 +13131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cloud_platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7019d2baf36a6b94da222dbbfbf6504c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Block
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13557,12 +13562,12 @@ PrefabInstance:
     - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: goals.Array.data[0].goalHeight
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: goals.Array.data[0].upgradeToUnlock
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4696113991167121783, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
@@ -14308,6 +14313,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 281856055699376255, guid: 962d21efbed8ad24ab59586e7565a68e,
+        type: 3}
+      propertyPath: far clip plane
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5450812006968992240, guid: 962d21efbed8ad24ab59586e7565a68e,
         type: 3}
       propertyPath: m_HorizontalAxis.m_MaxValue

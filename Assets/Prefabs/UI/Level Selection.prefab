@@ -881,6 +881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
+      propertyPath: levelSceneName
+      value: WaterLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
+        type: 3}
       propertyPath: unlockedAfterLevel
       value: EarthLevel
       objectReference: {fileID: 0}
@@ -1205,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
       propertyPath: unlockedAfterLevel
-      value: WaterLevel
+      value: AirLevel
       objectReference: {fileID: 0}
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
@@ -1383,7 +1388,7 @@ PrefabInstance:
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
       propertyPath: unlockedAfterLevel
-      value: AirLevel
+      value: WaterLevel
       objectReference: {fileID: 0}
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
@@ -1537,7 +1542,7 @@ PrefabInstance:
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}
       propertyPath: levelSceneName
-      value: WaterLevel
+      value: AirLevel
       objectReference: {fileID: 0}
     - target: {fileID: 729145968975740012, guid: 65272d03c6c622e4c87a2feec9f38ce7,
         type: 3}

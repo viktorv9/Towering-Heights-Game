@@ -32973,11 +32973,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
-      propertyPath: showScore
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
-        type: 3}
       propertyPath: heightGoal
       value: 
       objectReference: {fileID: 1343714802}
