@@ -297,6 +297,80 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3748f7ff63b29b4498c29916c7757263, type: 2}
+--- !u!1001 &3378228377456895328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 407454363490370100}
+    m_Modifications:
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942567708773758537, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e5caf177e9aa3446a161e2d762e9a4b, type: 3}
+--- !u!4 &4573469176561042925 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1268283585637965965, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3378228377456895328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6724225821636904437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,6 +688,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 379272076141018006}
+    - targetCorrespondingSourceObject: {fileID: 6410502810813302721, guid: 342cfcb8f969ecf4b83db6bb649f7b74,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4573469176561042925}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4835428507308315959, guid: 342cfcb8f969ecf4b83db6bb649f7b74,
         type: 3}
@@ -632,6 +710,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4225697675359306465}
   m_SourcePrefab: {fileID: 100100000, guid: 342cfcb8f969ecf4b83db6bb649f7b74, type: 3}
+--- !u!4 &407454363490370100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6410502810813302721, guid: 342cfcb8f969ecf4b83db6bb649f7b74,
+    type: 3}
+  m_PrefabInstance: {fileID: 6724225821636904437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2183079622152130754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4835428507308315959, guid: 342cfcb8f969ecf4b83db6bb649f7b74,
