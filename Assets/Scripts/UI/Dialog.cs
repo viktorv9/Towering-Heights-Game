@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class Dialog : MonoBehaviour
     [SerializeField] private TutorialType tutorialType;
     
     [SerializeField] private ProgressBar progressBar;
-
+    [SerializeField] private Image dialogBorder;
+    
     private Controls playerControls;
 
     private float progressPercentage;
@@ -78,11 +80,13 @@ public class Dialog : MonoBehaviour
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 break;
             case (TutorialType.Rotate):
+                shapeDropper.AddDropsBlocksBlocker();
                 rotationsDone = 0;
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(0);
                 break;
             case (TutorialType.HoldBlock):
+                shapeDropper.AddDropsBlocksBlocker();
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(0);
                 break;
@@ -104,6 +108,9 @@ public class Dialog : MonoBehaviour
                 }
                 break;
             case (TutorialType.HorizontalMovement):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
                 if (shapeDropperPosition.x != shapeDropper.transform.position.x || shapeDropperPosition.z != shapeDropper.transform.position.z) {
                     shapeDropperPosition = shapeDropper.transform.position;
                     progressPercentage += 40f * Time.deltaTime;
@@ -116,6 +123,9 @@ public class Dialog : MonoBehaviour
                 }
                 break;
             case (TutorialType.VerticalMovement):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
                 if (shapeDropperPosition.y != shapeDropper.transform.position.y) {
                     shapeDropperPosition = shapeDropper.transform.position;
                     progressPercentage += 500f * Time.deltaTime;
@@ -128,6 +138,9 @@ public class Dialog : MonoBehaviour
                 }
                 break;
             case (TutorialType.CameraMove):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
                 if (cinemachineVirtualCameraRotation != cinemachineVirtualCamera.transform.rotation) {
                     cinemachineVirtualCameraRotation = cinemachineVirtualCamera.transform.rotation;
                     progressPercentage += 80f * Time.deltaTime;
@@ -148,6 +161,9 @@ public class Dialog : MonoBehaviour
                 }
                 break;
             case (TutorialType.Rotate):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
                 if (rotationPreviousFrame == null) {
                     rotationPreviousFrame = shapeDropper.GetBlockRotation();
                     break;
@@ -159,27 +175,37 @@ public class Dialog : MonoBehaviour
                 progressPercentage = rotationsDone * 100 / 4;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }
                 break;
             case (TutorialType.HoldBlock):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
                 if (playerControls.Player.HoldBlock.triggered) {
                     holdBlockPresses++;
                 }
                 progressPercentage = holdBlockPresses * 100 / 2;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
-                    OnComplete?.Invoke();
-                    Destroy(gameObject);
-                }
-                break;
-            case (TutorialType.Undo):
-                if (playerControls.Player.Undo.triggered) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
                 }
                 break;
         }
+    }
+    
+    private IEnumerator FlashTutorialBorder()
+    {
+        dialogBorder.color = new Color(0.69f,  0.125f, 0, 255);
+        yield return new WaitForSeconds(0.2f);
+        dialogBorder.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        dialogBorder.color = new Color(0.69f,  0.125f, 0, 255);
+        yield return new WaitForSeconds(0.2f);
+        dialogBorder.color = Color.white;
     }
 }
