@@ -32979,7 +32979,7 @@ PrefabInstance:
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: shapes.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
@@ -33013,8 +33013,26 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
+      propertyPath: shapes.Array.data[5]
+      value: 
+      objectReference: {fileID: 5169930137884642812, guid: 713729c4c65076a489c249dbf97b05e9,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[6]
+      value: 
+      objectReference: {fileID: 4973439927753672271, guid: 61c68e5b0abde1f4d8f8c5fe20a42f93,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapes.Array.data[7]
+      value: 
+      objectReference: {fileID: 7978597780222568617, guid: f6c7dea77d7a5a84f82c8f4b267f896a,
+        type: 3}
+    - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
       propertyPath: shapePreviews.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
@@ -33050,13 +33068,13 @@ PrefabInstance:
         type: 3}
       propertyPath: shapePreviews.Array.data[5]
       value: 
-      objectReference: {fileID: 2889566473779303575, guid: 08288de6ba001dc4baf67617fbfdc7ba,
+      objectReference: {fileID: 3703310811802680268, guid: 23f90601f9e4a284da667ef565bca292,
         type: 3}
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: shapePreviews.Array.data[6]
       value: 
-      objectReference: {fileID: 2889566473779303575, guid: 08288de6ba001dc4baf67617fbfdc7ba,
+      objectReference: {fileID: 120874380902883998, guid: bc903ec83413cca4ab006dc4ae7f3cff,
         type: 3}
     - target: {fileID: 3302798056931511466, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
