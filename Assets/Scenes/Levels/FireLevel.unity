@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: be12a438c4aef5346af4f347ac6ba7cf, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 98c0d75e72d02414d8cb56a3a906dc06, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -33150,6 +33150,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6667388480244177384, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviewSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: -1939664104, guid: 99bbe95eda5de9b47806896badbfee3e,
+        type: 3}
+    - target: {fileID: 6667388480244177384, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shapePreviewSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 24554796, guid: 99bbe95eda5de9b47806896badbfee3e,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
