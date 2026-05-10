@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -365,7 +365,7 @@ TextureImporter:
       name: minishape-7
       rect:
         serializedVersion: 2
-        x: 768
+        x: 767
         y: 384
         width: 128
         height: 128
@@ -550,6 +550,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: corner-border
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 48, y: 48, z: 48, w: 48}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe39b7a70968f34e80a55d92731c9fd
+      internalID: -2008067905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -562,6 +583,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       border: -1965609121
+      corner-border: -2008067905
       empty: 1167269657
       minishape-1: -100474644
       minishape-2: -1939664104

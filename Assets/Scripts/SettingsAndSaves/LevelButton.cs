@@ -10,6 +10,7 @@ public class LevelButton : MonoBehaviour {
     [Header("Prefab links")]
     [SerializeField] private Button button;
     [SerializeField] private Image pathImage;
+    [SerializeField] private GameObject currentLevelIndicator;
     
     [Header("Settings")]
     [SerializeField] private string levelSceneName;
@@ -23,6 +24,10 @@ public class LevelButton : MonoBehaviour {
         if (unlockedAfterLevel == "" || gameData.completedLevels.Contains(unlockedAfterLevel)) {
             button.interactable = true;
             pathImage.color = Color.white;
+            if ((unlockedAfterLevel == "" && gameData.completedLevels.Count == 0)
+                || gameData.completedLevels[^1] == unlockedAfterLevel) {
+                currentLevelIndicator.SetActive(true);
+            }
         }
     }
     
