@@ -65,6 +65,17 @@ public class HeightGoal : MonoBehaviour
                 NextGoalHeight();
             }
         }
+
+        collidersInTrigger.ForEach(collider => {
+            if (collider == null) {
+                collidersInTrigger.Remove(collider.gameObject);
+
+                if (collidersInTrigger.Count == 0) {
+                    countdownText.gameObject.SetActive(false);
+                    timeCollisionStart = 0;
+                }
+            }
+        });
     }
     
     private void OnTriggerEnter(Collider other) {

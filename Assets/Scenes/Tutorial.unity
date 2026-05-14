@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: goals.Array.data[0].goalHeight
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
+      propertyPath: goals.Array.data[0].upgradeToUnlock
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5111843184633560321, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -356,9 +361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Build up to the line
-
-    to unlock rotation!'
+  m_text: Build up to the line!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2c2bfc29507e1b4ebe4455811aee247, type: 2}
   m_sharedMaterial: {fileID: -6145683430605681513, guid: c2c2bfc29507e1b4ebe4455811aee247,

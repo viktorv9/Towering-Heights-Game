@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6c5dea7421f654d9398ac8764eaa97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupCollisionDuration: 1
-  defaultMaterial: {fileID: 2100000, guid: 226973e3e05687c42afc8d6752e9e68d, type: 2}
-  collidingMaterial: {fileID: 2100000, guid: 9210a873b320f9340a54e4d3eae836a6, type: 2}
+  pickupType: 0
+  pickupCollisionDuration: 2
+  pickupEffect: {fileID: 6343847601216642769, guid: 6c4a277c8e2e1684b942e189f5e7606f,
+    type: 3}

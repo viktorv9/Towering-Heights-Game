@@ -1171,9 +1171,9 @@ PrefabInstance:
         Press Z to undo placing
         a block.
 
-        You can only undo once after each
+        You can only undo once after 5
 
-        dropped block.
+        dropped blocks.
         Try it out with Z!'
       objectReference: {fileID: 0}
     - target: {fileID: 5202051076765698495, guid: 6acf0cb2349ff3a4cbea4573b8274c76,

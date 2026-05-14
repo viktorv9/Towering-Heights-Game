@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour {
-    
+    private static readonly int fillAmount = Shader.PropertyToID("_fillAmount");
+
     [SerializeField] private PickupType pickupType;
     [SerializeField] private float pickupCollisionDuration;
-    [SerializeField] private Material defaultMaterial;
-    [SerializeField] private Material collidingMaterial;
+    [SerializeField] private GameObject pickupEffect;
 
     private MeshRenderer meshRenderer;
     
@@ -17,19 +17,63 @@ public class Pickup : MonoBehaviour {
     
     public enum PickupType {
         Default,
-        Platform
+        Platform,
+        RotationUpgrade,
+        HoldBlockUpgrade,
+        UndoUpgrade,
     }
 
-    public delegate void PickupAction(PickupType pickupType);
-    public static event PickupAction OnPickup;
+    public delegate void PickupAction();
+    public event PickupAction OnPickup;
     
     private void Start() {
         meshRenderer = GetComponent<MeshRenderer>();
     }
+    
+    private void OnEnable()
+    {
+        UpgradeManager.OnUpgradesLoaded += SetPickupBehavior;
+    }
+    
+    private void OnDisable()
+    {
+        UpgradeManager.OnUpgradesLoaded -= SetPickupBehavior;
+    }
+
+    private void SetPickupBehavior() {
+        switch (pickupType) {
+            case PickupType.RotationUpgrade: {
+                if (UpgradeManager.UnlockedUpgrades.Contains(UpgradeManager.UpgradeType.RotationUpgrade)) {
+                    Destroy(gameObject);
+                    return;
+                }
+                OnPickup += () => UpgradeManager.UnlockUpgrade(UpgradeManager.UpgradeType.RotationUpgrade);
+                break;
+            }
+            case PickupType.HoldBlockUpgrade: {
+                if (UpgradeManager.UnlockedUpgrades.Contains(UpgradeManager.UpgradeType.HoldUpgrade)) {
+                    Destroy(gameObject);
+                    return;
+                }
+                OnPickup += () => UpgradeManager.UnlockUpgrade(UpgradeManager.UpgradeType.HoldUpgrade);
+                break;
+            }
+            case PickupType.UndoUpgrade: {
+                if (UpgradeManager.UnlockedUpgrades.Contains(UpgradeManager.UpgradeType.UndoUpgrade)) {
+                    Destroy(gameObject);
+                    return;
+                }
+                OnPickup += () => UpgradeManager.UnlockUpgrade(UpgradeManager.UpgradeType.UndoUpgrade);
+                break;
+            }
+        }
+    }
 
     private void Update() {
         if (timeCollisionStart != 0) {
-            if (Time.time - timeCollisionStart > pickupCollisionDuration) {
+            var collisionDuration = Time.time - timeCollisionStart;
+            meshRenderer.material.SetFloat(fillAmount, collisionDuration / pickupCollisionDuration);
+            if (collisionDuration > pickupCollisionDuration) {
                 PickUp();
             }
         }
@@ -41,7 +85,6 @@ public class Pickup : MonoBehaviour {
         
         if (collidersInTrigger.Count > 0) {
             if (timeCollisionStart == 0) timeCollisionStart = Time.time;
-            meshRenderer.material = collidingMaterial;
         }
     }
     
@@ -51,12 +94,17 @@ public class Pickup : MonoBehaviour {
         
         if (collidersInTrigger.Count == 0) {
             timeCollisionStart = 0;
-            meshRenderer.material = defaultMaterial;
+            meshRenderer.material.SetFloat(fillAmount, 0);
         }
     }
     
     private void PickUp() {
-        OnPickup?.Invoke(pickupType);
+        OnPickup?.Invoke();
+        Instantiate(pickupEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+    
+    public PickupType GetPickupType() {
+        return pickupType;
     }
 }

@@ -18,6 +18,8 @@ public static class UpgradeManager
 
     public static readonly List<UpgradeType> UnlockedUpgrades = new();
     
+    public static event Action OnUpgradesLoaded;
+    
     public static List<UpgradeType> LoadUnlockedUpgrades() {
         GameData gameData = SaveSystem.LoadGameData();
         if (gameData.rotationUnlocked) {
@@ -32,6 +34,7 @@ public static class UpgradeManager
             OnUpgradeUnlocked?.Invoke(UpgradeType.UndoUpgrade);
             UnlockedUpgrades.Add(UpgradeType.UndoUpgrade);
         }
+        OnUpgradesLoaded?.Invoke();
         return UnlockedUpgrades;
     }
     

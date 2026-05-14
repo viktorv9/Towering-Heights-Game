@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2367765797925444165}
   - component: {fileID: 2939241250970843846}
   - component: {fileID: 5772652290361718808}
+  - component: {fileID: 2001033458943880239}
   m_Layer: 0
   m_Name: Just Spawned Effect
   m_TagString: Untagged
@@ -4888,3 +4889,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2001033458943880239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343847601216642769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550fbee18f22070429c05e1270e52cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 5

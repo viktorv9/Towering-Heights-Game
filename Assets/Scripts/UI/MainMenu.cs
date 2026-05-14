@@ -10,10 +10,12 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] private GameObject settingsMenuUI;
 
     private GameData gameData;
-    
-    public void Play() {
-        gameData = SaveSystem.LoadGameData();
 
+    private void Start() {
+        gameData = SaveSystem.LoadGameData();
+    }
+
+    public void Play() {
         if (gameData.tutorialCompleted) {
             SceneManager.LoadScene("LevelSelectMenu");
         } else {
@@ -33,5 +35,24 @@ public class MainMenu : MonoBehaviour {
 
     public void Quit() {
         Application.Quit();
+    }
+    
+    public void UnlockAllLevels() {
+        gameData.completedLevels = new List<string>() {
+            "Tutorial",
+            "EarthLevel",
+            "WaterLevel",
+            "FireLevel",
+            "AirLevel",
+            "SpaceLevel",
+        };
+        SaveSystem.SaveGameData(gameData);
+    }
+    
+    public void UnlockAllUpgrades() {
+        gameData.rotationUnlocked = true;
+        gameData.holdBlockUnlocked = true;
+        gameData.undoBlockUnlocked = true;
+        SaveSystem.SaveGameData(gameData);
     }
 }

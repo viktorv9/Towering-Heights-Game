@@ -10,21 +10,13 @@ public class WorldBase : MonoBehaviour {
     [SerializeField] private float platformY = 1;
     [SerializeField] private GameObject platformPart;
 
-    [SerializeField] private List<Pickup> pickups;
+    [SerializeField] private List<Pickup> randomPickups;
 
     private ShapeDropper shapeDropper;
 
     private void Start() {
         shapeDropper = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ShapeDropper>();
-        if (pickups.Count > 0) SpawnPickup(pickups[Random.Range(0, pickups.Count-1)]);
-    }
-
-    private void OnEnable() {
-        Pickup.OnPickup += HandlePickup;
-    }
-
-    private void OnDisable() {
-        Pickup.OnPickup -= HandlePickup;
+        if (randomPickups.Count > 0) SpawnPickup(randomPickups[Random.Range(0, randomPickups.Count-1)]);
     }
 
     public void SpawnPickup(Pickup pickup) {
@@ -38,7 +30,9 @@ public class WorldBase : MonoBehaviour {
                     (int) Random.Range(range, -range)
                     );
                 if (!Physics.CheckBox(randomSpawnPoint, Vector3.one / 2.1f)) {
-                    Instantiate(pickup, randomSpawnPoint, Quaternion.identity);
+                    var pickupGameObject = Instantiate(pickup, randomSpawnPoint, Quaternion.identity);
+                    Pickup newPickup = pickupGameObject.GetComponent<Pickup>();
+                    if (newPickup.GetPickupType() == Pickup.PickupType.Platform) newPickup.OnPickup += HandlePlatformPickup;
                     return;
                 }
             }
@@ -46,11 +40,9 @@ public class WorldBase : MonoBehaviour {
         }
     }
     
-    private void HandlePickup(Pickup.PickupType pickupType) {
-        if (pickupType == Pickup.PickupType.Platform) {
-            SpawnNewPlatform();
-        }
-        SpawnPickup(pickups[Random.Range(0, pickups.Count-1)]);
+    private void HandlePlatformPickup() {
+        SpawnNewPlatform();
+        SpawnPickup(randomPickups[Random.Range(0, randomPickups.Count-1)]);
     }
 
     private void SpawnNewPlatform() {

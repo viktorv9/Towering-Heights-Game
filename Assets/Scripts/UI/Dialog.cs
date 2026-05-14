@@ -90,6 +90,9 @@ public class Dialog : MonoBehaviour
                 progressPercentage = 0;
                 progressBar.SetProgressBarPercentage(0);
                 break;
+            case (TutorialType.Undo):
+                shapeDropper.AddDropsBlocksBlocker();
+                break;
         }
     }
 
@@ -190,6 +193,16 @@ public class Dialog : MonoBehaviour
                 progressPercentage = holdBlockPresses * 100 / 2;
                 progressBar.SetProgressBarPercentage(progressPercentage);
                 if (progressPercentage >= 100) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
+                    OnComplete?.Invoke();
+                    Destroy(gameObject);
+                }
+                break;
+            case (TutorialType.Undo):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
+                if (playerControls.Player.Undo.triggered) {
                     shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);
