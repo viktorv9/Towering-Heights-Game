@@ -45,7 +45,7 @@ Material:
     - _PerspectiveFilter: 0.875
     - _ScaleRatioA: 0.8
     - _ScaleRatioB: 1
-    - _ScaleRatioC: 0.65
+    - _ScaleRatioC: 0.325
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -57,10 +57,10 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 512
     - _TextureWidth: 512
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0.307
-    - _UnderlayOffsetY: -0.307
-    - _UnderlaySoftness: 0
+    - _UnderlayDilate: 1
+    - _UnderlayOffsetX: 0
+    - _UnderlayOffsetY: 0
+    - _UnderlaySoftness: 1
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
@@ -68,8 +68,8 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.7196765, g: 0.5344228, b: 0.5344228, a: 1}
+    - _UnderlayColor: {r: 0.4932614, g: 0.40883523, b: 0.40883523, a: 1}
   m_BuildTextureStacks: []
 --- !u!28 &-1297500186107039261
 Texture2D:
@@ -129,11 +129,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: dpcomic
+  m_Name: dpcomic_nounderline
   m_EditorClassIdentifier: 
-  hashCode: 1578234751
+  hashCode: -950313369
   material: {fileID: -6145683430605681513}
-  materialHashCode: 1067078271
+  materialHashCode: 1742221415
   m_Version: 1.1.0
   m_SourceFontFileGUID: fcfefd82ed3807f4eba5606a6dc0d2c8
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: fcfefd82ed3807f4eba5606a6dc0d2c8,

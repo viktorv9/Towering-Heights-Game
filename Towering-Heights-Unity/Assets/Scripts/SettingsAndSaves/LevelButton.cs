@@ -20,6 +20,7 @@ public class LevelButton : MonoBehaviour {
         button.interactable = false;
         pathImage.color = new Color(0.5f, 0.5f, 0.5f, 1);
 
+#if !DEMO
         GameData gameData = SaveSystem.LoadGameData();
         if (unlockedAfterLevel == "" || gameData.completedLevels.Contains(unlockedAfterLevel)) {
             button.interactable = true;
@@ -29,6 +30,7 @@ public class LevelButton : MonoBehaviour {
                 currentLevelIndicator.SetActive(true);
             }
         }
+#endif
     }
     
     public void LoadLevel() {

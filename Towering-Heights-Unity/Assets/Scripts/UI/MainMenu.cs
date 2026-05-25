@@ -16,11 +16,15 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void Play() {
+#if DEMO
+        SceneManager.LoadScene("EndlessMode");
+#else
         if (gameData.tutorialCompleted) {
             SceneManager.LoadScene("LevelSelectMenu");
         } else {
             SceneManager.LoadScene("Tutorial");
         }
+#endif
     }
     
     public void OpenSettings() {
