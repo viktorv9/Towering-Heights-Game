@@ -149,11 +149,11 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TilingMultiplier: 25
+    - _TilingMultiplier: 50
     - _WaterDepth: 10
     - _WaveDensity: 10
     - _WiggleSpeed: 1
-    - _WiggleStrength: 0.01
+    - _WiggleStrength: 0.005
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
