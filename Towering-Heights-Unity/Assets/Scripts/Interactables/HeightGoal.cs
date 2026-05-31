@@ -113,7 +113,7 @@ public class HeightGoal : MonoBehaviour
             transform.position = new Vector3(0, goals[0].goalHeight, 0);
         } else {
             GameData gameData = SaveSystem.LoadGameData();
-            gameData.completedLevels.Add(SceneManager.GetActiveScene().name); // add current level name to completed levels
+            if (!gameData.completedLevels.Contains(SceneManager.GetActiveScene().name)) gameData.completedLevels.Add(SceneManager.GetActiveScene().name); // add current level name to completed levels
             SaveSystem.SaveGameData(gameData);
             Destroy(gameObject); // out of goals, destroy
         }

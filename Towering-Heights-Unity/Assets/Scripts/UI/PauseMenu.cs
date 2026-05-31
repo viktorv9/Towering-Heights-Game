@@ -60,13 +60,13 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 0f;
         GameIsPaused = true;
         
-        eventSystem.SetSelectedGameObject(pauseMenuFirstSelected);
+        // eventSystem.SetSelectedGameObject(pauseMenuFirstSelected);
     }
     
     public void NavigateControls() {
         DisableAllMenus();
         controlsMenuUI.SetActive(true);
-        eventSystem.SetSelectedGameObject(controlsMenuFirstSelected);
+        // eventSystem.SetSelectedGameObject(controlsMenuFirstSelected);
 
         previousMenuUI = pauseMenuUI;
         previousMenuFirstSelected = pauseMenuFirstSelected;
@@ -75,7 +75,7 @@ public class PauseMenu : MonoBehaviour {
     public void NavigateSettings() {
         DisableAllMenus();
         settingsMenuUI.SetActive(true);
-        eventSystem.SetSelectedGameObject(settingsMenuFirstSelected);
+        // eventSystem.SetSelectedGameObject(settingsMenuFirstSelected);
 
         previousMenuUI = pauseMenuUI;
         previousMenuFirstSelected = pauseMenuFirstSelected;
@@ -86,7 +86,7 @@ public class PauseMenu : MonoBehaviour {
         else {
             DisableAllMenus();
             previousMenuUI.SetActive(true);
-            eventSystem.SetSelectedGameObject(previousMenuFirstSelected);
+            // eventSystem.SetSelectedGameObject(previousMenuFirstSelected);
 
             previousMenuUI = null;
             previousMenuFirstSelected = null;

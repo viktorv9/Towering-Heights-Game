@@ -109,13 +109,17 @@ public class ShapeDropper : MonoBehaviour {
     public int GetCurrentScore() {
         return currentScore;
     }
+    
+    public bool getIsRotating() {
+        return isRotating;
+    }
 
     public void SetGameOver(bool newState) {
         if (newState == gameOver) return;
         gameOver = newState;
         if (gameOver) {
             gameOverMenu.SetActive(true);
-            eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
+            // eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
             AudioManager.instance.PlayOneShot(gameOverSound, cameraTransform.position);
         }
     }
@@ -124,7 +128,7 @@ public class ShapeDropper : MonoBehaviour {
         hasWon = newState;
         if (hasWon) {
             hasWonMenu.SetActive(true);
-            eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
+            // eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
         }
     }
 

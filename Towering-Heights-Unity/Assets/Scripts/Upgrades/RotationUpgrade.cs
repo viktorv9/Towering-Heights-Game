@@ -84,7 +84,9 @@ public class RotationUpgrade : MonoBehaviour {
                 shapeDropper.AddDropsBlocksBlocker();
             } else {
                 shapeDropper.RemoveDropsBlocksBlocker();
-                ExecuteRotate(selectedRotationDirection);
+                if (!shapeDropper.getIsRotating()) {
+                    ExecuteRotate(selectedRotationDirection);
+                }
             }
         }
         
