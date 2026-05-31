@@ -1161,6 +1161,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3350453649284862174, guid: 7c60503b5fb8e624faa3cd8bdaabcde7,
+        type: 3}
+      propertyPath: controlsMenuUI
+      value: 
+      objectReference: {fileID: 6121466807889334347}
     - target: {fileID: 3487125594294699124, guid: 7c60503b5fb8e624faa3cd8bdaabcde7,
         type: 3}
       propertyPath: m_fontSizeBase
@@ -1939,6 +1944,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6121466807889334347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521904564149435972, guid: 5f4559d067a2afe4f983daf1b4575319,
+    type: 3}
+  m_PrefabInstance: {fileID: 7652417992886496783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7605063612162384089 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 268039567724941014, guid: 5f4559d067a2afe4f983daf1b4575319,
