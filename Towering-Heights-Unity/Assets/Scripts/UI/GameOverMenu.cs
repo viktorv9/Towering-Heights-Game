@@ -5,15 +5,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour {
+    
+    private Controls playerControls;
+    
+    private void Start() {
+        playerControls = new Controls();
+        playerControls.Player.Enable();
+    }
+    
     public void Restart() {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        PauseMenu.GameIsPaused = false;
     }
     
     public void LevelSelect() {
         SceneManager.LoadScene("LevelSelectMenu");
+        PauseMenu.GameIsPaused = false;
     }
 
     public void Quit() {

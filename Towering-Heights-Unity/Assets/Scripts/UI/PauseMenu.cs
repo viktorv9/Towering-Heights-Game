@@ -33,6 +33,8 @@ public class PauseMenu : MonoBehaviour {
     }
 
     private void Update() {
+        if (ShapeDropper.IsGameOver()) return;
+        
         if (playerControls.Player.Pause.triggered) {
             if (GameIsPaused) {
                 Resume();

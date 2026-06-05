@@ -5,8 +5,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class HasWonMenu : MonoBehaviour {
+    
+    private Controls playerControls;
+    
+    private void Start() {
+        playerControls = new Controls();
+        playerControls.Player.Enable();
+    }
+
+    private void Update() {
+        if (playerControls.Player.Pause.triggered) {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void MainMenu() {
         SceneManager.LoadScene("MainMenu");
+        PauseMenu.GameIsPaused = false;
     }
     
     public void Restart() {
@@ -14,9 +29,11 @@ public class HasWonMenu : MonoBehaviour {
         SceneManager.LoadScene(currentSceneName);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        PauseMenu.GameIsPaused = false;
     }
     
     public void LevelSelect() {
         SceneManager.LoadScene("LevelSelectMenu");
+        PauseMenu.GameIsPaused = false;
     }
 }

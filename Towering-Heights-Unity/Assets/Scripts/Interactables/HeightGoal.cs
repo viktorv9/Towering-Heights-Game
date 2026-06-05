@@ -99,7 +99,7 @@ public class HeightGoal : MonoBehaviour
     }
     
     private void NextGoalHeight() {
-        if (shapeDropper.IsGameOver()) return;
+        if (ShapeDropper.IsGameOver()) return;
         
         UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
         if (goals[0].finalGoal) {

@@ -45,7 +45,7 @@ public class ShapeDropper : MonoBehaviour {
     private CameraController cameraController;
     private Transform cameraTransform;
 
-    private bool gameOver;
+    private static bool gameOver;
     private bool hasWon;
     private int currentScore;
     
@@ -102,7 +102,7 @@ public class ShapeDropper : MonoBehaviour {
         dropShapeBlockers--;
     }
 
-    public bool IsGameOver() {
+    public static bool IsGameOver() {
         return gameOver;
     }
 
@@ -121,6 +121,7 @@ public class ShapeDropper : MonoBehaviour {
             gameOverMenu.SetActive(true);
             // eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
             AudioManager.instance.PlayOneShot(gameOverSound, cameraTransform.position);
+            PauseMenu.GameIsPaused = true;
         }
     }
 
@@ -128,7 +129,8 @@ public class ShapeDropper : MonoBehaviour {
         hasWon = newState;
         if (hasWon) {
             hasWonMenu.SetActive(true);
-            // eventSystem.SetSelectedGameObject(gameOverMenuFirstSelected);
+            // eventSystem.SetSelectedGameObject(hasWonMenuFirstSelected);
+            PauseMenu.GameIsPaused = true;
         }
     }
 
