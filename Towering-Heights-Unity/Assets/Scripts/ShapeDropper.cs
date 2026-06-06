@@ -26,6 +26,7 @@ public class ShapeDropper : MonoBehaviour {
     [SerializeField] private float verticalSpeed;
     [SerializeField] private float zoomSpeed;
     [SerializeField] private float holdSpeedUpMultiplier;
+    [SerializeField] private float minHeight;
     
     [Header("Shapes")]
     [SerializeField] private List<GameObject> shapes;
@@ -275,10 +276,17 @@ public class ShapeDropper : MonoBehaviour {
         
         if (playerMovementHorizontalInput.x != 0) newHorizontalPosition += cameraTransform.right * playerMovementHorizontalInput.x;
         if (playerMovementHorizontalInput.y != 0) newHorizontalPosition += cameraTransform.forward * playerMovementHorizontalInput.y;
+        
+        if (newHorizontalPosition.x < -10) newHorizontalPosition.x = -10;
+        if (newHorizontalPosition.x > 10) newHorizontalPosition.x = 10;
+        if (newHorizontalPosition.z < -10) newHorizontalPosition.z = -10;
+        if (newHorizontalPosition.z > 10) newHorizontalPosition.z = 10;
 
         Vector2 playerMovementVerticalInput = playerControls.Player.MoveVertical.ReadValue<Vector2>();
+        if (playerControls.Player.MoveSpeedUp.IsPressed()) playerMovementVerticalInput *= holdSpeedUpMultiplier;
         newHeight += playerMovementVerticalInput.y * verticalSpeed;
-        if (newHeight < 0) newHeight = 0;
+        newHeight = Mathf.Round(newHeight * 10.0f) * 0.1f;
+        if (newHeight < minHeight) newHeight = minHeight;
         
         Vector2 playerZoomInput = playerControls.Player.Zoom.ReadValue<Vector2>();
         cameraController.ZoomCamera(-playerZoomInput.y * zoomSpeed);

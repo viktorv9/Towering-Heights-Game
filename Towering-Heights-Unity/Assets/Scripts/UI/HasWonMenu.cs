@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class HasWonMenu : MonoBehaviour {
     
+    [SerializeField] private ShapeDropper shapeDropper;
+    
     private Controls playerControls;
     
     private void Start() {
@@ -30,6 +32,7 @@ public class HasWonMenu : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PauseMenu.GameIsPaused = false;
+        shapeDropper.SetGameOver(false);
     }
     
     public void LevelSelect() {

@@ -825,6 +825,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4126122005070790671, guid: 1b1d1d6bccc810b44863a7580d8d1051,
+        type: 3}
+      propertyPath: shapeDropper
+      value: 
+      objectReference: {fileID: 3302798056931511466}
     - target: {fileID: 4308760723046443456, guid: 1b1d1d6bccc810b44863a7580d8d1051,
         type: 3}
       propertyPath: m_Name
@@ -1446,6 +1451,11 @@ PrefabInstance:
       propertyPath: gameUI
       value: 
       objectReference: {fileID: 3686239866478651121}
+    - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
+        type: 3}
+      propertyPath: minHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1350644529415291633, guid: 42673cbd032d4384a85f1b7c41415a34,
         type: 3}
       propertyPath: hasWonMenu
@@ -2295,6 +2305,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6176673098325383338, guid: 56361b14a959dc84893ab4b48c41eec8,
+        type: 3}
+      propertyPath: shapeDropper
+      value: 
+      objectReference: {fileID: 3302798056931511466}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

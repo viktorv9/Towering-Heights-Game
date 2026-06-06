@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour {
     
+    [SerializeField] private ShapeDropper shapeDropper;
+    
     private Controls playerControls;
     
     private void Start() {
@@ -19,6 +21,7 @@ public class GameOverMenu : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PauseMenu.GameIsPaused = false;
+        shapeDropper.SetGameOver(false);
     }
     
     public void LevelSelect() {

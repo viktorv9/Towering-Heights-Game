@@ -109,6 +109,7 @@ MonoBehaviour:
   verticalSpeed: 0.002
   zoomSpeed: 0.01
   holdSpeedUpMultiplier: 3
+  minHeight: 1
   shapes:
   - {fileID: 888350324257194877, guid: 74d6157d62fa51140b964920833216ea, type: 3}
   - {fileID: 7978597780222568617, guid: 3968ff9dc5eba0f4989a7d4a9a73d0d4, type: 3}
