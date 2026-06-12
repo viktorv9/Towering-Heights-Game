@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject scoreDisplay;
     [SerializeField] private TMP_Text scoreTextArea;
     
+    [SerializeField] private ShapeDropper shapeDropper;
     [SerializeField] private GameObject controlsMenuUI;
     
     private Controls playerControls;
@@ -38,5 +39,6 @@ public class GameUI : MonoBehaviour
     public void NavigateControls() {
         controlsMenuUI.SetActive(true);
         PauseMenu.GameIsPaused = true;
+        Time.timeScale = 0f;
     }
 }
