@@ -122,21 +122,62 @@ public class RotationUpgrade : MonoBehaviour {
     private void ExecuteRotate(RotationDirection rotationDirection) {
         if (rotationDirection == RotationDirection.None) return;
         Vector3 rotationValue = new Vector3();
-        if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
-        if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
-        if (rotationDirection == RotationDirection.Up || rotationDirection == RotationDirection.Down) {
-            if (cinemachinePOV.m_HorizontalAxis.Value > 45 && cinemachinePOV.m_HorizontalAxis.Value <= 135) {
-                if (rotationDirection == RotationDirection.Up) rotationValue.z = -90;
-                if (rotationDirection == RotationDirection.Down) rotationValue.z = 90;
-            } else if (cinemachinePOV.m_HorizontalAxis.Value > 135 && cinemachinePOV.m_HorizontalAxis.Value <= 225) {
-                if (rotationDirection == RotationDirection.Up) rotationValue.x = -90;
-                if (rotationDirection == RotationDirection.Down) rotationValue.x = 90;
-            } else if (cinemachinePOV.m_HorizontalAxis.Value > 225 && cinemachinePOV.m_HorizontalAxis.Value <= 315) {
-                if (rotationDirection == RotationDirection.Up) rotationValue.z = 90;
-                if (rotationDirection == RotationDirection.Down) rotationValue.z = -90;
-            } else { 
-                if (rotationDirection == RotationDirection.Up) rotationValue.x = 90;
-                if (rotationDirection == RotationDirection.Down) rotationValue.x = -90;
+        
+        if (cinemachinePOV.m_HorizontalAxis.Value > 45 && cinemachinePOV.m_HorizontalAxis.Value <= 135) {
+            if (rotationDirection == RotationDirection.Up) rotationValue.z = -90;
+            if (rotationDirection == RotationDirection.Down) rotationValue.z = 90;
+            
+            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.x = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.x = -90;
+            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.x = -90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.x = 90;
+            } else {
+                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+            }
+        } else if (cinemachinePOV.m_HorizontalAxis.Value > 135 && cinemachinePOV.m_HorizontalAxis.Value <= 225) {
+            if (rotationDirection == RotationDirection.Up) rotationValue.x = -90;
+            if (rotationDirection == RotationDirection.Down) rotationValue.x = 90;
+            
+            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.z = -90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.z = 90;
+            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.z = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.z = -90;
+            } else {
+                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+            }
+        } else if (cinemachinePOV.m_HorizontalAxis.Value > 225 && cinemachinePOV.m_HorizontalAxis.Value <= 315) {
+            if (rotationDirection == RotationDirection.Up) rotationValue.z = 90;
+            if (rotationDirection == RotationDirection.Down) rotationValue.z = -90;
+            
+            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.x = -90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.x = 90;
+            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.x = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.x = -90;
+            } else {
+                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+            }
+        } else {
+            if (rotationDirection == RotationDirection.Up) rotationValue.x = 90;
+            if (rotationDirection == RotationDirection.Down) rotationValue.x = -90;
+            
+            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.z = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.z = -90;
+            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                if (rotationDirection == RotationDirection.Left) rotationValue.z = -90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.z = 90;
+            } else {
+                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
             }
         }
         
