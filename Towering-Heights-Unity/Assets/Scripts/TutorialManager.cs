@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,8 @@ public class TutorialManager : MonoBehaviour {
     [SerializeField] private List<GameObject> rotationSteps;
     [SerializeField] private List<GameObject> holdBlockSteps;
     [SerializeField] private List<GameObject> undoSteps;
+
+    [SerializeField][CanBeNull] private GameObject afterTutorialObject;
 
     private enum TutorialType {
         StarterTutorial,
@@ -63,12 +66,14 @@ public class TutorialManager : MonoBehaviour {
             currentTutorialType = TutorialType.UndoTutorial;
             currentSteps.AddRange(undoSteps);
             currentSteps[0]?.SetActive(true);
+        } else {
+            if (afterTutorialObject != null) afterTutorialObject.SetActive(true);
         }
     }
     
     private void NextTutorialStep() {
         gameData = SaveSystem.LoadGameData();
-
+        
         if (currentSteps.Count > 0) {
             Destroy(currentSteps[0]);
             currentSteps.RemoveAt(0);
