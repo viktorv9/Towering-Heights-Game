@@ -221,9 +221,11 @@ public class ShapeDropper : MonoBehaviour {
         else nextShapeIndex = shapeIndex.Value;
         nextShapePreview = Instantiate(shapePreviews[nextShapeIndex]).GetComponent<ShapePreview>();
         
-        // nextShapePreview = Instantiate(shapePreviews[nextShapeIndex].GetComponent<ShapePreview>());
-        // nextRotationIndex = 0;
-        // nextRotation = nextShapePreview.GetPossibleRotations[nextRotationIndex];
+        nextShapePreview.transform.rotation = Quaternion.Euler(new Vector3(
+            Random.Range(0, 3) * 90,
+            Random.Range(0, 3) * 90,
+            Random.Range(0, 3) * 90
+        ));
 
         nextShapePreview.gameObject.SetActive(false);
         StartCoroutine(SetActiveAfterCooldown(nextShapePreview.gameObject));
