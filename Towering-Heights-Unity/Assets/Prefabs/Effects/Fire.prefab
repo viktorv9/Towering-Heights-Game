@@ -14499,6 +14499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268283585637965965}
+  - component: {fileID: 7935939177106169735}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -14524,3 +14525,16 @@ Transform:
   - {fileID: 3456551857851164247}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7935939177106169735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942567708773758537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550fbee18f22070429c05e1270e52cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 5

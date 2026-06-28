@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Shield",
+                    "type": "Button",
+                    "id": "ecfbe975-6fb3-42ed-a24b-208025fe931f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -168,17 +177,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "DropShape",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "032a03b0-8eae-4962-a666-fd18a18a1371",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
                     "action": "DropShape",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -510,6 +508,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Help",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "032a03b0-8eae-4962-a666-fd18a18a1371",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Shield",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

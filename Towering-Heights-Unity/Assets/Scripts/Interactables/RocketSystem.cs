@@ -5,10 +5,13 @@ using UnityEngine;
 public class RocketSystem : MonoBehaviour {
 
     [SerializeField] private GameObject targetHolder;
+    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float spawnInterval;
     
     private float timeLastSpawn = 0;
     LineRenderer lr;
+    
+    GameObject projectileObj;
     
     private struct TargetData
     {
@@ -29,11 +32,19 @@ public class RocketSystem : MonoBehaviour {
             SpawnTargetingLaser();
             timeLastSpawn = Time.time;
         }
+        
+        if (projectileObj == null && lr.positionCount > 0) {
+            lr.positionCount = 0;
+        }
     }
 
     void SpawnTargetingLaser() {
         TargetData? targetData = RerollTarget();
         if (targetData == null) return;
+
+        projectileObj = Instantiate(projectilePrefab, targetData.Value.OriginPoint, Quaternion.identity);
+        Projectile projectile = projectileObj.GetComponent<Projectile>();
+        projectile.Initialize(targetData.Value.TargetPoint - targetData.Value.OriginPoint);
 
         lr.positionCount = 2;
         lr.SetPosition(0, targetData.Value.OriginPoint);

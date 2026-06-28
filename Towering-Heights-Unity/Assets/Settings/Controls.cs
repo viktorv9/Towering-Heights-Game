@@ -125,6 +125,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shield"",
+                    ""type"": ""Button"",
+                    ""id"": ""ecfbe975-6fb3-42ed-a24b-208025fe931f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -190,17 +199,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""DropShape"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""032a03b0-8eae-4962-a666-fd18a18a1371"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
                     ""action"": ""DropShape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -532,6 +530,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Help"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""032a03b0-8eae-4962-a666-fd18a18a1371"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Shield"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1130,6 +1139,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_HoldBlock = m_Player.FindAction("HoldBlock", throwIfNotFound: true);
         m_Player_Undo = m_Player.FindAction("Undo", throwIfNotFound: true);
         m_Player_Help = m_Player.FindAction("Help", throwIfNotFound: true);
+        m_Player_Shield = m_Player.FindAction("Shield", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1214,6 +1224,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_HoldBlock;
     private readonly InputAction m_Player_Undo;
     private readonly InputAction m_Player_Help;
+    private readonly InputAction m_Player_Shield;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -1229,6 +1240,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @HoldBlock => m_Wrapper.m_Player_HoldBlock;
         public InputAction @Undo => m_Wrapper.m_Player_Undo;
         public InputAction @Help => m_Wrapper.m_Player_Help;
+        public InputAction @Shield => m_Wrapper.m_Player_Shield;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1271,6 +1283,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Help.started += instance.OnHelp;
             @Help.performed += instance.OnHelp;
             @Help.canceled += instance.OnHelp;
+            @Shield.started += instance.OnShield;
+            @Shield.performed += instance.OnShield;
+            @Shield.canceled += instance.OnShield;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1308,6 +1323,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Help.started -= instance.OnHelp;
             @Help.performed -= instance.OnHelp;
             @Help.canceled -= instance.OnHelp;
+            @Shield.started -= instance.OnShield;
+            @Shield.performed -= instance.OnShield;
+            @Shield.canceled -= instance.OnShield;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1501,6 +1519,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnHoldBlock(InputAction.CallbackContext context);
         void OnUndo(InputAction.CallbackContext context);
         void OnHelp(InputAction.CallbackContext context);
+        void OnShield(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

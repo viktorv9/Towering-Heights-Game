@@ -86,9 +86,18 @@ public class ShapeDropper : MonoBehaviour {
         UpdatePreviewPosition();
         
         if (IsGameOver()) return;
+
+        if (playerControls.Player.Shield.IsPressed() && nextShapePreview.gameObject.activeSelf) {
+            nextShapePreview.gameObject.SetActive(false);
+        }
+        if (!playerControls.Player.Shield.IsPressed() && !nextShapePreview.gameObject.activeSelf) {
+            nextShapePreview.gameObject.SetActive(true);
+        }
+        
         if (playerControls.Player.DropShape.triggered) {
             if (dropShapeBlockers > 0) return;
             if (isRotating) return;
+            if (playerControls.Player.Shield.IsPressed()) return;
             
             HandleDrop();
         }

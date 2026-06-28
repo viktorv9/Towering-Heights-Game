@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetHolder: {fileID: 0}
+  projectilePrefab: {fileID: 8030457976239698198, guid: 00e33b1e422594d43a29ac811fa78226,
+    type: 3}
   spawnInterval: 2
 --- !u!120 &9194579678477913263
 LineRenderer:
