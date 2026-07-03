@@ -9,6 +9,8 @@ public class GameData {
     public bool rotationTutorialCompleted;
     public bool holdBlockTutorialCompleted;
     public bool undoTutorialCompleted;
+    
+    public bool shieldTutorialCompleted;
 
     // with a run based system these would have to be saved into a separate run-specific save
     public bool rotationUnlocked;
@@ -22,6 +24,7 @@ public class GameData {
         bool rotationTutorialIsCompleted = false,
         bool holdBlockTutorialIsCompleted = false,
         bool undoTutorialIsCompleted = false,
+        bool shieldTutorialIsCompleted = false,
         bool rotationIsUnlocked = false,
         bool holdBlockIsUnlocked = false,
         bool undoIsUnlocked = false,
@@ -31,6 +34,8 @@ public class GameData {
         rotationTutorialCompleted = rotationTutorialIsCompleted;
         holdBlockTutorialCompleted = holdBlockTutorialIsCompleted;
         undoTutorialCompleted = undoTutorialIsCompleted;
+        
+        shieldTutorialCompleted = shieldTutorialIsCompleted;
         
         rotationUnlocked = rotationIsUnlocked;
         holdBlockUnlocked = holdBlockIsUnlocked;

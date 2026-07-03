@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour {
             Destroy(gameObject);
         }
         else if (other.transform.CompareTag("Block") && other.transform.name != "rock_platform") {
-            ApplyExplosionForce();
+            ApplyExplosionForce(hitPoint);
 
             hasHit = true;
             Instantiate(collisionEffect, hitPoint, Quaternion.identity);
@@ -46,12 +46,12 @@ public class Projectile : MonoBehaviour {
         }
     }
     
-    public void ApplyExplosionForce()
+    public void ApplyExplosionForce(Vector3 hitPoint)
     {
         Vector3 explosionPosition = transform.position;
         Collider[] colliders = new Collider[50];
         List<Rigidbody> rigidbodies = new List<Rigidbody>();
-        Physics.OverlapSphereNonAlloc(explosionPosition, 4f, colliders);
+        Physics.OverlapSphereNonAlloc(explosionPosition, 1f, colliders);
 
         foreach (Collider collider in colliders)
         {
@@ -62,8 +62,7 @@ public class Projectile : MonoBehaviour {
         }
 
         foreach (Rigidbody targetRigidbody in rigidbodies) {
-            targetRigidbody.AddExplosionForce(20f, explosionPosition, 1, 1f);
-
+            targetRigidbody.AddForceAtPosition(-transform.forward * 2f, hitPoint, ForceMode.Impulse); // again. - because model backwards
         }
     }
 }

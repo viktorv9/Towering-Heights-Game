@@ -465,6 +465,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3443076916743025558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1377908227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7515351477488882718, guid: 354ed21543bd6d142a5430da223071a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 680718158783676801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2103863278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,6 +5421,16 @@ PrefabInstance:
       propertyPath: m_text
       value: A container has fallen into the abyss
       objectReference: {fileID: 0}
+    - target: {fileID: 711952469782116636, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shieldSteps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 711952469782116636, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: shieldSteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 1377908227}
     - target: {fileID: 798734144458573071, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6560,11 +6576,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6884448027857685137, guid: 7fe345e9a498f5049af50693a17ebfe5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 87016f694dbfa8147a25339a85d10dfd, type: 2}
     - target: {fileID: 8151738160610294337, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: m_Camera

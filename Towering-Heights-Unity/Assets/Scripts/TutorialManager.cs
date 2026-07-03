@@ -13,6 +13,7 @@ public class TutorialManager : MonoBehaviour {
     [SerializeField] private List<GameObject> rotationSteps;
     [SerializeField] private List<GameObject> holdBlockSteps;
     [SerializeField] private List<GameObject> undoSteps;
+    [SerializeField] private List<GameObject> shieldSteps;
 
     [SerializeField][CanBeNull] private GameObject afterTutorialObject;
 
@@ -21,6 +22,7 @@ public class TutorialManager : MonoBehaviour {
         RotationTutorial,
         HoldBlockTutorial,
         UndoTutorial,
+        ShieldTutorial,
     }
 
     private TutorialType? currentTutorialType;
@@ -66,6 +68,10 @@ public class TutorialManager : MonoBehaviour {
             currentTutorialType = TutorialType.UndoTutorial;
             currentSteps.AddRange(undoSteps);
             currentSteps[0]?.SetActive(true);
+        } else if (shieldSteps.Count > 0 && !gameData.shieldTutorialCompleted) {
+            currentTutorialType = TutorialType.ShieldTutorial;
+            currentSteps.AddRange(shieldSteps);
+            currentSteps[0]?.SetActive(true);
         } else {
             if (afterTutorialObject != null) afterTutorialObject.SetActive(true);
         }
@@ -94,6 +100,9 @@ public class TutorialManager : MonoBehaviour {
                     case (TutorialType.UndoTutorial):
                         gameData.undoTutorialCompleted = true;
                         break;
+                    case (TutorialType.ShieldTutorial):
+                        gameData.shieldTutorialCompleted = true;
+                        break;
                 }
 
                 currentTutorialType = null;
@@ -109,6 +118,7 @@ public class TutorialManager : MonoBehaviour {
         gameData.rotationTutorialCompleted = false;
         gameData.holdBlockTutorialCompleted = false;
         gameData.undoTutorialCompleted = false;
+        gameData.shieldTutorialCompleted = false;
         SaveSystem.SaveGameData(gameData);
     }
 }

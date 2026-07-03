@@ -19,6 +19,7 @@ public class Dialog : MonoBehaviour
         HoldBlock,
         None,
         Undo,
+        Shield,
     }
 
     public delegate void DialogCompleted();
@@ -91,6 +92,9 @@ public class Dialog : MonoBehaviour
                 progressBar.SetProgressBarPercentage(0);
                 break;
             case (TutorialType.Undo):
+                shapeDropper.AddDropsBlocksBlocker();
+                break;
+            case (TutorialType.Shield):
                 shapeDropper.AddDropsBlocksBlocker();
                 break;
         }
@@ -203,6 +207,16 @@ public class Dialog : MonoBehaviour
                     StartCoroutine(FlashTutorialBorder());
                 }
                 if (playerControls.Player.Undo.triggered) {
+                    shapeDropper.RemoveDropsBlocksBlocker();
+                    OnComplete?.Invoke();
+                    Destroy(gameObject);
+                }
+                break;
+            case (TutorialType.Shield):
+                if (playerControls.Player.DropShape.IsPressed()) {
+                    StartCoroutine(FlashTutorialBorder());
+                }
+                if (playerControls.Player.Shield.triggered) {
                     shapeDropper.RemoveDropsBlocksBlocker();
                     OnComplete?.Invoke();
                     Destroy(gameObject);

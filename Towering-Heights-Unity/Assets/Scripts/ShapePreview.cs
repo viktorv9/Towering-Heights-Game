@@ -21,6 +21,9 @@ public class ShapePreview : MonoBehaviour {
     }
 
     private void OnDisable() {
+        outerCollidingAmount = 0;
+        innerCollidingAmount = 0;
+        
         innerCollider.onTriggerEnterEvent.RemoveListener(OnInnerTriggerEnter);
         innerCollider.onTriggerExitEvent.RemoveListener(OnInnerTriggerExit);
     }
