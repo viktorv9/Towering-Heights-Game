@@ -6478,6 +6478,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
+      propertyPath: winEffect
+      value: 
+      objectReference: {fileID: 7517309591963548075, guid: 8e21108f689c4634d96c0c64b2ae0b78,
+        type: 3}
+    - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
+        type: 3}
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 689793022}

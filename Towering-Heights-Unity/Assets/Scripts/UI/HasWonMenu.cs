@@ -17,7 +17,7 @@ public class HasWonMenu : MonoBehaviour {
 
     private void Update() {
         if (playerControls.Player.Pause.triggered) {
-            gameObject.SetActive(false);
+            if (shapeDropper.GetHasWon()) gameObject.SetActive(false);
         }
     }
 
