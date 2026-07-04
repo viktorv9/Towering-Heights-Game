@@ -6229,8 +6229,33 @@ PrefabInstance:
       objectReference: {fileID: 1216718928}
     - target: {fileID: 8642689455935980892, guid: 995efbfeaba630546879cc1b32c024d4,
         type: 3}
-      propertyPath: spawnInterval
-      value: 10
+      propertyPath: lineDangerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642689455935980892, guid: 995efbfeaba630546879cc1b32c024d4,
+        type: 3}
+      propertyPath: lineDangerColor.r
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642689455935980892, guid: 995efbfeaba630546879cc1b32c024d4,
+        type: 3}
+      propertyPath: lineWarningColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642689455935980892, guid: 995efbfeaba630546879cc1b32c024d4,
+        type: 3}
+      propertyPath: lineWarningColor.b
+      value: 0.02021557
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642689455935980892, guid: 995efbfeaba630546879cc1b32c024d4,
+        type: 3}
+      propertyPath: lineWarningColor.g
+      value: 0.02021557
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642689455935980892, guid: 995efbfeaba630546879cc1b32c024d4,
+        type: 3}
+      propertyPath: lineWarningColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8650660949091643781, guid: 995efbfeaba630546879cc1b32c024d4,
         type: 3}
@@ -6282,6 +6307,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9194579678477913263, guid: 995efbfeaba630546879cc1b32c024d4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5cf9d9f156e008c418bf88098ae8ff0e, type: 2}
     - target: {fileID: 9194579678477913263, guid: 995efbfeaba630546879cc1b32c024d4,
         type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value

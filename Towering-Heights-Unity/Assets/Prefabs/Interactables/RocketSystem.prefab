@@ -48,7 +48,9 @@ MonoBehaviour:
   targetHolder: {fileID: 0}
   projectilePrefab: {fileID: 8030457976239698198, guid: 00e33b1e422594d43a29ac811fa78226,
     type: 3}
-  spawnInterval: 2
+  spawnInterval: 15
+  lineWarningMaterial: {fileID: 2100000, guid: 5cf9d9f156e008c418bf88098ae8ff0e, type: 2}
+  lineDangerMaterial: {fileID: 2100000, guid: 42731ae41dbcef041b012a0da8d6a22f, type: 2}
 --- !u!120 &9194579678477913263
 LineRenderer:
   serializedVersion: 2
@@ -70,7 +72,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42731ae41dbcef041b012a0da8d6a22f, type: 2}
+  - {fileID: 2100000, guid: 5cf9d9f156e008c418bf88098ae8ff0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

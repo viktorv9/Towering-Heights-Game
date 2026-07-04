@@ -38,7 +38,7 @@ public class WaveScanner : MonoBehaviour
 
     void FixedUpdate()
     {
-        float newY = transform.position.y + riseSpeed * Time.deltaTime;
+        float newY = transform.position.y + currentRiseSpeed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 }
