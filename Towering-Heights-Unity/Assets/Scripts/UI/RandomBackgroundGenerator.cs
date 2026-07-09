@@ -23,6 +23,8 @@ public class RandomBackgroundGenerator : MonoBehaviour {
                 neighboringTiles.Add(tilemap.GetTile<Tile>(new Vector3Int(i-1, j-1, 0)));
                 neighboringTiles.Add(tilemap.GetTile<Tile>(new Vector3Int(i, j-1, 0)));
                 neighboringTiles.Add(tilemap.GetTile<Tile>(new Vector3Int(i+1, j-1, 0)));
+                neighboringTiles.Add(tilemap.GetTile<Tile>(new Vector3Int(i-2, j, 0)));
+                neighboringTiles.Add(tilemap.GetTile<Tile>(new Vector3Int(i, j-2, 0)));
 
                 // remove neighboring tiles from current options
                 foreach (Tile neighboringTile in neighboringTiles) {

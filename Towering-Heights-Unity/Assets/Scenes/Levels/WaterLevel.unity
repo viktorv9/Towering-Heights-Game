@@ -1093,7 +1093,7 @@ PrefabInstance:
     - target: {fileID: 4168793620585828263, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
       propertyPath: goals.Array.data[0].upgradeToUnlock
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4696113991167121783, guid: 7fe345e9a498f5049af50693a17ebfe5,
         type: 3}
@@ -1244,6 +1244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaveScanner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005876986570163460, guid: 914f9ed770a4f0c4aa3cdea9ed5e9cbb,
+        type: 3}
+      propertyPath: riseSpeed
+      value: 0.066
       objectReference: {fileID: 0}
     - target: {fileID: 7005876986570163460, guid: 914f9ed770a4f0c4aa3cdea9ed5e9cbb,
         type: 3}
