@@ -26,6 +26,7 @@ public class GameOverMenu : MonoBehaviour {
     
     public void LevelSelect() {
         SceneManager.LoadScene("LevelSelectMenu");
+        shapeDropper.SetGameOver(false);
         PauseMenu.GameIsPaused = false;
     }
 

@@ -12317,6 +12317,11 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 566688471562899312, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: m_text
+      value: A container has fallen into the clouds
+      objectReference: {fileID: 0}
     - target: {fileID: 798734144458573071, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_AnchorMax.y

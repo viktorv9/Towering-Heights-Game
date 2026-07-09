@@ -23,7 +23,6 @@ public class RocketSystem : MonoBehaviour {
         public Vector3 OriginPoint;
         public Vector3 TargetPoint;
     }
-    
 
     void Start()
     {
@@ -41,6 +40,7 @@ public class RocketSystem : MonoBehaviour {
             
             SpawnTargetingLaser();
             timeLastSpawn = Time.time;
+            timeLastSpawn += Random.Range(-spawnInterval/5, spawnInterval/5); // random variation
         }
         
         if (projectileObj != null && targetData.HasValue) {
@@ -73,6 +73,7 @@ public class RocketSystem : MonoBehaviour {
 
     TargetData? RerollTarget() {
         RaycastHit hit = default;
+        targetHolder = shapeDropper.GetTowerState();
         Collider[] possibleTargets = targetHolder.GetComponentsInChildren<Collider>();
         if (possibleTargets.Length == 0) return null;
         

@@ -255,6 +255,10 @@ public class ShapeDropper : MonoBehaviour {
         lastSavedTowerState = Instantiate(blocksHolder);
         lastSavedTowerState.SetActive(false);
     }
+
+    public GameObject GetTowerState() {
+        return blocksHolder;
+    }
     
     public void LoadTowerState() {
         if (lastSavedTowerState && canUndo) {
