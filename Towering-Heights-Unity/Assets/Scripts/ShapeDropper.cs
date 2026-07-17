@@ -67,6 +67,8 @@ public class ShapeDropper : MonoBehaviour {
     void Start() {
         playerControls = new Controls();
         playerControls.Player.Enable();
+        
+        SetGameOver(false);
 
         UpgradeManager.LoadUnlockedUpgrades();
         

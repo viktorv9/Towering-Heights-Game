@@ -27,7 +27,7 @@ public class WaveScanner : MonoBehaviour
         if (!other.gameObject.CompareTag("Block")) return;
         blocksInTrigger.Remove(other.gameObject);
         
-        if (blocksInTrigger.Count == 0) {
+        if (blocksInTrigger.Count == 0 && !shapeDropper.GetHasWon()) {
             shapeDropper.SetGameOver(true);
         }
     }

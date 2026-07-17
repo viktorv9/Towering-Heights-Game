@@ -33,4 +33,9 @@ public class GameOverMenu : MonoBehaviour {
     public void Quit() {
         Application.Quit();
     }
+    
+    public void MainMenu() {
+        SceneManager.LoadScene("MainMenu");
+        PauseMenu.GameIsPaused = false;
+    }
 }
