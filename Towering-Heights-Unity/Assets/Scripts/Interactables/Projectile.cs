@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using FMODUnity;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
@@ -12,16 +13,15 @@ public class Projectile : MonoBehaviour {
     [SerializeField] private GameObject shieldCollisionEffect;
     [SerializeField] private GameObject trailEffectBurst;
 
+    [SerializeField] private EventReference shieldCollisionSound;
+    
     private Vector3 previousPosition;
-    private bool hasHit = false;
-    float radius;
+    private bool hasHit;
     
     public void Initialize(Vector3 direction)
     {
         transform.forward = -direction; // - because model is backwards
         rb.velocity = -transform.forward * speed; // - because model is backwards
-        Mesh mesh = GetComponent<MeshFilter>().sharedMesh;
-        radius = mesh.bounds.extents.magnitude;
     }
 
     private void Update() {
@@ -35,6 +35,10 @@ public class Projectile : MonoBehaviour {
         if (other.transform.CompareTag("Shield")) {
             hasHit = true;
             Instantiate(shieldCollisionEffect, hitPoint, Quaternion.identity);
+            var soundInstance = AudioManager.instance.CreateInstance(shieldCollisionSound);
+            soundInstance.set3DAttributes(transform.position.To3DAttributes());
+            soundInstance.start();
+            soundInstance.release();
             Destroy(gameObject);
         }
         else if (other.transform.CompareTag("Block") && other.transform.name != "rock_platform") {

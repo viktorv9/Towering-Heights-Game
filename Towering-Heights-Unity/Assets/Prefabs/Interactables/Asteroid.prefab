@@ -156,6 +156,13 @@ MonoBehaviour:
     type: 3}
   trailEffectBurst: {fileID: 8942567708773758537, guid: 0e5caf177e9aa3446a161e2d762e9a4b,
     type: 3}
+  shieldCollisionSound:
+    Guid:
+      Data1: -855908715
+      Data2: 1168296887
+      Data3: -1356392790
+      Data4: 821430091
+    Path: event:/Asteroid Sizzle
 --- !u!1001 &7434792661774218692
 PrefabInstance:
   m_ObjectHideFlags: 0

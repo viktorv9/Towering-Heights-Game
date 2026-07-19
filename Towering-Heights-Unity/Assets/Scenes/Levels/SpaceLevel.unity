@@ -218,6 +218,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldObject: {fileID: 728766504}
+  shieldSound:
+    Guid:
+      Data1: 1579920431
+      Data2: 1338905823
+      Data3: 97745323
+      Data4: 618035119
+    Path: event:/Shield
 --- !u!20 &330585545 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 53711985229380740, guid: 354ed21543bd6d142a5430da223071a9,
@@ -541,7 +548,7 @@ MonoBehaviour:
 
     Viktor Vermij
 
-    
+
 
     Music,
     SFX:
