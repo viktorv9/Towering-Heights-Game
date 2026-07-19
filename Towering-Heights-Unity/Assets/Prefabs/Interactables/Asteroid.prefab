@@ -163,6 +163,13 @@ MonoBehaviour:
       Data3: -1356392790
       Data4: 821430091
     Path: event:/Asteroid Sizzle
+  blockCollisionSound:
+    Guid:
+      Data1: -1664383417
+      Data2: 1235606944
+      Data3: -461965433
+      Data4: 1445954181
+    Path: event:/Explosion
 --- !u!1001 &7434792661774218692
 PrefabInstance:
   m_ObjectHideFlags: 0

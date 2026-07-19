@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour {
     [SerializeField] private GameObject trailEffectBurst;
 
     [SerializeField] private EventReference shieldCollisionSound;
+    [SerializeField] private EventReference blockCollisionSound;
     
     private Vector3 previousPosition;
     private bool hasHit;
@@ -41,11 +42,19 @@ public class Projectile : MonoBehaviour {
             soundInstance.release();
             Destroy(gameObject);
         }
-        else if (other.transform.CompareTag("Block") && other.transform.name != "rock_platform") {
-            ApplyExplosionForce(hitPoint);
-
+        else if (other.transform.CompareTag("Block")) {
+            if (other.transform.name != "rock_platform") {
+                ApplyExplosionForce(hitPoint);
+            }
+            
+            var soundInstance = AudioManager.instance.CreateInstance(blockCollisionSound);
+            soundInstance.set3DAttributes(transform.position.To3DAttributes());
+            soundInstance.start();
+            soundInstance.release();
+            
             hasHit = true;
             Instantiate(collisionEffect, hitPoint, Quaternion.identity);
+            
             Destroy(gameObject);
         }
     }
