@@ -580,7 +580,7 @@ TextureImporter:
         width: 56
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,6 +588,27 @@ TextureImporter:
       bones: []
       spriteID: 8836ca65697a2d548b18cdd59108283e
       internalID: -1438916513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: question_mark
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07276fef327c1974090571ffd9dde98c
+      internalID: 494213926
       vertices: []
       indices: 
       edges: []
@@ -614,6 +635,7 @@ TextureImporter:
       minishape-5: 325031979
       minishape-6: 1042309042
       minishape-7: -733921353
+      question_mark: 494213926
       rewind: -1868694716
       rotation_arrow: 2047778924
       rotation_bg: 236869963
