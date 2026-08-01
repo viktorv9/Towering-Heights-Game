@@ -825,7 +825,7 @@ PrefabInstance:
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 192.8318
+      value: 226.07
       objectReference: {fileID: 0}
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
@@ -870,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 129.65428
+      value: 113.04
       objectReference: {fileID: 0}
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
@@ -893,9 +893,12 @@ PrefabInstance:
       value: 'You''ve unlocked the ''Rotate'' ability!
 
         Hold R and select
-        a direction.
+        a direction
 
-        Release R to apply the rotation.'
+        (relative to your point of view).
+
+        Release R
+        to apply the rotation.'
       objectReference: {fileID: 0}
     - target: {fileID: 5202051076765698495, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
