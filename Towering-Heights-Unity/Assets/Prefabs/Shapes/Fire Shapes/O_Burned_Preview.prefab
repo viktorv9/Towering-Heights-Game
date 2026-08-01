@@ -443,8 +443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
-  errorMaterial: {fileID: 2100000, guid: 4f3e2801dbb427f4aa356fd66447a82c, type: 2}
-  errorerMaterial: {fileID: 2100000, guid: afc0f7166c2a38542b491412a6202d41, type: 2}
+  errorMaterial: {fileID: 2100000, guid: 8acefa72d5b166e4dbd42de993004d65, type: 2}
+  errorerMaterial: {fileID: 2100000, guid: 572b5fa30e7e42f43b9084f25f663d09, type: 2}
   innerCollider: {fileID: 9119493617258148122}
   associatedRenderers:
   - {fileID: 5590450422327078803}
