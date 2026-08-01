@@ -269,6 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 2019078916}
     - target: {fileID: 2086725578195033994, guid: 2a0bee95645f07c4c951f0dd10285788,
         type: 3}
+      propertyPath: fullscreenToggle
+      value: 
+      objectReference: {fileID: 1662426542}
+    - target: {fileID: 2086725578195033994, guid: 2a0bee95645f07c4c951f0dd10285788,
+        type: 3}
       propertyPath: musicVolumeSlider
       value: 
       objectReference: {fileID: 116287498}
@@ -751,6 +756,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1662426542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8027561903758005203, guid: 251685533d551224888994854f63c4a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8469296020379449663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1672492447
 PrefabInstance:
   m_ObjectHideFlags: 0
