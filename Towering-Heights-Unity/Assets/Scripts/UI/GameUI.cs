@@ -20,8 +20,8 @@ public class GameUI : MonoBehaviour
     }
 
     private void Update() {
-        if (!PauseMenu.GameIsPaused && playerControls.Player.Help.triggered) {
-            NavigateControls();
+        if (playerControls.Player.Help.triggered) {
+            if (!PauseMenu.GameIsPaused || controlsMenuUI.activeSelf) ToggleShowControls();
         }
     }
 
@@ -36,9 +36,9 @@ public class GameUI : MonoBehaviour
         if (newScore == 50) scoreTextArea.color = Color.yellow;
     }
     
-    public void NavigateControls() {
-        controlsMenuUI.SetActive(true);
-        PauseMenu.GameIsPaused = true;
-        Time.timeScale = 0f;
+    private void ToggleShowControls() {
+        controlsMenuUI.SetActive(!controlsMenuUI.activeSelf);
+        PauseMenu.GameIsPaused = controlsMenuUI.activeSelf;
+        Time.timeScale = controlsMenuUI.activeSelf ? 0f : 1f;
     }
 }
