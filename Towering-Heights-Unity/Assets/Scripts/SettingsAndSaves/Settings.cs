@@ -42,7 +42,6 @@ public class Settings : MonoBehaviour {
     }
     
     private void SetFullscreen(GameSettings newGameSettings) {
-        Debug.Log("SetFullscreen: " + newGameSettings.fullscreen);
         if (newGameSettings.fullscreen) {
             Resolution current = Screen.currentResolution;
 
@@ -92,14 +91,17 @@ public class Settings : MonoBehaviour {
         });
         horizontalInputInvertedToggle.onValueChanged.AddListener(delegate {
             gameSettings.invertCameraX = horizontalInputInvertedToggle.isOn;
+            gameSettings.invertCameraY = !horizontalInputInvertedToggle.isOn;
             PlayerPrefs.SetInt("HorizontalInputInverted", gameSettings.invertCameraX ? 1 : 0);
+            PlayerPrefs.SetInt("VerticalInputInverted", gameSettings.invertCameraY ? 0 : 1);
             OnUpdateSettings?.Invoke(gameSettings);
         });
-        verticalInputInvertedToggle.onValueChanged.AddListener(delegate {
-            gameSettings.invertCameraY = verticalInputInvertedToggle.isOn;
-            PlayerPrefs.SetInt("VerticalInputInverted", gameSettings.invertCameraY ? 1 : 0);
-            OnUpdateSettings?.Invoke(gameSettings);
-        });
+        // used to be seperate, but merged for simplicity
+        // verticalInputInvertedToggle.onValueChanged.AddListener(delegate {
+        //     gameSettings.invertCameraY = verticalInputInvertedToggle.isOn;
+        //     PlayerPrefs.SetInt("VerticalInputInverted", gameSettings.invertCameraY ? 1 : 0);
+        //     OnUpdateSettings?.Invoke(gameSettings);
+        // });
     }
 
     private void LoadPlayerSettings()
@@ -108,8 +110,6 @@ public class Settings : MonoBehaviour {
         musicVolumeSlider.value = gameSettings.musicVolume;
         gameSettings.sfxVolume = PlayerPrefs.GetFloat("SfxVolume", musicVolumeSlider.value);
         sfxVolumeSlider.value = gameSettings.sfxVolume;
-        
-        Debug.Log("PlayerPrefs.GetInt(\"Fullscreen\") " + PlayerPrefs.GetInt("Fullscreen"));
         
         gameSettings.fullscreen = Convert.ToBoolean(
             PlayerPrefs.GetInt("Fullscreen", fullscreenToggle.isOn ? 1 : 0));
@@ -120,8 +120,10 @@ public class Settings : MonoBehaviour {
         gameSettings.invertCameraX = Convert.ToBoolean(
             PlayerPrefs.GetInt("HorizontalInputInverted", horizontalInputInvertedToggle.isOn ? 1 : 0));
         horizontalInputInvertedToggle.isOn = gameSettings.invertCameraX;
-        gameSettings.invertCameraY = Convert.ToBoolean(
-            PlayerPrefs.GetInt("VerticalInputInverted", verticalInputInvertedToggle.isOn ? 1 : 0));
-        verticalInputInvertedToggle.isOn = gameSettings.invertCameraY;
+        gameSettings.invertCameraY = !Convert.ToBoolean(
+            PlayerPrefs.GetInt("HorizontalInputInverted", horizontalInputInvertedToggle.isOn ? 1 : 0));
+        // gameSettings.invertCameraY = Convert.ToBoolean(
+        //     PlayerPrefs.GetInt("VerticalInputInverted", verticalInputInvertedToggle.isOn ? 1 : 0));
+        // verticalInputInvertedToggle.isOn = gameSettings.invertCameraY;
     }
 }
