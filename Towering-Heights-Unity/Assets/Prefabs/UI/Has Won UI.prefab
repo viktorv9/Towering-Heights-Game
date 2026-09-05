@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f22eaf08ab33044f8c6bdfb84a4a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shapeDropper: {fileID: 0}
 --- !u!1001 &8696743279049576186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183,7 +184,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4126122005070790671}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8769061478132618917, guid: 810f11c56e8502a41b0232b40ced5495, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810f11c56e8502a41b0232b40ced5495, type: 3}
