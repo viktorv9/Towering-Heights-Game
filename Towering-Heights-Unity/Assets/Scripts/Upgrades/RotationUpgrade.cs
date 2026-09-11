@@ -5,6 +5,7 @@ using Cinemachine;
 using Cinemachine.Utility;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class RotationUpgrade : MonoBehaviour {
@@ -24,11 +25,12 @@ public class RotationUpgrade : MonoBehaviour {
     [SerializeField] private float RotationUpgradeUIDeadzoneSize;
 
     [Header("Element references")]
-    [SerializeField] private Button UpButton;
-    [SerializeField] private Button RightButton;
-    [SerializeField] private Button DownButton;
-    [SerializeField] private Button LeftButton;
-    [SerializeField] private GameObject ReleaseTip;
+    [SerializeField] private Button upButton;
+    [SerializeField] private Button rightButton;
+    [SerializeField] private Button downButton;
+    [SerializeField] private Button leftButton;
+    [SerializeField] private GameObject releaseTip;
+    [SerializeField] private GameObject rotationPreview;
     
     private ShapeDropper shapeDropper;
     private CinemachinePOV cinemachinePOV;
@@ -61,19 +63,37 @@ public class RotationUpgrade : MonoBehaviour {
             
             if (mouseRelative.magnitude < RotationUpgradeUIDeadzoneSize) {
                 selectedRotationDirection = RotationDirection.None;
-                ReleaseTip.SetActive(false);
+                releaseTip.SetActive(false);
+                rotationPreview.SetActive(false);
             } else {
-                ReleaseTip.SetActive(true);
+                releaseTip.SetActive(true);
+                rotationPreview.SetActive(true);
+                rotationPreview.transform.position = shapeDropper.transform.position;
+                var xDir = Convert.ToSingle(Math.Round(cinemachinePOV.m_VerticalAxis.Value / 90) % 4);
+                var yDir = Convert.ToSingle(Math.Round(cinemachinePOV.m_HorizontalAxis.Value / 90) % 4);
+                Vector3 arrowAngles = new Vector3(xDir * 90, yDir * 90, 0);
                 if (mouseRelative.Abs().x > mouseRelative.Abs().y) {
-                    if (mouseRelative.x > 0) selectedRotationDirection = RotationDirection.Right;
-                    else selectedRotationDirection = RotationDirection.Left;
+                    if (mouseRelative.x > 0) {
+                        selectedRotationDirection = RotationDirection.Right;
+                        arrowAngles.z = 180;
+                    } else {
+                        selectedRotationDirection = RotationDirection.Left;
+                    }
                 } else {
-                    if (mouseRelative.y > 0) selectedRotationDirection = RotationDirection.Up;
-                    else selectedRotationDirection = RotationDirection.Down;
+                    if (mouseRelative.y > 0) {
+                        selectedRotationDirection = RotationDirection.Up;
+                        arrowAngles.z = 270;
+                    } else {
+                        selectedRotationDirection = RotationDirection.Down;
+                        arrowAngles.z = 90;
+                    }
                 }
+                rotationPreview.transform.localEulerAngles = arrowAngles;
             }
 
             SetButtonHoverStates(selectedRotationDirection);
+        } else {
+            if (rotationPreview.activeSelf) rotationPreview.SetActive(false);
         }
 
         if (playerControls.Player.Rotate.triggered || playerControls.Player.Rotate.WasReleasedThisFrame()) {
@@ -105,16 +125,16 @@ public class RotationUpgrade : MonoBehaviour {
         
         switch (rotationDirection) {
             case RotationDirection.Up:
-                UpButton.Select();
+                upButton.Select();
                 break;
             case RotationDirection.Right:
-                RightButton.Select();
+                rightButton.Select();
                 break;
             case RotationDirection.Down:
-                DownButton.Select();
+                downButton.Select();
                 break;
             case RotationDirection.Left:
-                LeftButton.Select();
+                leftButton.Select();
                 break;
         }
     }
@@ -123,61 +143,78 @@ public class RotationUpgrade : MonoBehaviour {
         if (rotationDirection == RotationDirection.None) return;
         Vector3 rotationValue = new Vector3();
         
-        if (cinemachinePOV.m_HorizontalAxis.Value > 45 && cinemachinePOV.m_HorizontalAxis.Value <= 135) {
-            if (rotationDirection == RotationDirection.Up) rotationValue.z = -90;
-            if (rotationDirection == RotationDirection.Down) rotationValue.z = 90;
+        switch (cinemachinePOV.m_HorizontalAxis.Value) {
+            case > 45 and <= 135: {
+                // Looking to: +X
+                if (rotationDirection == RotationDirection.Up) rotationValue.z = -90;
+                if (rotationDirection == RotationDirection.Down) rotationValue.z = 90;
             
-            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.x = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.x = -90;
-            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.x = -90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.x = 90;
-            } else {
-                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.x = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.x = -90;
+                } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.x = -90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.x = 90;
+                } else {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                }
+
+                break;
             }
-        } else if (cinemachinePOV.m_HorizontalAxis.Value > 135 && cinemachinePOV.m_HorizontalAxis.Value <= 225) {
-            if (rotationDirection == RotationDirection.Up) rotationValue.x = -90;
-            if (rotationDirection == RotationDirection.Down) rotationValue.x = 90;
+            case > 135 and <= 225: {
+                // Looking to: -Z
+                if (rotationDirection == RotationDirection.Up) rotationValue.x = -90;
+                if (rotationDirection == RotationDirection.Down) rotationValue.x = 90;
             
-            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.z = -90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.z = 90;
-            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.z = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.z = -90;
-            } else {
-                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.z = -90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.z = 90;
+                } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.z = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.z = -90;
+                } else {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                }
+
+                break;
             }
-        } else if (cinemachinePOV.m_HorizontalAxis.Value > 225 && cinemachinePOV.m_HorizontalAxis.Value <= 315) {
-            if (rotationDirection == RotationDirection.Up) rotationValue.z = 90;
-            if (rotationDirection == RotationDirection.Down) rotationValue.z = -90;
+            case > 225 and <= 315: {
+                // Looking to: -X
+                if (rotationDirection == RotationDirection.Up) rotationValue.z = 90;
+                if (rotationDirection == RotationDirection.Down) rotationValue.z = -90;
             
-            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.x = -90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.x = 90;
-            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.x = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.x = -90;
-            } else {
-                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.x = -90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.x = 90;
+                } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.x = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.x = -90;
+                } else {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                }
+
+                break;
             }
-        } else {
-            if (rotationDirection == RotationDirection.Up) rotationValue.x = 90;
-            if (rotationDirection == RotationDirection.Down) rotationValue.x = -90;
+            default: {
+                // Looking to: +Z
+                if (rotationDirection == RotationDirection.Up) rotationValue.x = 90;
+                if (rotationDirection == RotationDirection.Down) rotationValue.x = -90;
             
-            if (cinemachinePOV.m_VerticalAxis.Value > 45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.z = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.z = -90;
-            } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
-                if (rotationDirection == RotationDirection.Left) rotationValue.z = -90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.z = 90;
-            } else {
-                if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
-                if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                if (cinemachinePOV.m_VerticalAxis.Value > 45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.z = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.z = -90;
+                } else if (cinemachinePOV.m_VerticalAxis.Value < -45) {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.z = -90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.z = 90;
+                } else {
+                    if (rotationDirection == RotationDirection.Left) rotationValue.y = 90;
+                    if (rotationDirection == RotationDirection.Right) rotationValue.y = -90;
+                }
+
+                break;
             }
         }
         
