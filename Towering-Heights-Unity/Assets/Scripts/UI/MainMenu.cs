@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] private RectTransform[] uiElements;
     [SerializeField] private HorizontalLayoutGroup[] layoutGroups;
     private float startYOffset = 1000f;
-    private float dropDuration = 0.5f;
+    private float dropDuration = 1f;
     private float delay= 0.1f;
 
     private GameData gameData;

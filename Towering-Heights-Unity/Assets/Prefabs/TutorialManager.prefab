@@ -1108,7 +1108,7 @@ PrefabInstance:
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 134.9072
+      value: 173.3028
       objectReference: {fileID: 0}
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
@@ -1153,7 +1153,7 @@ PrefabInstance:
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 158.61658
+      value: 139.4188
       objectReference: {fileID: 0}
     - target: {fileID: 4784685461832108964, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
@@ -1173,7 +1173,9 @@ PrefabInstance:
     - target: {fileID: 5202051076765698495, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
       propertyPath: m_text
-      value: Use WASD to move horizontally
+      value: 'To move horizontally, use
+
+        WASD or hold M2 (right click)'
       objectReference: {fileID: 0}
     - target: {fileID: 5202051076765698495, guid: 6acf0cb2349ff3a4cbea4573b8274c76,
         type: 3}
