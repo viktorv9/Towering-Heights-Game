@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using FMOD.Studio;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,6 +25,11 @@ public class HeightGoal : MonoBehaviour
     [SerializeField] private TextMeshProUGUI countdownText;
     
     [SerializeField] private GameObject winEffect;
+    
+    [SerializeField] private EventReference inHeightGoalSound;
+    [SerializeField] private EventReference reachedHeightGoalSound;
+    private EventInstance inHeightGoalSoundEventInstance;
+    
     [SerializeField] private GameObject tutorialManager;
 
     private List<GameObject> collidersInTrigger = new ();
@@ -84,6 +91,16 @@ public class HeightGoal : MonoBehaviour
         
         if (collidersInTrigger.Count > 0) {
             countdownText.gameObject.SetActive(true);
+            if (!inHeightGoalSoundEventInstance.isValid()) {
+                inHeightGoalSoundEventInstance = AudioManager.instance.CreateInstance(inHeightGoalSound);
+            }
+            
+            inHeightGoalSoundEventInstance.getPlaybackState(out var state);
+            if (state == PLAYBACK_STATE.STOPPED) {
+                inHeightGoalSoundEventInstance.start();
+                RuntimeManager.AttachInstanceToGameObject(inHeightGoalSoundEventInstance, GameObject.FindWithTag("MainCamera"));
+            }
+            
             if (timeCollisionStart == 0) timeCollisionStart = Time.time;
         }
     }
@@ -94,12 +111,19 @@ public class HeightGoal : MonoBehaviour
         
         if (collidersInTrigger.Count == 0) {
             countdownText.gameObject.SetActive(false);
+            inHeightGoalSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             timeCollisionStart = 0;
         }
     }
     
     private void NextGoalHeight() {
         if (ShapeDropper.IsGameOver()) return;
+        
+        inHeightGoalSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        var soundInstance = RuntimeManager.CreateInstance(reachedHeightGoalSound);
+        soundInstance.start();
+        RuntimeManager.AttachInstanceToGameObject(soundInstance, GameObject.FindWithTag("MainCamera"));
+        soundInstance.release();
         
         UpgradeManager.UnlockUpgrade(goals[0].upgradeToUnlock);
         if (goals[0].finalGoal) {

@@ -487,6 +487,20 @@ MonoBehaviour:
   countdownText: {fileID: 1806869859481770338}
   winEffect: {fileID: 6343847601216642769, guid: 7c89174a2ecd0f54f91f308eb604ae98,
     type: 3}
+  inHeightGoalSound:
+    Guid:
+      Data1: -355964320
+      Data2: 1331507440
+      Data3: -566129004
+      Data4: -1576065259
+    Path: event:/Height Goal Rise
+  reachedHeightGoalSound:
+    Guid:
+      Data1: -1413167555
+      Data2: 1137582686
+      Data3: 441263014
+      Data4: -396161417
+    Path: event:/Height Goal Win
   tutorialManager: {fileID: 0}
 --- !u!1 &4652774628791958083
 GameObject:

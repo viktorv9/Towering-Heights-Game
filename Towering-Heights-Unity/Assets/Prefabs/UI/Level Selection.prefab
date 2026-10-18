@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8315422529508069729}
   - component: {fileID: 7785727293832681236}
   - component: {fileID: 6887050823386946468}
+  - component: {fileID: 7964872799992329872}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -133,6 +134,25 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7964872799992329872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176168614789676248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedd8971abcf33c4692f3aa747cedd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound:
+    Guid:
+      Data1: -1046131472
+      Data2: 1117524494
+      Data3: -516013920
+      Data4: -1490637376
+    Path: event:/UI Click
 --- !u!1 &2693228602152606265
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +508,7 @@ GameObject:
   - component: {fileID: 4258807588184690555}
   - component: {fileID: 2625730442985376014}
   - component: {fileID: 1724802138932839870}
+  - component: {fileID: 2925968682270695151}
   m_Layer: 5
   m_Name: Endless Mode Button
   m_TagString: Untagged
@@ -609,6 +630,25 @@ MonoBehaviour:
           m_StringArgument: EndlessMode
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2925968682270695151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219277053792035522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedd8971abcf33c4692f3aa747cedd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound:
+    Guid:
+      Data1: -1046131472
+      Data2: 1117524494
+      Data3: -516013920
+      Data4: -1490637376
+    Path: event:/UI Click
 --- !u!1 &6666655812117491514
 GameObject:
   m_ObjectHideFlags: 0

@@ -218,6 +218,13 @@ MonoBehaviour:
   RotationUpgradeUI: {fileID: 9072873008850794118}
   RotationUpgradeCursorTransform: {fileID: 7852610239209821644}
   RotationUpgradeUIDeadzoneSize: 80
+  rotationSound:
+    Guid:
+      Data1: -1428960823
+      Data2: 1311764809
+      Data3: -102101578
+      Data4: -1473606267
+    Path: event:/Rotate Swoosh
   upButton: {fileID: 553679258853085929}
   rightButton: {fileID: 8535414951133863409}
   downButton: {fileID: 1117376909020153572}

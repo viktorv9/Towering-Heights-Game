@@ -124,6 +124,20 @@ MonoBehaviour:
   pickupCollisionDuration: 2
   pickupEffect: {fileID: 6343847601216642769, guid: 6c4a277c8e2e1684b942e189f5e7606f,
     type: 3}
+  pickingUpSound:
+    Guid:
+      Data1: 843458563
+      Data2: 1252210483
+      Data3: -216226884
+      Data4: -1436360274
+    Path: event:/Upgrade Rise
+  pickedUpSound:
+    Guid:
+      Data1: 1777529467
+      Data2: 1077840235
+      Data3: -866271309
+      Data4: -52730685
+    Path: event:/Upgrade Gained
 --- !u!114 &5421289752900080903
 MonoBehaviour:
   m_ObjectHideFlags: 0

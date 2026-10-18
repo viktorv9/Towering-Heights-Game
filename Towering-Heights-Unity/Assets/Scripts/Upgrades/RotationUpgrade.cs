@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Cinemachine.Utility;
+using FMODUnity;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -23,6 +24,7 @@ public class RotationUpgrade : MonoBehaviour {
     [SerializeField] private GameObject RotationUpgradeUI;
     [SerializeField] private RectTransform RotationUpgradeCursorTransform;
     [SerializeField] private float RotationUpgradeUIDeadzoneSize;
+    [SerializeField] private EventReference rotationSound;
 
     [Header("Element references")]
     [SerializeField] private Button upButton;
@@ -105,7 +107,11 @@ public class RotationUpgrade : MonoBehaviour {
             } else {
                 shapeDropper.RemoveDropsBlocksBlocker();
                 if (!shapeDropper.getIsRotating()) {
+                    if (selectedRotationDirection != RotationDirection.None) {
+                        PlayRotationSound();
+                    }
                     ExecuteRotate(selectedRotationDirection);
+                    
                 }
             }
         }
@@ -219,5 +225,12 @@ public class RotationUpgrade : MonoBehaviour {
         }
         
         StartCoroutine(shapeDropper.RotateBlockTowards(rotationValue, 0.3f));
+    }
+
+    private void PlayRotationSound() {
+        var soundInstance = RuntimeManager.CreateInstance(rotationSound);
+        soundInstance.start();
+        RuntimeManager.AttachInstanceToGameObject(soundInstance, GameObject.FindWithTag("MainCamera"));
+        soundInstance.release();
     }
 }

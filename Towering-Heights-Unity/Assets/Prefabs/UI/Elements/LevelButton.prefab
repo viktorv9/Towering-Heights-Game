@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 4197465990486358005}
   - component: {fileID: 2292374456879628389}
   - component: {fileID: 8299259984113021492}
+  - component: {fileID: 1453232113282127503}
   m_Layer: 5
   m_Name: FG
   m_TagString: Untagged
@@ -521,6 +522,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1453232113282127503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796969853082720441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedd8971abcf33c4692f3aa747cedd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound:
+    Guid:
+      Data1: -1046131472
+      Data2: 1117524494
+      Data3: -516013920
+      Data4: -1490637376
+    Path: event:/UI Click
 --- !u!1 &4822013344173499416
 GameObject:
   m_ObjectHideFlags: 0

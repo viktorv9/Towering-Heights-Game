@@ -29,6 +29,8 @@ public class LevelButton : MonoBehaviour {
                 || gameData.completedLevels[^1] == unlockedAfterLevel) {
                 currentLevelIndicator.SetActive(true);
             }
+        } else {
+            button.gameObject.GetComponent<ButtonHoverSound>().enabled = false;
         }
 #endif
     }

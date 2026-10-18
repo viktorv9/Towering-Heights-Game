@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour {
@@ -9,6 +11,10 @@ public class Pickup : MonoBehaviour {
     [SerializeField] private PickupType pickupType;
     [SerializeField] private float pickupCollisionDuration;
     [SerializeField] private GameObject pickupEffect;
+    
+    [SerializeField] private EventReference pickingUpSound;
+    [SerializeField] private EventReference pickedUpSound;
+    private EventInstance pickingUpSoundEventInstance;
 
     private MeshRenderer meshRenderer;
     
@@ -84,6 +90,15 @@ public class Pickup : MonoBehaviour {
         collidersInTrigger.Add(other.gameObject);
         
         if (collidersInTrigger.Count > 0) {
+            if (!pickingUpSoundEventInstance.isValid()) {
+                pickingUpSoundEventInstance = AudioManager.instance.CreateInstance(pickingUpSound);
+            }
+            
+            pickingUpSoundEventInstance.getPlaybackState(out var state);
+            if (state == PLAYBACK_STATE.STOPPED) {
+                pickingUpSoundEventInstance.start();
+                RuntimeManager.AttachInstanceToGameObject(pickingUpSoundEventInstance, GameObject.FindWithTag("MainCamera"));
+            }
             if (timeCollisionStart == 0) timeCollisionStart = Time.time;
         }
     }
@@ -95,12 +110,20 @@ public class Pickup : MonoBehaviour {
         if (collidersInTrigger.Count == 0) {
             timeCollisionStart = 0;
             meshRenderer.material.SetFloat(fillAmount, 0);
+            pickingUpSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
     }
     
     private void PickUp() {
         OnPickup?.Invoke();
         Instantiate(pickupEffect, transform.position, Quaternion.identity);
+        
+        pickingUpSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        var soundInstance = RuntimeManager.CreateInstance(pickedUpSound);
+        soundInstance.start();
+        RuntimeManager.AttachInstanceToGameObject(soundInstance, GameObject.FindWithTag("MainCamera"));
+        soundInstance.release();
+        
         Destroy(gameObject);
     }
     
