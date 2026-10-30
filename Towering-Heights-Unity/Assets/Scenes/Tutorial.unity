@@ -1177,6 +1177,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Path
+      value: event:/Mechanical Workshop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data1
+      value: -767321282
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data2
+      value: 1279187355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data3
+      value: -688614250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data4
+      value: 1336875634
+      objectReference: {fileID: 0}
     - target: {fileID: 7591151675943408365, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_AnchorMax.y
