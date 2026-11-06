@@ -1097,6 +1097,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Path
+      value: event:/Sand Dunes
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data1
+      value: -982894892
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data2
+      value: 1237416402
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data3
+      value: 1275662726
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504064317329221703, guid: 354ed21543bd6d142a5430da223071a9,
+        type: 3}
+      propertyPath: sceneMusic.Guid.Data4
+      value: 374746304
+      objectReference: {fileID: 0}
     - target: {fileID: 7508134702048065723, guid: 354ed21543bd6d142a5430da223071a9,
         type: 3}
       propertyPath: m_LocalPosition.x
